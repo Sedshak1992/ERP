@@ -49,3 +49,25 @@ package.json
 /man/
 /share/
 /src/
+
+
+# Virtualenv
+venv/
+
+# Logs
+*.log
+
+# Odoo cache & filestore
+.odoo_session
+.odoo_cache/
+odoo/filestore/
+
+# Compiled assets
+*.pyo
+*.pyc
+__pycache__/
+
+# System files
+.DS_Store
+Thumbs.db
+
