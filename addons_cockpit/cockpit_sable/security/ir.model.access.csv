@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cockpit_sable.access_achat_sable_operator,Achat Sable Operator,cockpit_sable.model_achat_sable,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_sable.access_achat_sable_supervisor,Achat Sable Supervisor,cockpit_sable.model_achat_sable,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_sable.access_vente_sable_operator,Vente Sable Operator,cockpit_sable.model_vente_sable,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_sable.access_vente_sable_supervisor,Vente Sable Supervisor,cockpit_sable.model_vente_sable,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_sable.access_balance_sable_operator,Balance Sable Operator,cockpit_sable.model_balance_sable,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_sable.access_balance_sable_supervisor,Balance Sable Supervisor,cockpit_sable.model_balance_sable,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_sable.access_mouvement_sable_operator,Mouvement Sable Operator,cockpit_sable.model_mouvement_sable,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_sable.access_mouvement_sable_supervisor,Mouvement Sable Supervisor,cockpit_sable.model_mouvement_sable,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+

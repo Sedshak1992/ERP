@@ -1,0 +1,54 @@
+<odoo>
+  <data>
+
+    <!-- Racine stratégique : Cockpit Boss -->
+    <menuitem id="cockpit_erp_sedric.menu_cockpit_root"
+              name="Cockpit Boss"
+              sequence="10"/>
+
+    <record id="action_cockpit_dashboard" model="ir.actions.act_window">
+      <field name="name">Cockpit Boss</field>
+      <field name="res_model">cockpit.dashboard</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_cockpit_dashboard"
+              name="Tableau de bord"
+              parent="menu_cockpit_root"
+              action="action_cockpit_dashboard"/>
+
+    <!-- Racine opérationnelle : ERP -->
+    <menuitem id="menu_cockpit_erp_root"
+              name="ERP"
+              sequence="20"/>
+
+    <!-- Produits -->
+    <menuitem id="menu_cockpit_produits"
+              name="Produits"
+              parent="menu_cockpit_erp_root"/>
+
+    <menuitem id="menu_cockpit_lojy"
+              name="Lojy"
+              parent="menu_cockpit_produits"
+              action="cockpit_lojy.action_lojy_brut"/>
+
+    <menuitem id="menu_cockpit_antsoroko"
+              name="Antsoroko"
+              parent="menu_cockpit_produits"
+              action="cockpit_antsoroko.action_antsoroko_brut"/>
+
+    <!-- Sable -->
+    <menuitem id="menu_cockpit_sable"
+              name="Sable"
+              parent="menu_cockpit_erp_root"
+              action="cockpit_sable.action_mouvement_sable"/>
+
+    <!-- Gasoil -->
+    <menuitem id="menu_cockpit_gasoil"
+              name="Gasoil"
+              parent="menu_cockpit_erp_root"
+              action="cockpit_gasoil.action_gasoil_mouvement"/>
+
+  </data>
+</odoo>
+

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cockpit_gasoil.access_gasoil_mouvement_operator,Gasoil Mouvement Operator,cockpit_gasoil.model_gasoil_mouvement,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_gasoil.access_gasoil_mouvement_supervisor,Gasoil Mouvement Supervisor,cockpit_gasoil.model_gasoil_mouvement,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_gasoil.access_gasoil_recharge_operator,Gasoil Recharge Operator,cockpit_gasoil.model_gasoil_recharge,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_gasoil.access_gasoil_recharge_supervisor,Gasoil Recharge Supervisor,cockpit_gasoil.model_gasoil_recharge,cockpit_security.group_cockpit_supervisor,1,0,0,0
+

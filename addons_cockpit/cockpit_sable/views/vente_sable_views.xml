@@ -1,0 +1,84 @@
+<odoo>
+  <data>
+
+    <!-- Vue liste (tableau cockpit) -->
+    <record id="view_vente_sable_tree" model="ir.ui.view">
+      <field name="name">vente.sable.tree</field>
+      <field name="model">vente.sable</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="heure_entree"/>
+          <field name="heure_sortie"/>
+          <field name="vehicule"/>
+          <field name="client"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="prix_unitaire"/>
+          <field name="montant_paye"/>
+          <field name="reste_a_payer"/>
+          <field name="numero_bl"/>
+          <field name="quantite_restante"/>
+          <field name="remarque"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vue formulaire cockpit -->
+    <record id="view_vente_sable_form" model="ir.ui.view">
+      <field name="name">vente.sable.form</field>
+      <field name="model">vente.sable</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="date"/>
+              <field name="heure_entree"/>
+              <field name="heure_sortie"/>
+              <field name="vehicule"/>
+              <field name="client"/>
+              <field name="numero_bl"/>
+            </group>
+            <group>
+              <field name="quantite"/>
+              <field name="cumul_quantite" readonly="1"/>
+              <field name="prix_unitaire"/>
+              <field name="montant_paye"/>
+              <field name="reste_a_payer" readonly="1"/>
+              <field name="quantite_achat_reference"/>
+              <field name="quantite_restante" readonly="1"/>
+            </group>
+            <group>
+              <field name="remarque"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vue recherche cockpit -->
+    <record id="view_vente_sable_search" model="ir.ui.view">
+      <field name="name">vente.sable.search</field>
+      <field name="model">vente.sable</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="client"/>
+          <field name="vehicule"/>
+          <field name="numero_bl"/>
+          <field name="date"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action cockpit -->
+    <record id="action_vente_sable" model="ir.actions.act_window">
+      <field name="name">Vente Sable</field>
+      <field name="res_model">vente.sable</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_vente_sable_search"/>
+    </record>
+
+
+  </data>
+</odoo>
+

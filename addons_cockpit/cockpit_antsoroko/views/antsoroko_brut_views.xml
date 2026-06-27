@@ -1,0 +1,88 @@
+<odoo>
+  <data>
+
+    <!-- Vue liste -->
+    <record id="view_antsoroko_brut_tree" model="ir.ui.view">
+      <field name="name">antsoroko.brut.tree</field>
+      <field name="model">antsoroko.brut</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="heure"/>
+          <field name="vehicule"/>
+          <field name="partenaire"/>
+          <field name="type_mouvement"/>
+          <field name="nb_sacs"/>
+          <field name="cumul_sacs"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="prix_kg"/>
+          <field name="montant_paye"/>
+          <field name="cumul_montant"/>
+          <field name="stock"/>
+          <field name="remarque"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vue formulaire -->
+    <record id="view_antsoroko_brut_form" model="ir.ui.view">
+      <field name="name">antsoroko.brut.form</field>
+      <field name="model">antsoroko.brut</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name" readonly="1"/>
+              <field name="date"/>
+              <field name="heure"/>
+              <field name="vehicule"/>
+              <field name="partenaire"/>
+              <field name="type_mouvement"/>
+            </group>
+            <group>
+              <field name="nb_sacs"/>
+              <field name="cumul_sacs" readonly="1"/>
+              <field name="quantite"/>
+              <field name="cumul_quantite" readonly="1"/>
+              <field name="prix_kg"/>
+              <field name="montant_paye"/>
+              <field name="cumul_montant" readonly="1"/>
+              <field name="stock"/>
+            </group>
+            <group>
+              <field name="remarque"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vue recherche -->
+    <record id="view_antsoroko_brut_search" model="ir.ui.view">
+      <field name="name">antsoroko.brut.search</field>
+      <field name="model">antsoroko.brut</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="vehicule"/>
+          <field name="type_mouvement"/>
+          <filter string="Entrées" domain="[('type_mouvement','=','entree')]" name="filter_entree"/>
+          <filter string="Sorties" domain="[('type_mouvement','=','sortie')]" name="filter_sortie"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_antsoroko_brut" model="ir.actions.act_window">
+      <field name="name">Antsoroko Brut</field>
+      <field name="res_model">antsoroko.brut</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_antsoroko_brut_search"/>
+    </record>
+
+
+  </data>
+</odoo>
+

@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+
+    <!-- Rattachement cockpit -->
+    <menuitem id="menu_cockpit_produits"
+              name="Produits"
+              parent="cockpit_erp_sedric.menu_cockpit_root"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+
+    <!-- Racines métier -->
+    <menuitem id="menu_cockpit_lojy" name="LOJY" parent="menu_cockpit_produits"/>
+    <menuitem id="menu_cockpit_antsoroko" name="Antsoroko" parent="menu_cockpit_produits"/>
+
+  </data>
+</odoo>
+

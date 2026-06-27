@@ -1,0 +1,75 @@
+<odoo>
+  <data>
+
+    <record id="view_gasoil_recharge_tree" model="ir.ui.view">
+      <field name="name">gasoil.recharge.tree</field>
+      <field name="model">gasoil.recharge</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="heure_depart"/>
+          <field name="heure_retour"/>
+          <field name="libelle"/>
+          <field name="chauffeur"/>
+          <field name="camion"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="remarque"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_gasoil_recharge_form" model="ir.ui.view">
+      <field name="name">gasoil.recharge.form</field>
+      <field name="model">gasoil.recharge</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name" readonly="1"/>
+              <field name="date"/>
+              <field name="heure_depart"/>
+              <field name="heure_retour"/>
+              <field name="libelle"/>
+              <field name="chauffeur"/>
+              <field name="camion"/>
+              <field name="quantite"/>
+              <field name="cumul_quantite" readonly="1"/>
+              <field name="remarque"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="view_gasoil_recharge_search" model="ir.ui.view">
+      <field name="name">gasoil.recharge.search</field>
+      <field name="model">gasoil.recharge</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="date"/>
+          <field name="camion"/>
+          <field name="quantite"/>
+          <filter name="filter_actros" string="ACTROS" domain="[('camion','=','actros')]"/>
+          <filter name="filter_dongfeng" string="DONG FENG" domain="[('camion','=','dongfeng')]"/>
+          <filter name="filter_daf" string="DAF" domain="[('camion','=','daf')]"/>
+          <filter name="filter_tking" string="T-KING" domain="[('camion','=','tking')]"/>
+          <filter name="filter_jmc" string="JMC" domain="[('camion','=','jmc')]"/>
+          <filter name="filter_renauld" string="RENAULD" domain="[('camion','=','renauld')]"/>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_gasoil_recharge" model="ir.actions.act_window">
+      <field name="name">Recharge Gasoil</field>
+      <field name="res_model">gasoil.recharge</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_gasoil_recharge_search"/>
+    </record>
+
+    <menuitem id="menu_gasoil_recharge" name="Recharge par Camion" parent="menu_cockpit_gasoil" action="action_gasoil_recharge"/>
+
+  </data>
+</odoo>
+

@@ -1,0 +1,50 @@
+<odoo>
+  <!-- Actions -->
+  <record id="action_lojy_brut" model="ir.actions.act_window">
+    <field name="name">LOJY Brut</field>
+    <field name="res_model">lojy.brut</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_lojy_hps" model="ir.actions.act_window">
+    <field name="name">LOJY HPS</field>
+    <field name="res_model">lojy.hps</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_lojy_small" model="ir.actions.act_window">
+    <field name="name">LOJY Small</field>
+    <field name="res_model">lojy.small</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_lojy_brise" model="ir.actions.act_window">
+    <field name="name">LOJY Brise</field>
+    <field name="res_model">lojy.brise</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_lojy_dechet" model="ir.actions.act_window">
+    <field name="name">LOJY Déchet</field>
+    <field name="res_model">lojy.dechet</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_lojy_karokany" model="ir.actions.act_window">
+    <field name="name">LOJY Karokany</field>
+    <field name="res_model">lojy.karokany</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- Menu parent -->
+  <menuitem id="menu_lojy_root" name="LOJY" parent="cockpit_erp_sedric.menu_cockpit_root"/>
+
+  <!-- Menus enfants -->
+  <menuitem id="menu_lojy_brut" name="Brut" parent="menu_lojy_root" action="action_lojy_brut"/>
+  <menuitem id="menu_lojy_hps" name="HPS" parent="menu_lojy_root" action="action_lojy_hps"/>
+  <menuitem id="menu_lojy_small" name="Small" parent="menu_lojy_root" action="action_lojy_small"/>
+  <menuitem id="menu_lojy_brise" name="Brise" parent="menu_lojy_root" action="action_lojy_brise"/>
+  <menuitem id="menu_lojy_dechet" name="Déchet" parent="menu_lojy_root" action="action_lojy_dechet"/>
+  <menuitem id="menu_lojy_karokany" name="Karokany" parent="menu_lojy_root" action="action_lojy_karokany"/>
+</odoo>
+

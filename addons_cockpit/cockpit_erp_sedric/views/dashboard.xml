@@ -1,0 +1,55 @@
+<odoo>
+  <!-- Vue liste minimale -->
+  <record id="view_cockpit_dashboard_tree" model="ir.ui.view">
+    <field name="name">cockpit.dashboard.tree</field>
+    <field name="model">cockpit.dashboard</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Vue formulaire avec indicateurs et onglets -->
+  <record id="view_cockpit_dashboard_form" model="ir.ui.view">
+    <field name="name">cockpit.dashboard.form</field>
+    <field name="model">cockpit.dashboard</field>
+    <field name="arch" type="xml">
+      <form string="Cockpit Dashboard">
+        <sheet>
+          <group>
+            <field name="name"/>
+          </group>
+          <group>
+            <h2>Vue d’ensemble</h2>
+            <div class="oe_title">
+             <h3>Stocks Lojy : <field name="lojy_count"/></h3>
+             <h3>Mouvements Gasoil : <field name="gasoil_count"/></h3>
+             <h3>Lots Sable : <field name="sable_count"/></h3>
+             <h3>Flux Antsoroko : <field name="antsoroko_count"/></h3>
+             <h3>Produits actifs : <field name="produits_count"/></h3>
+            </div>
+          </group>
+          <notebook>
+            <page string="Détails Lojy">
+              <field name="lojy_ids"><tree><field name="name"/></tree></field>
+            </page>
+            <page string="Détails Gasoil">
+              <field name="gasoil_ids"><tree><field name="name"/></tree></field>
+            </page>
+            <page string="Détails Sable">
+              <field name="sable_ids"><tree><field name="name"/></tree></field>
+            </page>
+            <page string="Détails Antsoroko">
+              <field name="antsoroko_ids"><tree><field name="name"/></tree></field>
+            </page>
+            <page string="Détails Produits">
+              <field name="produits_ids"><tree><field name="name"/></tree></field>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>
+

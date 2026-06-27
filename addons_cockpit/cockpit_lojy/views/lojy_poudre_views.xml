@@ -1,0 +1,50 @@
+<odoo>
+  <record id="view_lojy_poudre_tree" model="ir.ui.view">
+    <field name="name">lojy.poudre.tree</field>
+    <field name="model">lojy.poudre</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="date"/>
+        <field name="heure"/>
+        <field name="vehicule"/>
+        <field name="client"/>
+        <field name="type_mouvement"/>
+        <field name="nb_sacs"/>
+        <field name="cumul_sacs"/>
+        <field name="quantite"/>
+        <field name="cumul_quantite"/>
+        <field name="prix_kg"/>
+        <field name="montant_paye"/>
+        <field name="cumul_montant"/>
+        <field name="stock"/>
+        <field name="remarque"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_lojy_poudre_form" model="ir.ui.view">
+    <field name="name">lojy.poudre.form</field>
+    <field name="model">lojy.poudre</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+          <field name="date"/>
+          <field name="heure"/>
+          <field name="vehicule"/>
+          <field name="client"/>
+          <field name="type_mouvement"/>
+          <field name="nb_sacs"/>
+          <field name="cumul_sacs"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="prix_kg"/>
+          <field name="montant_paye"/>
+          <field name="cumul_montant"/>
+          <field name="stock"/>
+          <field name="remarque"/>
+        </group>
+      </form>
+    </field>
+  </record>
+</odoo>
+

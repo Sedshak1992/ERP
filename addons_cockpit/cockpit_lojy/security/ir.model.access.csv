@@ -1,0 +1,20 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cockpit_lojy.access_lojy_brut_operator,Lojy Brut Operator,cockpit_lojy.model_lojy_brut,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_brut_supervisor,Lojy Brut Supervisor,cockpit_lojy.model_lojy_brut,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_lojy.access_lojy_hps_operator,Lojy HPS Operator,cockpit_lojy.model_lojy_hps,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_hps_supervisor,Lojy HPS Supervisor,cockpit_lojy.model_lojy_hps,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_lojy.access_lojy_small_operator,Lojy Small Operator,cockpit_lojy.model_lojy_small,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_small_supervisor,Lojy Small Supervisor,cockpit_lojy.model_lojy_small,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_lojy.access_lojy_brise_operator,Lojy Brise Operator,cockpit_lojy.model_lojy_brise,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_brise_supervisor,Lojy Brise Supervisor,cockpit_lojy.model_lojy_brise,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_lojy.access_lojy_dechet_operator,Lojy Déchet Operator,cockpit_lojy.model_lojy_dechet,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_dechet_supervisor,Lojy Déchet Supervisor,cockpit_lojy.model_lojy_dechet,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+cockpit_lojy.access_lojy_karokany_operator,Lojy Karokany Operator,cockpit_lojy.model_lojy_karokany,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_lojy.access_lojy_karokany_supervisor,Lojy Karokany Supervisor,cockpit_lojy.model_lojy_karokany,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+

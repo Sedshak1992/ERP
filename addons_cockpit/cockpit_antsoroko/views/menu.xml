@@ -1,0 +1,38 @@
+<odoo>
+  <data>
+
+    <!-- Racine Antsoroko -->
+    <menuitem id="menu_antsoroko_root"
+              name="Antsoroko"
+              parent="cockpit_erp_sedric.menu_cockpit_root"
+              action="action_antsoroko_brut"
+              sequence="20"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+
+    <!-- Brut -->
+    <menuitem id="menu_antsoroko_brut" name="Antsoroko Brut" parent="menu_antsoroko_root" sequence="20"/>
+    <menuitem id="menu_antsoroko_brut_action" name="Tableau Entrée-Sortie" parent="menu_antsoroko_brut" action="action_antsoroko_brut" sequence="21"/>
+
+    <!-- Karokany -->
+    <menuitem id="menu_antsoroko_karokany" name="Antsoroko Karokany" parent="menu_antsoroko_root" sequence="30"/>
+    <menuitem id="menu_antsoroko_karokany_action" name="Mouvement Karokany" parent="menu_antsoroko_karokany" action="action_antsoroko_karokany" sequence="31"/>
+
+    <!-- Extra -->
+    <menuitem id="menu_antsoroko_extra" name="Antsoroko Extra" parent="menu_antsoroko_root" sequence="40"/>
+    <menuitem id="menu_antsoroko_extra_action" name="Mouvement Extra" parent="menu_antsoroko_extra" action="action_antsoroko_extra" sequence="41"/>
+
+    <!-- MC -->
+    <menuitem id="menu_antsoroko_mc" name="Antsoroko MC" parent="menu_antsoroko_root" sequence="50"/>
+    <menuitem id="menu_antsoroko_mc_action" name="Mouvement MC" parent="menu_antsoroko_mc" action="action_antsoroko_mc" sequence="51"/>
+
+    <!-- Déchet -->
+    <menuitem id="menu_antsoroko_dechet" name="Antsoroko Déchet" parent="menu_antsoroko_root" sequence="60"/>
+    <menuitem id="menu_antsoroko_dechet_action" name="Mouvement Déchet" parent="menu_antsoroko_dechet" action="action_antsoroko_dechet" sequence="61"/>
+
+    <!-- Brise -->
+    <menuitem id="menu_antsoroko_brise" name="Antsoroko Brise" parent="menu_antsoroko_root" sequence="70"/>
+    <menuitem id="menu_antsoroko_brise_action" name="Mouvement Brise" parent="menu_antsoroko_brise" action="action_antsoroko_brise" sequence="71"/>
+
+  </data>
+</odoo>
+

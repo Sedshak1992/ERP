@@ -1,0 +1,35 @@
+<odoo>
+  <data>
+
+    <!-- Racine Sable -->
+    <menuitem id="menu_cockpit_sable"
+              name="Sable"
+              parent="cockpit_erp_sedric.menu_cockpit_root"
+              action="cockpit_sable.action_mouvement_sable"
+              sequence="30"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+
+    <!-- Sous-menus -->
+    <menuitem id="menu_achat_sable"
+              name="Achat Sable"
+              parent="menu_cockpit_sable"
+              action="cockpit_sable.action_achat_sable"/>
+
+    <menuitem id="menu_vente_sable"
+              name="Vente Sable"
+              parent="menu_cockpit_sable"
+              action="cockpit_sable.action_vente_sable"/>
+
+    <menuitem id="menu_balance_sable"
+              name="Balance Sable"
+              parent="menu_cockpit_sable"
+              action="cockpit_sable.action_balance_sable"/>
+
+    <menuitem id="menu_mouvement_sable"
+              name="Mouvements Sable"
+              parent="menu_cockpit_sable"
+              action="cockpit_sable.action_mouvement_sable"/>
+
+  </data>
+</odoo>
+

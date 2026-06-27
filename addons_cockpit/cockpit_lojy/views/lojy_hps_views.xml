@@ -1,0 +1,84 @@
+<odoo>
+  <data>
+
+    <!-- Vue liste -->
+    <record id="view_lojy_hps_tree" model="ir.ui.view">
+      <field name="name">lojy.hps.tree</field>
+      <field name="model">lojy.hps</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="heure"/>
+          <field name="vehicule"/>
+          <field name="client"/>
+          <field name="type_mouvement"/>
+          <field name="nb_sacs"/>
+          <field name="cumul_sacs"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="prix_kg"/>
+          <field name="montant_paye"/>
+          <field name="cumul_montant"/>
+          <field name="stock"/>
+          <field name="remarque"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vue formulaire -->
+    <record id="view_lojy_hps_form" model="ir.ui.view">
+      <field name="name">lojy.hps.form</field>
+      <field name="model">lojy.hps</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="date"/>
+            <field name="heure"/>
+            <field name="vehicule"/>
+            <field name="client"/>
+            <field name="type_mouvement"/>
+            <field name="nb_sacs"/>
+            <field name="cumul_sacs"/>
+            <field name="quantite"/>
+            <field name="cumul_quantite"/>
+            <field name="prix_kg"/>
+            <field name="montant_paye"/>
+            <field name="cumul_montant"/>
+            <field name="stock"/>
+            <field name="remarque"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vue recherche -->
+    <record id="view_lojy_hps_search" model="ir.ui.view">
+      <field name="name">lojy.hps.search</field>
+      <field name="model">lojy.hps</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="date"/>
+          <field name="vehicule"/>
+          <field name="client"/>
+          <field name="type_mouvement"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_lojy_hps" model="ir.actions.act_window">
+      <field name="name">LOJY HPS</field>
+      <field name="res_model">lojy.hps</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_lojy_hps_search"/>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_lojy_hps"
+              name="LOJY HPS"
+              parent="menu_lojy_root"
+              action="action_lojy_hps"/>
+
+  </data>
+</odoo>
+

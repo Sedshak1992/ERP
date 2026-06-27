@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cockpit_produits_operator,Cockpit Produits Operator,model_cockpit_produits,cockpit_security.group_cockpit_operator,1,1,1,1
+access_cockpit_produits_supervisor,Cockpit Produits Supervisor,model_cockpit_produits,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+access_cockpit_sable_operator,Cockpit Sable Operator,model_cockpit_sable,cockpit_security.group_cockpit_operator,1,1,1,1
+access_cockpit_sable_supervisor,Cockpit Sable Supervisor,model_cockpit_sable,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+access_cockpit_gasoil_operator,Cockpit Gasoil Operator,model_cockpit_gasoil,cockpit_security.group_cockpit_operator,1,1,1,1
+access_cockpit_gasoil_supervisor,Cockpit Gasoil Supervisor,model_cockpit_gasoil,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+access_cockpit_lojy_operator,Cockpit Lojy Operator,model_cockpit_lojy,cockpit_security.group_cockpit_operator,1,1,1,1
+access_cockpit_lojy_supervisor,Cockpit Lojy Supervisor,model_cockpit_lojy,cockpit_security.group_cockpit_supervisor,1,0,0,0
+
+access_cockpit_antsoroko_operator,Cockpit Antsoroko Operator,model_cockpit_antsoroko,cockpit_security.group_cockpit_operator,1,1,1,1
+access_cockpit_antsoroko_supervisor,Cockpit Antsoroko Supervisor,model_cockpit_antsoroko,cockpit_security.group_cockpit_supervisor,1,0,0,0
+

@@ -1,0 +1,66 @@
+<odoo>
+  <data>
+
+    <!-- Menu LOJY rattaché à Produits -->
+    <menuitem id="menu_lojy_root"
+              name="LOJY"
+              parent="cockpit_produits.menu_cockpit_produits"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+
+    <!-- Brut -->
+    <menuitem id="menu_lojy_brut" name="LOJY Brut" parent="menu_lojy_root"/>
+    <record id="action_lojy_brut" model="ir.actions.act_window">
+      <field name="name">LOJY Brut</field>
+      <field name="res_model">lojy.brut</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_brut_action" name="Tableau Entrée/Sortie" parent="menu_lojy_brut" action="action_lojy_brut"/>
+
+    <!-- HPS -->
+    <menuitem id="menu_lojy_hps" name="LOJY HPS" parent="menu_lojy_root"/>
+    <record id="action_lojy_hps" model="ir.actions.act_window">
+      <field name="name">LOJY HPS</field>
+      <field name="res_model">lojy.hps</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_hps_action" name="Mouvement HPS" parent="menu_lojy_hps" action="action_lojy_hps"/>
+
+    <!-- Small -->
+    <menuitem id="menu_lojy_small" name="LOJY Small" parent="menu_lojy_root"/>
+    <record id="action_lojy_small" model="ir.actions.act_window">
+      <field name="name">LOJY Small</field>
+      <field name="res_model">lojy.small</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_small_action" name="Mouvement Small" parent="menu_lojy_small" action="action_lojy_small"/>
+
+    <!-- Brise -->
+    <menuitem id="menu_lojy_brise" name="LOJY Brise" parent="menu_lojy_root"/>
+    <record id="action_lojy_brise" model="ir.actions.act_window">
+      <field name="name">LOJY Brise</field>
+      <field name="res_model">lojy.brise</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_brise_action" name="Mouvement Brise" parent="menu_lojy_brise" action="action_lojy_brise"/>
+
+    <!-- Déchet -->
+    <menuitem id="menu_lojy_dechet" name="LOJY Déchet" parent="menu_lojy_root"/>
+    <record id="action_lojy_dechet" model="ir.actions.act_window">
+      <field name="name">LOJY Déchet</field>
+      <field name="res_model">lojy.dechet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_dechet_action" name="Mouvement Déchet" parent="menu_lojy_dechet" action="action_lojy_dechet"/>
+
+    <!-- Karokany -->
+    <menuitem id="menu_lojy_karokany" name="LOJY Karokany" parent="menu_lojy_root"/>
+    <record id="action_lojy_karokany" model="ir.actions.act_window">
+      <field name="name">LOJY Karokany</field>
+      <field name="res_model">lojy.karokany</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_lojy_karokany_action" name="Mouvement Karokany" parent="menu_lojy_karokany" action="action_lojy_karokany"/>
+
+  </data>
+</odoo>
+

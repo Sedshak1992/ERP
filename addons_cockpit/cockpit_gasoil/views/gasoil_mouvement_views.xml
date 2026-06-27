@@ -1,0 +1,96 @@
+<odoo>
+  <data>
+
+    <!-- Vue liste -->
+    <record id="view_gasoil_mouvement_tree" model="ir.ui.view">
+      <field name="name">gasoil.mouvement.tree</field>
+      <field name="model">gasoil.mouvement</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="date"/>
+          <field name="heure"/>
+          <field name="libelle"/>
+          <field name="type_mouvement"/>
+          <field name="camion"/>
+          <field name="chauffeur"/>
+          <field name="quantite"/>
+          <field name="prix_unitaire"/>
+          <field name="montant"/>
+          <field name="stock_qty"/>
+          <field name="remarque"/>
+          <field name="photo"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vue formulaire -->
+    <record id="view_gasoil_mouvement_form" model="ir.ui.view">
+      <field name="name">gasoil.mouvement.form</field>
+      <field name="model">gasoil.mouvement</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name" readonly="1"/>
+              <field name="date"/>
+              <field name="heure"/>
+              <field name="libelle"/>
+              <field name="type_mouvement"/>
+              <field name="camion"/>
+              <field name="chauffeur"/>
+            </group>
+            <group>
+              <field name="quantite"/>
+              <field name="prix_unitaire"/>
+              <field name="montant" readonly="1"/>
+              <field name="stock_qty" readonly="1"/>
+            </group>
+            <group>
+              <field name="remarque"/>
+              <field name="photo" widget="image"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vue recherche -->
+    <record id="view_gasoil_mouvement_search" model="ir.ui.view">
+      <field name="name">gasoil.mouvement.search</field>
+      <field name="model">gasoil.mouvement</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="name"/>
+          <field name="libelle"/>
+          <field name="type_mouvement"/>
+          <field name="camion"/>
+          <field name="stock_qty"/>
+          <filter name="filter_entree" string="Entrées" domain="[('type_mouvement','=','entree')]"/>
+          <filter name="filter_sortie" string="Sorties" domain="[('type_mouvement','=','sortie')]"/>
+          <filter name="filter_daf" string="DAF" domain="[('camion','=','daf')]"/>
+          <filter name="filter_tking" string="T-KING" domain="[('camion','=','tking')]"/>
+          <filter name="filter_dongfeng" string="DONG FENG" domain="[('camion','=','dongfeng')]"/>
+          <filter name="filter_2624" string="26 24" domain="[('camion','=','2624')]"/>
+          <filter name="filter_1836" string="18 36" domain="[('camion','=','1836')]"/>
+          <filter name="filter_2540" string="25 40" domain="[('camion','=','2540')]"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_gasoil_mouvement" model="ir.actions.act_window">
+      <field name="name">Entrée-Sortie Gasoil</field>
+      <field name="res_model">gasoil.mouvement</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_gasoil_mouvement_search"/>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_gasoil_mouvement"
+              name="Entrée-Sortie"
+              parent="menu_cockpit_gasoil"
+              action="action_gasoil_mouvement"/>
+  </data>
+</odoo>
+

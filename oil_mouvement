@@ -1,0 +1,34 @@
+                                           Table "public.achat_sable"
+     Column      |            Type             | Collation | Nullable |                 Default                 
+-----------------+-----------------------------+-----------+----------+-----------------------------------------
+ id              | integer                     |           | not null | nextval('achat_sable_id_seq'::regclass)
+ nb_voyages      | integer                     |           |          | 
+ create_uid      | integer                     |           |          | 
+ write_uid       | integer                     |           |          | 
+ libelle         | character varying           |           |          | 
+ chauffeur       | character varying           |           |          | 
+ camion          | character varying           |           |          | 
+ etat_paie       | character varying           |           |          | 
+ ristourne_bl    | character varying           |           |          | 
+ depense_libelle | character varying           |           |          | 
+ date            | date                        |           |          | 
+ remarque        | text                        |           |          | 
+ create_date     | timestamp without time zone |           |          | 
+ write_date      | timestamp without time zone |           |          | 
+ quantite        | double precision            |           |          | 
+ cumul_quantite  | double precision            |           |          | 
+ prix            | double precision            |           |          | 
+ cumul_montant   | double precision            |           |          | 
+ carburant       | double precision            |           |          | 
+ cumul_carburant | double precision            |           |          | 
+ prix_ristourne  | double precision            |           |          | 
+ cumul_ristourne | double precision            |           |          | 
+ prix_depense    | double precision            |           |          | 
+ cumul_depense   | double precision            |           |          | 
+ total_paye      | double precision            |           |          | 
+Indexes:
+    "achat_sable_pkey" PRIMARY KEY, btree (id)
+Foreign-key constraints:
+    "achat_sable_create_uid_fkey" FOREIGN KEY (create_uid) REFERENCES res_users(id) ON DELETE SET NULL
+    "achat_sable_write_uid_fkey" FOREIGN KEY (write_uid) REFERENCES res_users(id) ON DELETE SET NULL
+

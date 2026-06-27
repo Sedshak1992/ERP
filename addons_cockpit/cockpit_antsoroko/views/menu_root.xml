@@ -1,0 +1,10 @@
+<odoo>
+  <data>
+    <menuitem id="menu_antsoroko_root"
+              name="Antsoroko"
+              parent="cockpit_erp_sedric.menu_cockpit_root"
+              sequence="10"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+  </data>
+</odoo>
+

@@ -1,0 +1,61 @@
+<odoo>
+    <!-- Vue liste (tree) -->
+    <record id="view_mouvement_sable_tree" model="ir.ui.view">
+        <field name="name">mouvement.sable.tree</field>
+        <field name="model">mouvement.sable</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="date"/>
+                <field name="libelle"/>
+                <field name="chauffeur"/>
+                <field name="vehicule"/>
+                <field name="nb_voyage"/>
+                <field name="quantite"/>
+                <field name="prix_sable"/>
+                <field name="recharge_gasoil"/>
+                <field name="depense_montant"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vue formulaire (form) -->
+    <record id="view_mouvement_sable_form" model="ir.ui.view">
+        <field name="name">mouvement.sable.form</field>
+        <field name="model">mouvement.sable</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="heure_depart"/>
+                        <field name="heure_retour"/>
+                        <field name="libelle"/>
+                        <field name="chauffeur"/>
+                        <field name="vehicule"/>
+                        <field name="nb_voyage"/>
+                        <field name="quantite"/>
+                        <field name="prix_sable"/>
+                        <field name="recharge_gasoil"/>
+                        <field name="depense_libelle"/>
+                        <field name="depense_montant"/>
+                        <field name="remarque"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_mouvement_sable" model="ir.actions.act_window">
+        <field name="name">Mouvements Sable</field>
+        <field name="res_model">mouvement.sable</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_mouvement_sable"
+              name="Mouvements Sable"
+              parent="menu_cockpit_sable"
+              action="action_mouvement_sable"/>
+</odoo>
+

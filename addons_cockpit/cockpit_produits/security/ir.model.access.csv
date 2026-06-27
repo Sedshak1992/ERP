@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+cockpit_produits.access_produits_operator,Produits Operator,cockpit_produits.model_produits,cockpit_security.group_cockpit_operator,1,1,1,1
+cockpit_produits.access_produits_supervisor,Produits Supervisor,cockpit_produits.model_produits,cockpit_security.group_cockpit_supervisor,1,0,0,0
+cockpit_produits.access_produits_user,Produits User,cockpit_produits.model_produits,base.group_user,1,0,0,0
+

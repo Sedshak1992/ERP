@@ -1,0 +1,26 @@
+<odoo>
+  <data>
+
+    <!-- Racine Gasoil rattachée au cockpit central -->
+    <menuitem id="menu_cockpit_gasoil"
+              name="Gasoil"
+              parent="cockpit_erp_sedric.menu_cockpit_root"
+              action="cockpit_gasoil.action_gasoil_mouvement"
+              sequence="40"
+              groups="cockpit_security.group_cockpit_operator,cockpit_security.group_cockpit_supervisor"/>
+
+    <!-- Entrée-Sortie -->
+    <menuitem id="menu_gasoil_mouvement"
+              name="Entrée-Sortie"
+              parent="menu_cockpit_gasoil"
+              action="cockpit_gasoil.action_gasoil_mouvement"/>
+
+    <!-- Recharge par Camion -->
+    <menuitem id="menu_gasoil_recharge"
+              name="Recharge par Camion"
+              parent="menu_cockpit_gasoil"
+              action="cockpit_gasoil.action_gasoil_recharge"/>
+
+  </data>
+</odoo>
+	

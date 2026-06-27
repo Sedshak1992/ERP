@@ -1,0 +1,108 @@
+<odoo>
+  <data>
+
+    <!-- Vue liste (tableau) -->
+    <record id="view_achat_sable_tree" model="ir.ui.view">
+      <field name="name">achat.sable.tree</field>
+      <field name="model">achat.sable</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="date"/>
+          <field name="depart"/>
+          <field name="retour"/>
+          <field name="libelle"/>
+          <field name="chauffeur"/>
+          <field name="camion"/>
+          <field name="nb_voyages"/>
+          <field name="quantite"/>
+          <field name="cumul_quantite"/>
+          <field name="prix"/>
+          <field name="etat_paie"/>
+          <field name="prix_total"/>
+          <field name="carburant_id"/>
+          <field name="cumul_carburant"/>
+          <field name="ristourne_bl"/>
+          <field name="prix_ristourne"/>
+          <field name="cumul_ristourne"/>
+          <field name="depense_libelle"/>
+          <field name="prix_depense"/>
+          <field name="cumul_depense"/>
+          <field name="total_paye"/>
+          <field name="cumul_paye"/>
+          <field name="remarque"/>
+          <field name="photo"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vue formulaire -->
+    <record id="view_achat_sable_form" model="ir.ui.view">
+      <field name="name">achat.sable.form</field>
+      <field name="model">achat.sable</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="date"/>
+              <field name="depart"/>
+              <field name="retour"/>
+              <field name="libelle"/>
+              <field name="chauffeur"/>
+              <field name="camion"/>
+              <field name="nb_voyages"/>
+              <field name="quantite"/>
+              <field name="prix"/>
+              <field name="etat_paie"/>
+              <field name="prix_total" readonly="1"/>
+            </group>
+            <group>
+              <field name="carburant_id"/>
+              <field name="ristourne_bl"/>
+              <field name="prix_ristourne"/>
+              <field name="depense_libelle"/>
+              <field name="prix_depense"/>
+            </group>
+            <group>
+              <field name="remarque"/>
+              <field name="photo" widget="image"/>
+            </group>
+            <group string="Calculs cockpit">
+              <field name="cumul_quantite" readonly="1"/>
+              <field name="cumul_carburant" readonly="1"/>
+              <field name="cumul_ristourne" readonly="1"/>
+              <field name="cumul_depense" readonly="1"/>
+              <field name="total_paye" readonly="1"/>
+              <field name="cumul_paye" readonly="1"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Vue recherche cockpit -->
+    <record id="view_achat_sable_search" model="ir.ui.view">
+      <field name="name">achat.sable.search</field>
+      <field name="model">achat.sable</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="chauffeur"/>
+          <field name="camion"/>
+          <field name="date"/>
+          <field name="libelle"/>
+          <filter name="filter_paye" string="Payés" domain="[('etat_paie','=','paye')]"/>
+          <filter name="filter_non_paye" string="Non Payés" domain="[('etat_paie','=','non_paye')]"/>
+        </search>
+      </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_achat_sable" model="ir.actions.act_window">
+      <field name="name">Achat Sable</field>
+      <field name="res_model">achat.sable</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_achat_sable_search"/>
+    </record>
+
+  </data>
+</odoo>
+  

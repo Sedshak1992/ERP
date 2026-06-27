@@ -1,0 +1,12 @@
+<odoo>
+    <record id="group_cockpit_operator" model="res.groups">
+        <field name="name">Cockpit Operator</field>
+        <field name="category_id" ref="base.module_category_user_type"/>
+    </record>
+
+    <record id="group_cockpit_supervisor" model="res.groups">
+        <field name="name">Cockpit Supervisor</field>
+        <field name="category_id" ref="base.module_category_user_type"/>
+    </record>
+</odoo>
+
