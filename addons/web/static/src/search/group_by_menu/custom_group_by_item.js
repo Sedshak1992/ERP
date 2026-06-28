@@ -1,17 +1,3 @@
-/** @odoo-module **/
-
-import { Dropdown } from "@web/core/dropdown/dropdown";
-
-import { Component, useState } from "@odoo/owl";
-
-export class CustomGroupByItem extends Component {
-    setup() {
-        this.state = useState({});
-        if (this.props.fields.length) {
-            this.state.fieldName = this.props.fields[0].name;
-        }
-    }
-}
-
-CustomGroupByItem.template = "web.CustomGroupByItem";
-CustomGroupByItem.components = { Dropdown };
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ec17768df653b8185d33f5f32032294119be75d4e4734472c1b7caa7afe6ea1
+size 449

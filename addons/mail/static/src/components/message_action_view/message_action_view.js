@@ -1,32 +1,3 @@
-/** @odoo-module */
-
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class MessageActionView extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'actionRef', refName: 'action' });
-    }
-
-    /**
-     * @returns {MessageActionView}
-     */
-    get messageActionView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(MessageActionView, {
-    props: { record: Object },
-    template: "mail.MessageActionView",
-});
-
-registerMessagingComponent(MessageActionView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ebaf193cce0a5fbd3533061abb28058fe4335e1e841458cc942182d699e2f6b
+size 683

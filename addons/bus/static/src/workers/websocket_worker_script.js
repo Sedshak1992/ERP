@@ -1,23 +1,3 @@
-/** @odoo-module **/
-/* eslint-env worker */
-/* eslint-disable no-restricted-globals */
-
-import { WebsocketWorker } from "./websocket_worker";
-
-(function () {
-    const websocketWorker = new WebsocketWorker();
-
-    if (self.name.includes('shared')) {
-        // The script is running in a shared worker: let's register every
-        // tab connection to the worker in order to relay notifications
-        // coming from the websocket.
-        onconnect = function (ev) {
-            const currentClient = ev.ports[0];
-            websocketWorker.registerClient(currentClient);
-        };
-    } else {
-        // The script is running in a simple web worker.
-        websocketWorker.registerClient(self);
-    }
-})();
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b4a6755783095ce48d10626ac893576e20c36423874133a6daabab7ef1f5c5c
+size 717

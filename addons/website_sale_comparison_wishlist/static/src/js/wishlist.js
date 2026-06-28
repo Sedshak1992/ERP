@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import publicWidget from 'web.public.widget';
-import 'website_sale_comparison.comparison';
-
-publicWidget.registry.ProductComparison.include({
-    events: _.extend({}, publicWidget.registry.ProductComparison.prototype.events, {
-        'click .wishlist-section .o_add_to_compare': '_onClickCompare',
-    }),
-
-    //--------------------------------------------------------------------------
-    // Private
-    //--------------------------------------------------------------------------
-
-    /**
-     * @private
-     * @param {Event} ev
-     */
-    _onClickCompare: function (ev) {
-        const productID = parseInt(ev.currentTarget.dataset.productId, 10);
-        this.productComparison._addNewProducts(productID);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:39410d1745ae9a14db3f5f455712650e71f61f4aa85dd5807795fd7c222565d5
+size 748

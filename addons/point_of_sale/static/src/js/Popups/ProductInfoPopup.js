@@ -1,34 +1,3 @@
-odoo.define('point_of_sale.ProductInfoPopup', function(require) {
-    'use strict';
-
-    const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
-    const Registries = require('point_of_sale.Registries');
-
-    /**
-     * Props:
-     *  {
-     *      info: {object of data}
-     *  }
-     */
-    class ProductInfoPopup extends AbstractAwaitablePopup {
-        setup() {
-            super.setup();
-            Object.assign(this, this.props.info);
-        }
-        searchProduct(productName) {
-            this.env.posbus.trigger('search-product-from-info-popup', productName);
-            this.cancel()
-        }
-        _hasMarginsCostsAccessRights() {
-            const isAccessibleToEveryUser = this.env.pos.config.is_margins_costs_accessible_to_every_user;
-            const isCashierManager = this.env.pos.get_cashier().role === 'manager';
-            return isAccessibleToEveryUser || isCashierManager;
-        }
-    }
-
-    ProductInfoPopup.template = 'ProductInfoPopup';
-    ProductInfoPopup.defaultProps= { confirmKey: false };
-    Registries.Component.add(ProductInfoPopup);
-
-    return ProductInfoPopup;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c67f5636bff8f7664ec5a8b0b3e57db443f8543a6e9d2f75bc27047bcb1fa9b
+size 1142

@@ -1,22 +1,3 @@
-odoo.define('web.tools', function (require) {
-"use strict";
-
-/**
- * Wrapper for deprecated functions that display a warning message.
- *
- * @param {Function} fn the deprecated function
- * @param {string} [message=''] optional message to display
- * @returns {Function}
- */
-function deprecated(fn, message) {
-    return function () {
-        console.warn(message || (fn.name + ' is deprecated.'));
-        return fn.apply(this, arguments);
-    };
-}
-
-return {
-    deprecated: deprecated,
-};
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:66b03d7c64ec5e79a5ae8f5c756ce2aa41af35e6b2044bd3f354769891794a0d
+size 492

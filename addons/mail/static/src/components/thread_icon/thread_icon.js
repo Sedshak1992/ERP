@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ThreadIcon extends Component {
-
-    /**
-     * @returns {Thread}
-     */
-    get thread() {
-        return this.props.thread;
-    }
-
-}
-
-Object.assign(ThreadIcon, {
-    props: { thread: Object },
-    template: 'mail.ThreadIcon',
-});
-
-registerMessagingComponent(ThreadIcon);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f6dc009314f2d6744bbe3c8ff3fe3ff96ae538cdeee07364b3504a7f980162a
+size 415

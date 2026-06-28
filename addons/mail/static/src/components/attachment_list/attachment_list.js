@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class AttachmentList extends Component {
-
-    /**
-     * @returns {AttachmentList}
-     */
-    get attachmentList() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(AttachmentList, {
-    props: { record: Object },
-    template: 'mail.AttachmentList',
-});
-
-registerMessagingComponent(AttachmentList);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d66907518ac74f68450678c56ece711a209745f861287080a76ec6ebf884944
+size 447

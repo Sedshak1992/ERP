@@ -1,31 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-
-const { Component, onWillUpdateProps } = owl;
-
-class ListItem extends Component {}
-ListItem.template = "account.GroupedItemTemplate";
-ListItem.props = ["item_vals", "options"];
-
-class ListGroup extends Component {}
-ListGroup.template = "account.GroupedItemsTemplate";
-ListGroup.components = { ListItem };
-ListGroup.props = ["group_vals", "options"];
-
-class ShowGroupedList extends Component {
-    setup() {
-        this.formatData(this.props);
-        onWillUpdateProps((nextProps) => this.formatData(nextProps));
-    }
-
-    formatData(props) {
-        this.data = props.value
-            ? JSON.parse(props.value)
-            : { groups_vals: [], options: { discarded_number: "", columns: [] } };
-    }
-}
-ShowGroupedList.template = "account.GroupedListTemplate";
-ShowGroupedList.components = { ListGroup };
-
-registry.category("fields").add("grouped_view_widget", ShowGroupedList);
+version https://git-lfs.github.com/spec/v1
+oid sha256:650e96b61caf780f099c6b3b04a4de8acdb54e2c8aa4e21ff73b0fea4ebdf772
+size 951

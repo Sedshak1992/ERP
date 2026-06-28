@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-import { LegacyComponent } from '@web/legacy/legacy_component';
-
-export class WebClientViewAttachmentView extends LegacyComponent {
-    /**
-     * @override
-     */
-    setup() {
-        useComponentToModel({ fieldName: 'component' });
-        useRefToModel({ fieldName: 'iframeViewerPdfRef', refName: 'iframeViewerPdf' });
-        useUpdateToModel({ methodName: 'onComponentUpdate' });
-    }
-    /**
-     * @returns {WebClientViewAttachmentView}
-     */
-    get webClientViewAttachmentView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(WebClientViewAttachmentView, {
-    props: { record: Object },
-    template: 'mail.WebClientViewAttachmentView',
-});
-
-registerMessagingComponent(WebClientViewAttachmentView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cd988b9e23cdde0c93aaeb6b48dca5a63d385f1dd741c96a94132c4f31db19a
+size 1061

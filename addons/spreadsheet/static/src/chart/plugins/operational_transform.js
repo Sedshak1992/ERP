@@ -1,21 +1,3 @@
-/** @odoo-module */
-
-import spreadsheet from "@spreadsheet/o_spreadsheet/o_spreadsheet_extended";
-const { inverseCommandRegistry, otRegistry } = spreadsheet.registries;
-
-function identity(cmd) {
-    return [cmd];
-}
-
-otRegistry.addTransformation(
-    "DELETE_FIGURE",
-    ["LINK_ODOO_MENU_TO_CHART"],
-    (toTransform, executed) => {
-        if (executed.id === toTransform.chartId) {
-            return undefined;
-        }
-        return toTransform;
-    }
-);
-
-inverseCommandRegistry.add("LINK_ODOO_MENU_TO_CHART", identity);
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf4f6f74322e214cd9af86cce64bc7077fed675d10aa759fe2ce82cb44687e19
+size 527

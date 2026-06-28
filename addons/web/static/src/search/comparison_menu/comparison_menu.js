@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { Dropdown } from "@web/core/dropdown/dropdown";
-import { SearchDropdownItem } from "@web/search/search_dropdown_item/search_dropdown_item";
-import { FACET_ICONS } from "../utils/misc";
-import { useBus } from "@web/core/utils/hooks";
-
-import { Component } from "@odoo/owl";
-
-export class ComparisonMenu extends Component {
-    setup() {
-        this.icon = FACET_ICONS.comparison;
-
-        useBus(this.env.searchModel, "update", this.render);
-    }
-
-    /**
-     * @returns {Object[]}
-     */
-    get items() {
-        return this.env.searchModel.getSearchItems(
-            (searchItem) => searchItem.type === "comparison"
-        );
-    }
-
-    /**
-     * @param {number} itemId
-     */
-    onComparisonSelected(itemId) {
-        this.env.searchModel.toggleSearchItem(itemId);
-    }
-}
-ComparisonMenu.template = "web.ComparisonMenu";
-ComparisonMenu.components = { Dropdown, DropdownItem: SearchDropdownItem };
+version https://git-lfs.github.com/spec/v1
+oid sha256:675ea193d3af8441eb94cf444710ab6df2845560652159a6117af27ef4e5173c
+size 939

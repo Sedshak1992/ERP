@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { kanbanView } from "@web/views/kanban/kanban_view";
-import { ForecastKanbanRenderer } from "@crm/views/forecast_kanban/forecast_kanban_renderer";
-import { ForecastSearchModel } from "@crm/views/forecast_search_model";
-import { ForecastKanbanModel } from "@crm/views/forecast_kanban/forecast_kanban_model";
-
-export const forecastKanbanView = {
-    ...kanbanView,
-    Model: ForecastKanbanModel,
-    Renderer: ForecastKanbanRenderer,
-    SearchModel: ForecastSearchModel,
-};
-
-registry.category("views").add("forecast_kanban", forecastKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:d04444ea450c4f4d9bd1194d5124cc508e98c2a15f8ee7a7e2ea88e1d51b5dfe
+size 622

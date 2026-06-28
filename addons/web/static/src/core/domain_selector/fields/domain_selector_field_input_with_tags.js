@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { Component, useRef } from "@odoo/owl";
-
-export class DomainSelectorFieldInputWithTags extends Component {
-    setup() {
-        this.inputRef = useRef("input");
-    }
-
-    removeTag(tagIndex) {
-        const value = [...this.props.value];
-        value.splice(tagIndex, 1);
-        this.props.update({ value });
-    }
-    addTag(value) {
-        this.props.update({ value: this.props.value.concat(value) });
-    }
-
-    onBtnClick() {
-        const value = this.inputRef.el.value;
-        this.inputRef.el.value = "";
-        this.addTag(value);
-    }
-}
-DomainSelectorFieldInputWithTags.template = "web.DomainSelectorFieldInputWithTags";
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f67e836d8cc04cccc725aa29e0c5c3ab4921652ad90eb1d2123c77d68d48286
+size 667

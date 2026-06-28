@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class TrackingValue extends Component {
-
-    /**
-     * @returns {TrackingValue}
-     */
-    get trackingValue() {
-        return this.props.value;
-    }
-
-}
-
-Object.assign(TrackingValue, {
-    props: { value: Object },
-    template: 'mail.TrackingValue',
-});
-
-registerMessagingComponent(TrackingValue);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e3f102e5d8b4f48cd06276542aff44abf7277c88ad920df4fdb144f5d859cc5
+size 439

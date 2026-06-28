@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { clear } from '@mail/model/model_field_command';
-import '@mail/models/composer_view';
-
-registerPatch({
-    name: 'ComposerView',
-    fields: {
-        dropZoneView: {
-            compute() {
-                if (this.composer.thread && this.composer.thread.channel && this.composer.thread.channel.channel_type === 'livechat') {
-                    return clear();
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6fd80f6228117c3e70281bd149e94f3c62c497ca4f615add52ae14f448b19b7b
+size 542

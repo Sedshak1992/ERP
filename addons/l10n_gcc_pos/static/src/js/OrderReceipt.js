@@ -1,20 +1,3 @@
-odoo.define('l10n_gcc_pos.OrderReceipt', function (require) {
-    'use strict';
-
-    const OrderReceipt = require('point_of_sale.OrderReceipt')
-    const Registries = require('point_of_sale.Registries');
-
-    const OrderReceiptGCC = OrderReceipt =>
-        class extends OrderReceipt {
-
-            get receiptEnv() {
-                let receipt_render_env = super.receiptEnv;
-                let receipt = receipt_render_env.receipt;
-                const country = receipt_render_env.order.pos.company.country;
-                receipt.is_gcc_country =  country ? ['SA', 'AE', 'BH', 'OM', 'QA', 'KW'].includes(country && country.code) : false;
-                return receipt_render_env;
-            }
-        }
-    Registries.Component.extend(OrderReceipt, OrderReceiptGCC)
-    return OrderReceiptGCC
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e232d83569c2f25b0d06c7102ff5592bfc60ac1446a6e162ba20afcc220dcdd
+size 806

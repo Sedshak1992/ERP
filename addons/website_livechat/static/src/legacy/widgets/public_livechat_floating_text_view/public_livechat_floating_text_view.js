@@ -1,12 +1,3 @@
-/** @odoo-module **/
-
-import Widget from 'web.Widget';
-
-export const PublicLivechatFloatingTextView = Widget.extend({
-    template: 'im_livechat.legacy.PublicLivechatFloatingTextView',
-    init(parent, messaging) {
-        this._super(parent);
-        this.messaging = messaging;
-        this.publicLivechatFloatingTextView = this.messaging.publicLivechatGlobal.livechatButtonView.floatingTextView;
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:aacaf8b60c3531aa3fdc47484999c36318a7265d129bb5a83694c66fdb3435a0
+size 410

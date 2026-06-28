@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-
-import { useEffect } from "@odoo/owl";
-
-/**
- * This hook will register/unregister the given registration
- * when the caller component will mount/unmount.
- *
- * @param {string} hotkey
- * @param {import("./hotkey_service").HotkeyCallback} callback
- * @param {import("./hotkey_service").HotkeyOptions} [options] additional options
- */
-export function useHotkey(hotkey, callback, options = {}) {
-    const hotkeyService = useService("hotkey");
-    useEffect(
-        () => hotkeyService.add(hotkey, callback, options),
-        () => []
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffd5c1c628ba20a6c4f41cf09486d1398426deb98ad78b636e96e1aba8269666
+size 616

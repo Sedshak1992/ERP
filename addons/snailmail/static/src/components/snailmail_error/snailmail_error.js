@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class SnailmailError extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        useComponentToModel({ fieldName: 'component' });
-    }
-
-    /**
-     * @returns {SnailmailErrorView}
-     */
-    get snailmailErrorView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(SnailmailError, {
-    props: { record: Object },
-    template: 'snailmail.SnailmailError',
-});
-
-registerMessagingComponent(SnailmailError);
+version https://git-lfs.github.com/spec/v1
+oid sha256:64b80b6b9265a9602c922f27c34f521b584a66ddd270f030f0ef2b9ba2ee85da
+size 655

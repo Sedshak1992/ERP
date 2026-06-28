@@ -1,23 +1,3 @@
-/** @odoo-module */
-
-import wTourUtils from 'website.tour_utils';
-
-wTourUtils.registerWebsitePreviewTour('client_action_iframe_fallback', {
-    test: true,
-    url: '/',
-},
-[
-    {
-        content: "Ensure we are on the expected page",
-        trigger: 'body iframe html[data-view-xmlid="website.homepage"]',
-        run: () => {}, // It's a check.
-    }, {
-        content: "Ensure the iframe fallback is not loaded in test mode",
-        trigger: 'body',
-        run: () => {
-            if (document.querySelector('iframe[src="/website/iframefallback"]')) {
-                console.error("The iframe fallback shouldn't be inside the DOM.");
-            }
-        },
-    },
-]);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7110b8fbde5239f2501b7789907954654df5b132a690935c7f741a9740a8d40b
+size 680

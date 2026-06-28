@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { many, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'CallSidebarView',
-    fields: {
-        callView: one('CallView', {
-            identifying: true,
-            inverse: 'callSidebarView',
-        }),
-        sidebarTiles: many('CallSidebarViewTile', {
-            compute() {
-                return this.callView.filteredChannelMembers.map(channelMember => ({ channelMember }));
-            },
-            inverse: 'callSidebarViewOwner',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b2793cd78e995dc96143099596f6dd5343a0c9cae728e5674267454ae147058
+size 572

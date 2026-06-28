@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ActivityButtonView extends Component {
-
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'buttonRef', refName: 'button' });
-    }
-
-    get activityButtonView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ActivityButtonView, {
-    props: { record: Object },
-    template: 'mail.ActivityButtonView',
-});
-
-registerMessagingComponent(ActivityButtonView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f97ef1ec7437be2ae8f0f942e6a34887da8acd5c092aff8690f77f64430ffe80
+size 604

@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import publicWidget from 'web.public.widget';
-
-publicWidget.registry.WebsiteSaleGiftCardCopy = publicWidget.Widget.extend({
-    selector: '.o_purchased_gift_card',
-    /**
-     * @override
-     */
-    start: function () {
-        new ClipboardJS(this.$el.find('.copy-to-clipboard')[0]);
-    }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:daf39a8e76009d1928f9c5e873b0f2ed3cc68706efc68ceb5a523ce64e7f9e76
+size 319

@@ -1,28 +1,3 @@
-odoo.define('point_of_sale.Orderline', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class Orderline extends PosComponent {
-        selectLine() {
-            this.trigger('select-line', { orderline: this.props.line });
-        }
-        lotIconClicked() {
-            this.trigger('edit-pack-lot-lines', { orderline: this.props.line });
-        }
-        get addedClasses() {
-            return {
-                selected: this.props.line.selected,
-            };
-        }
-        get customerNote() {
-            return this.props.line.get_customer_note();
-        }
-    }
-    Orderline.template = 'Orderline';
-
-    Registries.Component.add(Orderline);
-
-    return Orderline;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:16c1d1b85eb28118d8037d612cb1e775e3bf57d4c0050def8c4a3b130725372b
+size 805

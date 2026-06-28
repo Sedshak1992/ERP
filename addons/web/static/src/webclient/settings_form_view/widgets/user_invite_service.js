@@ -1,20 +1,3 @@
-/** @odoo-modules */
-
-import { registry } from "@web/core/registry";
-
-export const userInviteService = {
-    dependencies: ["rpc"],
-    async start(env, { rpc }) {
-        let dataProm;
-        return {
-            fetchData(reload = false) {
-                if (!dataProm || reload) {
-                    dataProm = rpc("/base_setup/data");
-                }
-                return dataProm;
-            },
-        };
-    },
-};
-
-registry.category("services").add("user_invite", userInviteService);
+version https://git-lfs.github.com/spec/v1
+oid sha256:587abc94511dae2e8e6a391b3a123e9806b5b8c2650828899f5bca9bae0cd53d
+size 499

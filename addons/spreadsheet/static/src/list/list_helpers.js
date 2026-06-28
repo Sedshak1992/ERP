@@ -1,27 +1,3 @@
-/** @odoo-module */
-
-import { getOdooFunctions } from "../helpers/odoo_functions_helpers";
-
-/**
- * Parse a spreadsheet formula and detect the number of LIST functions that are
- * present in the given formula.
- *
- * @param {string} formula
- *
- * @returns {number}
- */
-export function getNumberOfListFormulas(formula) {
-    return getOdooFunctions(formula, ["ODOO.LIST", "ODOO.LIST.HEADER"]).filter((fn) => fn.isMatched)
-        .length;
-}
-
-/**
- * Get the first List function description of the given formula.
- *
- * @param {string} formula
- *
- * @returns {import("../helpers/odoo_functions_helpers").OdooFunctionDescription|undefined}
- */
-export function getFirstListFunction(formula) {
-    return getOdooFunctions(formula, ["ODOO.LIST", "ODOO.LIST.HEADER"]).find((fn) => fn.isMatched);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:638572345f2500a16a40e62faecdb116dbf9605a85549c5da66ec0056ce88271
+size 787

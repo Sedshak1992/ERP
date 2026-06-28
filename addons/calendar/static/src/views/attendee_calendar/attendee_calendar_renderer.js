@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import { CalendarRenderer } from "@web/views/calendar/calendar_renderer";
-import { AttendeeCalendarCommonRenderer } from "@calendar/views/attendee_calendar/common/attendee_calendar_common_renderer";
-import { AttendeeCalendarYearRenderer } from "@calendar/views/attendee_calendar/year/attendee_calendar_year_renderer";
-
-export class AttendeeCalendarRenderer extends CalendarRenderer {}
-AttendeeCalendarRenderer.components = {
-    ...CalendarRenderer.components,
-    day: AttendeeCalendarCommonRenderer,
-    week: AttendeeCalendarCommonRenderer,
-    month: AttendeeCalendarCommonRenderer,
-    year: AttendeeCalendarYearRenderer,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cfd54d6db09e82e4004d97d7d03185901e46572d12c6160675ead875aeee598
+size 652

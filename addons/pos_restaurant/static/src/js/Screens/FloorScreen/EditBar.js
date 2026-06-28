@@ -1,20 +1,3 @@
-odoo.define('pos_restaurant.EditBar', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    const { useState } = owl;
-
-    class EditBar extends PosComponent {
-        setup() {
-            super.setup();
-            this.state = useState({ isColorPicker: false })
-        }
-    }
-    EditBar.template = 'EditBar';
-
-    Registries.Component.add(EditBar);
-
-    return EditBar;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e0bb75c05ad1222f4de04ab205d5e2a28482f648513569b3134d79eb4dd656b
+size 494

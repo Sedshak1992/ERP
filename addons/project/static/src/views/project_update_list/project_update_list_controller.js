@@ -1,16 +1,3 @@
-/** @odoo-module */
-
-import { ListController } from '@web/views/list/list_controller';
-import { ProjectRightSidePanel } from '../../components/project_right_side_panel/project_right_side_panel';
-
-export class ProjectUpdateListController extends ListController {
-    get className() {
-        return super.className + ' o_controller_with_rightpanel';
-    }
-}
-
-ProjectUpdateListController.components = {
-    ...ListController.components,
-    ProjectRightSidePanel,
-};
-ProjectUpdateListController.template = 'project.ProjectUpdateListView';
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9805d88ca966bd6a055753ea64d277397a4e637a117a518923e4b5a74b695a4
+size 538

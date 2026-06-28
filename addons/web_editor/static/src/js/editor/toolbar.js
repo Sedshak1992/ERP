@@ -1,20 +1,3 @@
-odoo.define('web_editor.toolbar', function (require) {
-'use strict';
-
-var Widget = require('web.Widget');
-
-const Toolbar = Widget.extend({
-    /**
-     * @constructor
-     * @param {Widget} parent
-     * @param {string} contents
-     */
-    init: function (parent, template = 'web_editor.toolbar') {
-        this._super.apply(this, arguments);
-        this.template = template;
-    },
-});
-
-return Toolbar;
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ecee5dc5e02f3f3f44edaae99ad5969a9d8c3dd5393f441d5649cb5df766193
+size 411

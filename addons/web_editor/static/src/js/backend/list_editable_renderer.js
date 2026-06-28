@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import ListRenderer from "web.ListRenderer";
-
-ListRenderer.include({
-    _onWindowClicked: function (event) {
-        // ignore clicks in the web_editor toolbar
-        if ($(event.target).closest(".oe-toolbar").length) {
-            return;
-        }
-        return this._super.apply(this, arguments);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:40ddb40624f976cc5b477c79f6d616d90def829a25c5834730a50bfe42e40453
+size 336

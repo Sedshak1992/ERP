@@ -1,22 +1,3 @@
-/** @odoo-module */
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class MessageInReplyToView extends Component {
-
-    /**
-     * @returns {MessageInReplyToView}
-     */
-    get messageInReplyToView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(MessageInReplyToView, {
-    props: { record: Object },
-    template: "mail.MessageInReplyToView",
-});
-
-registerMessagingComponent(MessageInReplyToView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e3edaea21796e2c93fabecf4e287015099388e9194652cfa7aea12dda178cce
+size 481

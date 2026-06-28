@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { many, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'ComposerSuggestable',
-    identifyingMode: 'xor',
-    fields: {
-        cannedResponse: one('CannedResponse', {
-            identifying: true,
-            inverse: 'suggestable',
-        }),
-        channelCommand: one('ChannelCommand', {
-            identifying: true,
-            inverse: 'suggestable',
-        }),
-        composerSuggestionListViewExtraComposerSuggestionViewItems: many('ComposerSuggestionListViewExtraComposerSuggestionViewItem', {
-            inverse: 'suggestable',
-        }),
-        composerSuggestionListViewMainComposerSuggestionViewItems: many('ComposerSuggestionListViewMainComposerSuggestionViewItem', {
-            inverse: 'suggestable',
-        }),
-        partner: one('Partner', {
-            identifying: true,
-            inverse: 'suggestable',
-        }),
-        thread: one('Thread', {
-            identifying: true,
-            inverse: 'suggestable',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c258c0cb16d68ca66b542ba4fe2c27e4f4a6dae2d86b7022c5f3ea9f0e17734
+size 1078

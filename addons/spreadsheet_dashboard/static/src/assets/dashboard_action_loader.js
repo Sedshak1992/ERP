@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { loadSpreadsheetAction } from "@spreadsheet/assets_backend/spreadsheet_action_loader";
-
-const actionRegistry = registry.category("actions");
-
-const loadDashboardAction = async (env, context) => {
-    await loadSpreadsheetAction(env, "action_spreadsheet_dashboard", loadDashboardAction);
-    return {
-        ...context,
-        target: "current",
-        tag: "action_spreadsheet_dashboard",
-        type: "ir.actions.client",
-    };
-};
-
-actionRegistry.add("action_spreadsheet_dashboard", loadDashboardAction);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f6af6a7008ac9cf2ababbef0adfeaae22dbcfbb1ed21e12f742e27aba3f5883e
+size 606

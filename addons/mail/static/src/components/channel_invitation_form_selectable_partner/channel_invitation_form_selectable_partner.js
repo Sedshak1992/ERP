@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChannelInvitationFormSelectablePartner extends Component {
-
-    /**
-     * @returns {ChannelInvitationFormSelectablePartnerView}
-     */
-    get channelInvitationFormSelectablePartnerView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ChannelInvitationFormSelectablePartner, {
-    props: { record: Object },
-    template: 'mail.ChannelInvitationFormSelectablePartner',
-});
-
-registerMessagingComponent(ChannelInvitationFormSelectablePartner);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b6d5a7ca1a5741ddf553b0c2aa6967ca0e9c878e6b96bae2c5ecd637b1f3c8d
+size 599

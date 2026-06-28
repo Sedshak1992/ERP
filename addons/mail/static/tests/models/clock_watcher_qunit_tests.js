@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'ClockWatcher',
-    fields: {
-        qunitTestOwner: one('QUnitTest', {
-            identifying: true,
-            inverse: 'clockWatcher',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb6f8703d710ace145557e563d90170d5e7725616711e66f7117141e31335132
+size 316

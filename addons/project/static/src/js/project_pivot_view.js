@@ -1,9 +1,3 @@
-/** @odoo-module **/
-
-import { ProjectControlPanel } from "@project/components/project_control_panel/project_control_panel";
-import { registry } from "@web/core/registry";
-import { pivotView } from "@web/views/pivot/pivot_view";
-
-const projectPivotView = {...pivotView, ControlPanel: ProjectControlPanel};
-
-registry.category("views").add("project_pivot", projectPivotView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:536b552c73e424a1297f96e51a004e2d04529988107a39dde286f70e101184cd
+size 374

@@ -1,26 +1,3 @@
-/** @odoo-module alias=pos_sale_loyalty.models **/
-
-
-import { Orderline } from 'point_of_sale.models';
-import Registries from 'point_of_sale.Registries';
-
-export const PosSaleLoyaltyOrderline = (Orderline) => class PosSaleLoyaltyOrderline extends Orderline {
-    //@override
-    ignoreLoyaltyPoints(args) {
-        if (this.sale_order_origin_id) {
-            return true;
-        }
-        return super.ignoreLoyaltyPoints(args);
-    }
-    //@override
-    setQuantityFromSOL(saleOrderLine) {
-        // we need to consider reward product such as discount in a quotation
-        if (saleOrderLine.reward_id) {
-            this.set_quantity(saleOrderLine.product_uom_qty);
-        } else {
-            super.setQuantityFromSOL(...arguments);
-        }
-    }
-};
-
-Registries.Model.extend(Orderline, PosSaleLoyaltyOrderline);
+version https://git-lfs.github.com/spec/v1
+oid sha256:4161528e69a1bbc7d05a11880a1530ab795c0e8f0e0aec70ffdf4bf77b842e7e
+size 822

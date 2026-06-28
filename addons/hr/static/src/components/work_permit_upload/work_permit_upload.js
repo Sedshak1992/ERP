@@ -1,9 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { BinaryField } from "@web/views/fields/binary/binary_field";
-
-export class WorkPermitUploadField extends BinaryField {}
-WorkPermitUploadField.template = "hr.WorkPermitUploadField";
-
-registry.category("fields").add("work_permit_upload", WorkPermitUploadField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:b264a0653bfb07c107e271b5cbe1a8d7e3a8a68877c4cc9aee43de509198e81a
+size 337

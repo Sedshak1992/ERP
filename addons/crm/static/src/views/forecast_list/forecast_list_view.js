@@ -1,12 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { listView } from "@web/views/list/list_view";
-import { ForecastSearchModel } from "@crm/views/forecast_search_model";
-
-export const forecastListView = {
-    ...listView,
-    SearchModel: ForecastSearchModel,
-};
-
-registry.category("views").add("forecast_list", forecastListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0256617d5106e5f6a288a3d9808a3a1e57a304a91826ac9e4a5f79cfbae65d5
+size 356

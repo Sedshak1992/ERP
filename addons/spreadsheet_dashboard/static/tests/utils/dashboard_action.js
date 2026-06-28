@@ -1,25 +1,3 @@
-/** @odoo-module */
-
-import { createWebClient, doAction } from "@web/../tests/webclient/helpers";
-import { getDashboardServerData } from "./data";
-
-/**
- * @param {object} params
- * @param {object} [params.serverData]
- * @param {function} [params.mockRPC]
- * @param {number} [params.spreadsheetId]
- * @returns {Promise}
- */
-export async function createSpreadsheetDashboard(params = {}) {
-    const webClient = await createWebClient({
-        serverData: params.serverData || getDashboardServerData(),
-        mockRPC: params.mockRPC,
-    });
-    return await doAction(webClient, {
-        type: "ir.actions.client",
-        tag: "action_spreadsheet_dashboard",
-        params: {
-            dashboard_id: params.spreadsheetId,
-        },
-    });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:031dc9a381608eadba8faad3e4a19aa9039c8ba39e3d7d9cb06f65eabc4970ad
+size 747

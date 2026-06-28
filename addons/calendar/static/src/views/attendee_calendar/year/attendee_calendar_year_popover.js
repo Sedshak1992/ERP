@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { CalendarYearPopover } from "@web/views/calendar/calendar_year/calendar_year_popover";
-
-export class AttendeeCalendarYearPopover extends CalendarYearPopover {
-    getRecordClass(record) {
-        const classes = [super.getRecordClass(record)];
-        if (record.isAlone) {
-            classes.push("o_attendee_status_alone");
-        } else {
-            classes.push(`o_attendee_status_${record.attendeeStatus}`);
-        }
-        return classes.join(" ");
-    }
-}
-AttendeeCalendarYearPopover.subTemplates = {
-    ...CalendarYearPopover.subTemplates,
-    body: "calendar.AttendeeCalendarYearPopover.body",
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7ff8b373646b252ef73c09e6c3a0a7ec29f71f591e98ada8a11fc43fd7e3c9f
+size 642

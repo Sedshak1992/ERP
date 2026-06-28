@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { kanbanView } from '@web/views/kanban/kanban_view';
-import { KanbanRenderer } from '@web/views/kanban/kanban_renderer';
-import { PurchaseDashBoard } from '@purchase/views/purchase_dashboard';
-
-
-export class PurchaseDashBoardKanbanRenderer extends KanbanRenderer {};
-
-PurchaseDashBoardKanbanRenderer.template = 'purchase.PurchaseKanbanView';
-PurchaseDashBoardKanbanRenderer.components= Object.assign({}, KanbanRenderer.components, {PurchaseDashBoard})
-
-export const PurchaseDashBoardKanbanView = {
-    ...kanbanView,
-    Renderer: PurchaseDashBoardKanbanRenderer,
-};
-
-registry.category("views").add("purchase_dashboard_kanban", PurchaseDashBoardKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac0f255c2820ebb890260c6e59c5c54e5c9a82bf640e1a41d974729de146b992
+size 734

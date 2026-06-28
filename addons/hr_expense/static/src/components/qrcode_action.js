@@ -1,18 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { Component } from "@odoo/owl";
-
-const actionRegistry = registry.category("actions");
-
-class QRModalComponent extends Component {
-    setup() {
-        this.url = _.str.sprintf(
-            "/report/barcode/?barcode_type=QR&value=%s&width=256&height=256&humanreadable=1",
-            this.props.action.params.url);
-    }
-}
-
-QRModalComponent.template = "hr_expense.QRModalComponent"
-
-actionRegistry.add("expense_qr_code_modal", QRModalComponent);
+version https://git-lfs.github.com/spec/v1
+oid sha256:625fbd2ce227aa10a4e57cee5648ad25f2acbef8bc2bca8c79ccbba0c9fdb3c6
+size 521

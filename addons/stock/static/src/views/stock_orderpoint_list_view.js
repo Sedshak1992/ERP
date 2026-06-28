@@ -1,13 +1,3 @@
-/** @odoo-module */
-
-import { listView } from '@web/views/list/list_view';
-import { registry } from "@web/core/registry";
-import { StockOrderpointListController as Controller } from './stock_orderpoint_list_controller';
-
-export const StockOrderpointListView = {
-    ...listView,
-    Controller,
-    buttonTemplate: 'stock.StockOrderpoint.Buttons',
-};
-
-registry.category("views").add("stock_orderpoint_list", StockOrderpointListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:28fdffbef73e16fa68c6ee5bcba9cf6c44c64b0ee55714490b2715e28c13dfe6
+size 434

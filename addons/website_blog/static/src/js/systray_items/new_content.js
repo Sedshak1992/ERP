@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
-import { patch } from 'web.utils';
-
-patch(NewContentModal.prototype, 'website_blog_new_content', {
-    setup() {
-        this._super();
-
-        const newBlogElement = this.state.newContentElements.find(element => element.moduleXmlId === 'base.module_website_blog');
-        newBlogElement.createNewContent = () => this.onAddContent('website_blog.blog_post_action_add', true);
-        newBlogElement.status = MODULE_STATUS.INSTALLED;
-        newBlogElement.model = 'blog.post';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:33f6c2c99aaaa3b7aee75ddb741e29ffe8e3692e9985410d63a53c9468ae0ee8
+size 596

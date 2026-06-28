@@ -1,8 +1,3 @@
-/** @odoo-module **/
-
-import { addModelNamesToFetch, insertModelFields } from '@bus/../tests/helpers/model_definitions_helpers';
-
-addModelNamesToFetch(['im_livechat.channel']);
-insertModelFields('res.users.settings', {
-    is_discuss_sidebar_category_livechat_open: { default: true },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:aba40b92d9616ea4c60910aade1bebd8ddf82ee85733184366307aae3fa2b741
+size 289

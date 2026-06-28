@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { BASE_VISUAL } from '@mail/models/chat_window_manager';
-
-registerPatch({
-    name: 'ChatWindowManager',
-    fields: {
-        visual: {
-            compute() {
-                if (this.messaging.isWebsitePreviewOpen) {
-                    return JSON.parse(JSON.stringify(BASE_VISUAL));
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cfd54a6d519463604eb51b796c77d929dec2ecc7ae0e7c7c5b76139776b30bc
+size 466

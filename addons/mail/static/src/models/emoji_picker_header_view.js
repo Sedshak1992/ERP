@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'EmojiPickerHeaderView',
-    fields: {
-        actionListView: one('EmojiPickerHeaderActionListView', {
-            default: {},
-            isCausal: true,
-            inverse: 'owner',
-        }),
-        emojiCategoryBarView: one('EmojiCategoryBarView', {
-            default: {},
-            inverse: 'emojiPickerHeaderViewOwner',
-            readonly: true,
-            required: true,
-        }),
-        emojiPickerViewOwner: one('EmojiPickerView', {
-            identifying: true,
-            inverse: 'headerView',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf1f2fc68fd2f2bedd46a0ed39d187cf06ffd5df282325d470ffe3fc8d2b195a
+size 699

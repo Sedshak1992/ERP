@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'NotificationListView',
-    fields: {
-        filteredChannels: {
-            compute() {
-                if (this.filter === 'livechat') {
-                    return this.messaging.models['Channel'].all(channel =>
-                        channel.channel_type === 'livechat' &&
-                        channel.thread.isPinned
-                    );
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:50de3b4b5f8aaa0dac250ac026e71b8f287c9ccf28f09a55323242108933eb0c
+size 547

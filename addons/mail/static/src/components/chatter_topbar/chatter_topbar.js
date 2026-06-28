@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChatterTopbar extends Component {
-
-    /**
-     * @returns {ChatterTopbar}
-     */
-    get chatterTopbar() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ChatterTopbar, {
-    props: { record: Object },
-    template: 'mail.ChatterTopbar',
-});
-
-registerMessagingComponent(ChatterTopbar);
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c6bfcd1b4397af5b9cba426b116bd2962efe1132c94df9322286685aa08560b
+size 441

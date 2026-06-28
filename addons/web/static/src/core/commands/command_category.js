@@ -1,12 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-
-const commandCategoryRegistry = registry.category("command_categories");
-commandCategoryRegistry
-    .add("app", {}, { sequence: 10 })
-    .add("smart_action", {}, { sequence: 15 })
-    .add("actions", {}, { sequence: 30 })
-    .add("navbar", {}, { sequence: 40 })
-    .add("default", {}, { sequence: 100 })
-    .add("debug", {}, { sequence: 110 });
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b3260f3b6559f139731bb7a2306f0efaa86be541df2c3730373ce5d4a934964
+size 420

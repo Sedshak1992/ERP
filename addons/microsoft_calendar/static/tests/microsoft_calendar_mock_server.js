@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from "@web/core/utils/patch";
-import { MockServer } from "@web/../tests/helpers/mock_server";
-
-patch(MockServer.prototype, "microsoft_calendar_mock_server", {
-    /**
-     * Simulate the creation of a custom appointment type
-     * by receiving a list of slots.
-     * @override
-     */
-    async _performRPC(route, args) {
-        if (route === '/microsoft_calendar/sync_data') {
-            return Promise.resolve({status: 'no_new_event_from_microsoft'});
-        }
-        return this._super(...arguments);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7772fbed864a8403c6bbda38f169dcd083bc3e7ade346a9f1675a96021177e2
+size 560

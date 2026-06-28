@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { Record, RelationalModel } from "@web/views/basic_relational_model";
-
-export class StockPickingAutoSaveRecord extends Record {
-    setup(params, state) {
-        super.setup(params, state);
-    }
-
-    async saveAndOpenDetails() {
-        await new Promise((resolve) => {
-            this.model.env.bus.trigger("STOCK_MOVE:UPDATED", { resolve });
-        });
-        await new Promise((resolve) => {
-            this.model.env.bus.trigger("STOCK_MOVE:SAVED", {
-                id: this.data.id,
-                product_id: this.data.product_id,
-                resolve,
-            });
-        });
-    }
-}
-
-export class StockPickingModel extends RelationalModel {}
-StockPickingModel.Record = StockPickingAutoSaveRecord;
+version https://git-lfs.github.com/spec/v1
+oid sha256:415627df38c9943c19cb73926541f5336125483795db88c0f2c5bd96d0d87bd7
+size 749

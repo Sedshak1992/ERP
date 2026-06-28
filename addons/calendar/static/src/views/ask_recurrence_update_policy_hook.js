@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-import { AskRecurrenceUpdatePolicyDialog } from "@calendar/views/ask_recurrence_update_policy_dialog";
-
-export function askRecurrenceUpdatePolicy(dialogService) {
-    return new Promise((resolve) => {
-        dialogService.add(AskRecurrenceUpdatePolicyDialog, {
-            confirm: resolve,
-        }, {
-            onClose: resolve.bind(null, false),
-        });
-    });
-}
-
-export function useAskRecurrenceUpdatePolicy() {
-    const dialogService = useService("dialog");
-    return askRecurrenceUpdatePolicy.bind(null, dialogService);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1874b51a1272234fad2e4f5b32f2b1a4de6f74fd4f3ddc1cd3ace015dd93aa5
+size 613

@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { useEnvDebugContext } from "./debug_context";
-import { Dropdown } from "@web/core/dropdown/dropdown";
-import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-
-import { Component } from "@odoo/owl";
-
-export class DebugMenuBasic extends Component {
-    setup() {
-        const debugContext = useEnvDebugContext();
-        // Needs to be bound to this for use in template
-        this.getElements = async () => {
-            this.elements = await debugContext.getItems(this.env);
-        };
-    }
-}
-DebugMenuBasic.components = {
-    Dropdown,
-    DropdownItem,
-};
-DebugMenuBasic.template = "web.DebugMenu";
+version https://git-lfs.github.com/spec/v1
+oid sha256:59d579fab38414a5fe9d75e1e1e4ccdeb6722619f9089387706ccaeb723405d3
+size 643

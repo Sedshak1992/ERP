@@ -1,34 +1,3 @@
-odoo.define('website.s_timeline_options', function (require) {
-'use strict';
-
-const options = require('web_editor.snippets.options');
-
-options.registry.Timeline = options.Class.extend({
-    displayOverlayOptions: true,
-
-    /**
-     * @override
-     */
-    start: function () {
-        var $buttons = this.$el.find('we-button.o_we_overlay_opt');
-        var $overlayArea = this.$overlay.find('.o_overlay_options_wrap');
-        $overlayArea.append($buttons);
-
-        return this._super(...arguments);
-    },
-
-    //--------------------------------------------------------------------------
-    // Options
-    //--------------------------------------------------------------------------
-
-    /**
-     * Moves the card to the right/left.
-     *
-     * @see this.selectClass for parameters
-     */
-    timelineCard: function (previewMode, widgetValue, params) {
-        const $timelineRow = this.$target.closest('.s_timeline_row');
-        $timelineRow.toggleClass('flex-row-reverse flex-row');
-    },
-});
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:921499a738b1c347d23120b524b5a840f8f9091181c3cf846c323b88bd2941b4
+size 1008

@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-/**
- * Models a record that makes use of a clock.
- */
-registerModel({
-    name: 'ClockWatcher',
-    identifyingMode: 'xor',
-    fields: {
-        activityListViewItemOwner: one('ActivityListViewItem', {
-            identifying: true,
-            inverse: 'clockWatcher',
-        }),
-        activityViewOwner: one('ActivityView', {
-            identifying: true,
-            inverse: 'clockWatcher',
-        }),
-        clock: one('Clock', {
-            inverse: 'watchers',
-            required: true,
-        }),
-        messageViewOwner: one('MessageView', {
-            identifying: true,
-            inverse: 'clockWatcher',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f875551c9db7d87807aae2c35a5a6ed89019c2f68ae7e0176f846a442803da7c
+size 779

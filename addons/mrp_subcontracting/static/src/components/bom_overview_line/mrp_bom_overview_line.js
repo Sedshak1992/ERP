@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from "@web/core/utils/patch";
-import { BomOverviewLine } from "@mrp/components/bom_overview_line/mrp_bom_overview_line";
-
-patch(BomOverviewLine.prototype, "mrp_subcontracting", {
-    /**
-     * @override
-     */
-    async goToRoute(routeType) {
-        if (routeType == "subcontract") {
-            return this.goToAction(this.data.link_id, this.data.link_model);
-        }
-        return this._super(...arguments);
-    }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5183dd15e7c6364838229ffdda10c8ec95f91735d9b1e898a19baae5aa70360
+size 465

@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from 'web.utils';
-import { WebsitePreview } from '@website/client_actions/website_preview/website_preview';
-
-patch(WebsitePreview.prototype, 'website_slides_website_preview', {
-    /**
-     * @todo remove me in master, the cleaning of iframe is now done
-     * globally in the website part
-     * @override
-     */
-    _cleanIframeFallback() {
-        return this._super(...arguments);
-    }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0fc6600a9eaa6a96a36dfa41d94b035327c23a18160e1aa3a45729b2bbb7f81e
+size 435

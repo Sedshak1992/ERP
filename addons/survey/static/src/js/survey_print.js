@@ -1,31 +1,3 @@
-odoo.define('survey.print', function (require) {
-'use strict';
-
-var publicWidget = require('web.public.widget');
-var dom = require('web.dom');
-
-publicWidget.registry.SurveyPrintWidget = publicWidget.Widget.extend({
-    selector: '.o_survey_print',
-
-    //--------------------------------------------------------------------------
-    // Widget
-    //--------------------------------------------------------------------------
-
-    /**
-    * @override
-    */
-    start: function () {
-        var self = this;
-        return this._super.apply(this, arguments).then(function () {
-            // Will allow the textarea to resize if any carriage return instead of showing scrollbar.
-            self.$('textarea').each(function () {
-                dom.autoresize($(this));
-            });
-        });
-    },
-
-});
-
-return publicWidget.registry.SurveyPrintWidget;
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6ba17a2dd45df127ddd42efd6ba94ca268fe8d0750c62e39d748ca6c6fa3d69
+size 863

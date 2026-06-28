@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-class LinkPreviewCardView extends Component {
-
-    /**
-     * @returns {LinkPreviewCardView}
-     */
-    get linkPreviewCardView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(LinkPreviewCardView, {
-    props: { record: Object },
-    template: 'mail.LinkPreviewCardView',
-});
-
-registerMessagingComponent(LinkPreviewCardView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:153afa27ed777e2b0da83d898ed7212724b76e760e4e3a360a617c47ac54c688
+size 470

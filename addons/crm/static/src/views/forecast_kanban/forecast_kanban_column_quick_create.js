@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { _t } from "@web/core/l10n/translation";
-import { sprintf } from "@web/core/utils/strings";
-import { INTERVAL_OPTIONS } from "@web/search/utils/dates";
-import { KanbanColumnQuickCreate } from "@web/views/kanban/kanban_column_quick_create";
-
-export class ForecastKanbanColumnQuickCreate extends KanbanColumnQuickCreate {
-    /**
-     * @override
-     */
-    get relatedFieldName() {
-        const { granularity = "month" } = this.props.groupByField;
-        const { description } = INTERVAL_OPTIONS[granularity];
-        return sprintf(_t("Add next %s"), description.toLocaleLowerCase());
-    }
-    /**
-     * @override
-     *
-     * Create column directly upon "unfolding" quick create.
-     */
-    unfold() {
-        this.props.onValidate();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c87d4389bd2ec6b989a9d8abaa8bbc74b16841953a38bd9d9627a98ed73aba3
+size 781

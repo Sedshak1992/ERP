@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ThreadTextualTypingStatus extends Component {
-
-    /**
-     * @returns {Thread}
-     */
-    get thread() {
-        return this.props.thread;
-    }
-
-}
-
-Object.assign(ThreadTextualTypingStatus, {
-    props: { thread: Object },
-    template: 'mail.ThreadTextualTypingStatus',
-});
-
-registerMessagingComponent(ThreadTextualTypingStatus);
+version https://git-lfs.github.com/spec/v1
+oid sha256:268c50af5484daeba861237c5945201518fa41b17853df28d89b2f9ffd0ecd33
+size 475

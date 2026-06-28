@@ -1,25 +1,3 @@
-odoo.define('pos_restaurant.SplitOrderline', function(require) {
-    'use strict';
-
-    const { useListener } = require("@web/core/utils/hooks");
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class SplitOrderline extends PosComponent {
-        setup() {
-            super.setup();
-            useListener('click', this.onClick);
-        }
-        get isSelected() {
-            return this.props.split.quantity !== 0;
-        }
-        onClick() {
-            this.trigger('click-line', this.props.line);
-        }
-    }
-    SplitOrderline.template = 'SplitOrderline';
-
-    Registries.Component.add(SplitOrderline);
-
-    return SplitOrderline;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ef67d1a70e04d46d17d48c7bf5b99a5f44e9fb9958659838e6d740e1cb0d0fe
+size 731

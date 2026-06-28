@@ -1,17 +1,3 @@
-odoo.define('point_of_sale.SyncNotification', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class SyncNotification extends PosComponent {
-        onClick() {
-            this.env.pos.push_orders(null, { show_error: true });
-        }
-    }
-    SyncNotification.template = 'SyncNotification';
-
-    Registries.Component.add(SyncNotification);
-
-    return SyncNotification;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:5480bc033ac5f7bf66c9893fdab512343e3193ab1e1701af40649a7dbc13e7a5
+size 497

@@ -1,20 +1,3 @@
-odoo.define('web.SessionStorageService', function (require) {
-'use strict';
-
-/**
- * This module defines a service to access the sessionStorage object.
- */
-
-var AbstractStorageService = require('web.AbstractStorageService');
-var core = require('web.core');
-var sessionStorage = require('web.sessionStorage');
-
-var SessionStorageService = AbstractStorageService.extend({
-    storage: sessionStorage,
-});
-
-core.serviceRegistry.add('session_storage', SessionStorageService);
-
-return SessionStorageService;
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:36b7cc7ab4244bb66b57dc6e601c826ba00200e0e9aecf2b18ddfab41c406109
+size 507

@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
-import { patch } from 'web.utils';
-
-patch(NewContentModal.prototype, 'website_livechat_new_content', {
-    setup() {
-        this._super();
-
-        const newChannelElement = this.state.newContentElements.find(element => element.moduleXmlId === 'base.module_website_livechat');
-        newChannelElement.createNewContent = () => this.onAddContent('website_livechat.im_livechat_channel_action_add');
-        newChannelElement.status = MODULE_STATUS.INSTALLED;
-        newChannelElement.model = 'im_livechat.channel';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b82bf7220b64c5bf63158265d14360c08d28a8940817d072321c16a41cb565eb
+size 634

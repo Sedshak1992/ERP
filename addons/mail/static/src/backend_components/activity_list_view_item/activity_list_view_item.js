@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ActivityListViewItem extends Component {
-
-    get activityListViewItem() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ActivityListViewItem, {
-    props: { record: Object },
-    template: 'mail.ActivityListViewItem',
-});
-
-registerMessagingComponent(ActivityListViewItem);
+version https://git-lfs.github.com/spec/v1
+oid sha256:ca78dfad1fad208cce2b7629434c6f5b2d74aa3f7fbcb28866515ca430124d2d
+size 428

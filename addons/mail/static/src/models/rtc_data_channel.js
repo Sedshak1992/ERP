@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'RtcDataChannel',
-    lifecycleHooks: {
-        _willDelete() {
-            this.dataChannel.close();
-        },
-    },
-    fields: {
-        dataChannel: attr({
-            required: true,
-            readonly: true,
-        }),
-        rtcSession: one('RtcSession', {
-            identifying: true,
-            inverse: 'rtcDataChannel',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:71f78664770e7cfdd162010e0c8700f244ada3862f068891b69b53b3acd8572c
+size 521

@@ -1,20 +1,3 @@
-odoo.define("website.tour.website_navbar_menu", function (require) {
-"use strict";
-
-var tour = require("web_tour.tour");
-
-tour.register("website_navbar_menu", {
-    test: true,
-    url: "/",
-}, [
-    {
-        content: "Ensure menus are in DOM",
-        trigger: '#top_menu .nav-item a:contains("Test Tour Menu")',
-        run: function () {}, // it's a check
-    }, {
-        content: "Ensure menus loading is done (so they are actually visible)",
-        trigger: 'body:not(:has(.o_menu_loading))',
-        run: function () {}, // it's a check
-    }
-]);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:30f3f869520ab23cb1fa8edab70788a1e9329306c3f27ed753da520484698344
+size 560

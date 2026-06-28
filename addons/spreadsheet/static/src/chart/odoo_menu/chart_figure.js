@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from "@web/core/utils/patch";
-import spreadsheet from "@spreadsheet/o_spreadsheet/o_spreadsheet_extended";
-import { useService } from "@web/core/utils/hooks";
-
-patch(spreadsheet.components.ChartFigure.prototype, "spreadsheet.ChartFigure", {
-    setup() {
-        this._super();
-        this.menuService = useService("menu");
-        this.actionService = useService("action");
-    },
-    async navigateToOdooMenu() {
-        const menu = this.env.model.getters.getChartOdooMenu(this.props.figure.id);
-        if (!menu) {
-            throw new Error(`Cannot find any menu associated with the chart`);
-        }
-        await this.actionService.doAction(menu.actionID);
-    },
-    get hasOdooMenu() {
-        return this.env.model.getters.getChartOdooMenu(this.props.figure.id) !== undefined;
-    },
-    async onClick() {
-        if (this.env.isDashboard() && this.hasOdooMenu) {
-            this.navigateToOdooMenu();
-        }
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c3a4ef4e7ff82c5523a0d4089a47dc5818bed1cd2aa3cae0952cf2ae1b5d701
+size 977

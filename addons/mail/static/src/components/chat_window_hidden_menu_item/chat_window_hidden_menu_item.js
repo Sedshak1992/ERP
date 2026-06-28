@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChatWindowHiddenMenuItem extends Component {
-
-    /**
-     * @returns {ChatWindowHeaderView}
-     */
-     get chatWindowHeaderView() {
-        return this.props.chatWindowHeaderView;
-    }
-}
-
-Object.assign(ChatWindowHiddenMenuItem, {
-    defaultProps: {
-        isLast: false,
-    },
-    props: {
-        chatWindowHeaderView: Object,
-        isLast: {
-            type: Boolean,
-            optional: true,
-        },
-    },
-    template: 'mail.ChatWindowHiddenMenuItem',
-});
-
-registerMessagingComponent(ChatWindowHiddenMenuItem);
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d87b6c7f5179ef9b288d407382bb50da2d5933eef7420a42d164f773f4722f4
+size 674

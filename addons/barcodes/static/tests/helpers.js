@@ -1,20 +1,3 @@
-/* @odoo-module */
-
-import { triggerEvent } from "@web/../tests/helpers/utils";
-
-export function simulateBarCode(chars, target = document.body, selector = undefined) {
-    for (let char of chars) {
-        let keycode;
-        if (char === "Enter") {
-            keycode = $.ui.keyCode.ENTER;
-        } else if (char === "Tab") {
-            keycode = $.ui.keyCode.TAB;
-        } else {
-            keycode = char.charCodeAt(0);
-        }
-        triggerEvent(target, selector, "keydown", {
-            key: char,
-            keyCode: keycode,
-        });
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbe4a16719c332497cc5ec12cd57caad26229096837a0c2ed5774d91244bcfa4
+size 564

@@ -1,19 +1,3 @@
-odoo.define('point_of_sale.EditListInput', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class EditListInput extends PosComponent {
-        onKeyup(event) {
-            if (event.key === "Enter" && event.target.value.trim() !== '') {
-                this.trigger('create-new-item');
-            }
-        }
-    }
-    EditListInput.template = 'EditListInput';
-
-    Registries.Component.add(EditListInput);
-
-    return EditListInput;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:18e46319955fb91a9feeb5eba01793757666ea01ed6d37050e16bb145c24278b
+size 558

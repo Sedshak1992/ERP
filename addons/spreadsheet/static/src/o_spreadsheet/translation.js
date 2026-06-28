@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import spreadsheet from "@spreadsheet/o_spreadsheet/o_spreadsheet_extended";
-import { _t } from "@web/core/l10n/translation";
-
-const { args, toString } = spreadsheet.helpers;
-const { functionRegistry } = spreadsheet.registries;
-
-functionRegistry.add("_t", {
-    description: _t("Get the translated value of the given string"),
-    args: args(`
-        value (string) ${_t("Value to translate.")}
-    `),
-    compute: function (value) {
-        return _t(toString(value));
-    },
-    returns: ["STRING"],
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3af8a81204d66d879898ca9f7cdec42f571f25909ab676f999296573d36e85e9
+size 530

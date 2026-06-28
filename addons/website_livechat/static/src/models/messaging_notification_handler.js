@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'MessagingNotificationHandler',
-    recordMethods: {
-        /**
-         * @override
-         */
-        async _handleNotification(message) {
-            if (message.type === 'website_livechat.send_chat_request') {
-                const convertedData = this.messaging.models['Thread'].convertData(
-                    Object.assign({ model: 'mail.channel' }, message.payload)
-                );
-                this.messaging.models['Thread'].insert(convertedData);
-                const channel = this.messaging.models['Thread'].findFromIdentifyingData({
-                    id: message.payload.id,
-                    model: 'mail.channel',
-                });
-                this.messaging.chatWindowManager.openThread(channel, {
-                    makeActive: true,
-                });
-            }
-            return this._super(message);
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ff27f38f73608cecb9d725d044933eea080162d04c736f5a41d9acfee332e66
+size 975

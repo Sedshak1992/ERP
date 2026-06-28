@@ -1,25 +1,3 @@
-/** @odoo-module */
-
-import { calendarView } from '@web/views/calendar/calendar_view';
-
-import { TimeOffCalendarController } from './calendar_controller';
-import { TimeOffCalendarModel } from './calendar_model';
-import { TimeOffCalendarRenderer, TimeOffDashboardCalendarRenderer } from './calendar_renderer';
-
-import { registry } from '@web/core/registry';
-
-const TimeOffCalendarView = {
-    ...calendarView,
-
-    Controller: TimeOffCalendarController,
-    Renderer: TimeOffCalendarRenderer,
-    Model: TimeOffCalendarModel,
-
-    buttonTemplate: "hr_holidays.CalendarController.controlButtons",
-}
-
-registry.category('views').add('time_off_calendar', TimeOffCalendarView);
-registry.category('views').add('time_off_calendar_dashboard', {
-    ...TimeOffCalendarView,
-    Renderer: TimeOffDashboardCalendarRenderer,
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a24a39cf11f2fe902db3c3f810ef2007a5dfe686df83d661f822d5d7255dc7b
+size 816

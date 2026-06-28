@@ -1,16 +1,3 @@
-/** @odoo-module */
-
-import { evaluateExpr } from "@web/core/py_js/py";
-import { formView } from "@web/views/form/form_view";
-
-export class SettingsArchParser extends formView.ArchParser {
-    parseXML() {
-        const result = super.parseXML(...arguments);
-        Array.from(result.querySelectorAll(".app_settings_header field")).forEach((el) => {
-            const options = evaluateExpr(el.getAttribute("options") || "{}");
-            options.isHeaderField = true;
-            el.setAttribute("options", JSON.stringify(options));
-        });
-        return result;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9d47a897773032a1584820b80e90e162ff17eef8cfb3ef8bf382b69b58bc70d
+size 579

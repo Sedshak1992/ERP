@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'ir.model',
-    fields: {
-        /**
-         * Determines the name of the views that are available for this model.
-         */
-        availableWebViews: attr({
-            compute() {
-                return ['kanban', 'list', 'form', 'activity'];
-            },
-        }),
-        activityGroup: one('ActivityGroup', {
-            inverse: 'irModel',
-        }),
-        iconUrl: attr(),
-        id: attr({
-            identifying: true,
-        }),
-        model: attr({
-            required: true,
-        }),
-        name: attr(),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:2814cb4dc09e33f9970c89861ce2b700a17082cb22d83565e88c3f4711157e97
+size 707

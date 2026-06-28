@@ -1,35 +1,3 @@
-odoo.define('website_sale_tour.website_sale_shop_pricelist_tour', function (require) {
-    'use strict';
-
-    var tour = require("web_tour.tour");
-
-    tour.register('website_sale_shop_pricelist_tour', {
-        test: true,
-        url: '/shop'
-    }, [
-    {
-        content: "Check pricelist",
-        trigger: ".o_pricelist_dropdown:contains('Public Pricelist 1')",
-        run: function() {} // Check
-    },
-    {
-        content: "Go to login page",
-        trigger: ".nav-link:contains('Sign in')"
-    },
-    {
-        content: "Submit login",
-        trigger: '.oe_login_form',
-        run: function () {
-            $('.oe_login_form input[name="login"]').val("toto");
-            $('.oe_login_form input[name="password"]').val("long_enough_password");
-            $('.oe_login_form input[name="redirect"]').val("/shop");
-            $('.oe_login_form').submit();
-        }
-    },
-    {
-        content: "Check pricelist",
-        trigger: ".o_pricelist_dropdown:contains('User Pricelist')",
-        run: function() {} // Check
-    },
-    ]);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:5429ecddeb95d98371cc0159d401620ad7b580ea21da77ce5f3cdb022f5a37f2
+size 1055

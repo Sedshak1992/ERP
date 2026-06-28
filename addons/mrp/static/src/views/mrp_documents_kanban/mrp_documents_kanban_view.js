@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-
-import { kanbanView } from "@web/views/kanban/kanban_view";
-import { MrpDocumentsKanbanController } from "@mrp/views/mrp_documents_kanban/mrp_documents_kanban_controller";
-import { MrpDocumentsKanbanRenderer } from "@mrp/views/mrp_documents_kanban/mrp_documents_kanban_renderer";
-
-export const mrpDocumentsKanbanView = {
-    ...kanbanView,
-    Controller: MrpDocumentsKanbanController,
-    Renderer: MrpDocumentsKanbanRenderer,
-    buttonTemplate: "mrp.MrpDocumentsKanbanView.Buttons",
-};
-
-registry.category("views").add("mrp_documents_kanban", mrpDocumentsKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:10500ddd829a5958d2c53adb2784e4a03d34da76dccfacb0fb3ed182b7c95659
+size 640

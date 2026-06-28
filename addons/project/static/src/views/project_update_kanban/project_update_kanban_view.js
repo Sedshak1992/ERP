@@ -1,12 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { kanbanView } from "@web/views/kanban/kanban_view";
-import { ProjectUpdateKanbanController } from './project_update_kanban_controller';
-
-export const projectUpdateKanbanView = {
-    ...kanbanView,
-    Controller: ProjectUpdateKanbanController,
-};
-
-registry.category('views').add('project_update_kanban', projectUpdateKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd740d8361b30dde2aa85b19cb31021c6a7f270ea56e6411067391e02e651b02
+size 406

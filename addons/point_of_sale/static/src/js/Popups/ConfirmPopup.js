@@ -1,21 +1,3 @@
-odoo.define('point_of_sale.ConfirmPopup', function(require) {
-    'use strict';
-
-    const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
-    const Registries = require('point_of_sale.Registries');
-    const { _lt } = require('@web/core/l10n/translation');
-
-    // formerly ConfirmPopupWidget
-    class ConfirmPopup extends AbstractAwaitablePopup {}
-    ConfirmPopup.template = 'ConfirmPopup';
-    ConfirmPopup.defaultProps = {
-        confirmText: _lt('Ok'),
-        cancelText: _lt('Cancel'),
-        title: _lt('Confirm ?'),
-        body: '',
-    };
-
-    Registries.Component.add(ConfirmPopup);
-
-    return ConfirmPopup;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba8db6c9963eaafd7a855b1a34d6483af46720a0656dbe9839a4596a6868ac79
+size 655

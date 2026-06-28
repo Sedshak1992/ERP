@@ -1,14 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-
-const { Component } = owl;
-
-export class LazyTestComponent extends Component {
-    setup() {
-        this.props.onCreated();
-    }
-}
-LazyTestComponent.template = "test_assetsbundle.LazyTestComponent";
-
-registry.category("lazy_components").add("LazyTestComponent", LazyTestComponent);
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe763534158fa254ac480b555a1b6d5d5bcb5cd62aade7813c34520717c587e1
+size 353

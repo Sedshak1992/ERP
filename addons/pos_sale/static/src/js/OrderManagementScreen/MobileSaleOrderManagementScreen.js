@@ -1,26 +1,3 @@
-odoo.define('point_of_sale.MobileSaleOrderManagementScreen', function (require) {
-    const SaleOrderManagementScreen = require('pos_sale.SaleOrderManagementScreen');
-    const Registries = require('point_of_sale.Registries');
-    const { useListener } = require("@web/core/utils/hooks");
-
-    const { useState } = owl;
-
-    const MobileSaleOrderManagementScreen = (SaleOrderManagementScreen) => {
-        class MobileSaleOrderManagementScreen extends SaleOrderManagementScreen {
-            setup() {
-                super.setup();
-                useListener('click-order', this._onShowDetails)
-                this.mobileState = useState({ showDetails: false });
-            }
-            _onShowDetails() {
-                this.mobileState.showDetails = true;
-            }
-        }
-        MobileSaleOrderManagementScreen.template = 'MobileSaleOrderManagementScreen';
-        return MobileSaleOrderManagementScreen;
-    };
-
-    Registries.Component.addByExtending(MobileSaleOrderManagementScreen, SaleOrderManagementScreen);
-
-    return MobileSaleOrderManagementScreen;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0702fe0cfd8b41dad7ca069413709412c28da57d6fc14242ad32bf5420b8bfca
+size 1080

@@ -1,11 +1,3 @@
-/** @odoo-module **/
-import { formatMonetary } from "@web/views/fields/formatters";
-import { patch } from '@web/core/utils/patch';
-
-import { ForecastedDetails } from "@stock/stock_forecasted/forecasted_details";
-
-patch(ForecastedDetails.prototype, 'sale_stock.ForecastedDetails', {
-    _formatMonetary(num, currencyId){
-        return formatMonetary(num,{ currencyId: currencyId});
-    }
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:622e2d5cfbe819ff3948c3cee8fd0f6b34a3490663233d07884b3f3fd974d825
+size 392

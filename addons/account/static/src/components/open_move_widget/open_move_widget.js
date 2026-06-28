@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { useService } from "@web/core/utils/hooks";
-
-const { Component } = owl;
-
-class OpenMoveWidget extends Component {
-    setup() {
-        super.setup();
-        this.action = useService("action");
-    }
-
-    async openMove(ev) {
-        this.action.doActionButton({
-            type: "object",
-            resId: this.props.record.resId,
-            name: "action_open_business_doc",
-            resModel: "account.move.line",
-        });
-    }
-}
-
-OpenMoveWidget.template = "account.OpenMoveWidget";
-registry.category("fields").add("open_move_widget", OpenMoveWidget);
+version https://git-lfs.github.com/spec/v1
+oid sha256:675aa537e1310b49dc831bf50b760186a5b14d1700a110d72e4e78db1cf91eda
+size 644

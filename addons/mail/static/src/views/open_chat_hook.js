@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-
-export const helpers = {
-    SUPPORTED_M2X_AVATAR_MODELS: ["res.users"],
-    buildOpenChatParams: (resModel, id) => {
-        if (resModel === "res.users") {
-            return { userId: id };
-        }
-    },
-}
-
-export function useOpenChat(resModel) {
-    const messagingService = useService("messaging");
-    if (!helpers.SUPPORTED_M2X_AVATAR_MODELS.includes(resModel)) {
-        throw new Error(
-            `This widget is only supported on many2one and many2many fields pointing to ${JSON.stringify(
-                helpers.SUPPORTED_M2X_AVATAR_MODELS
-            )}`
-        );
-    }
-    return async (id) => {
-        const messaging = await messagingService.get();
-        messaging.openChat(helpers.buildOpenChatParams(resModel, id));
-    };
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f442742d8f39d73a30b7f4739abe7e2da494687a03c70e3559d567311af5bea1
+size 828

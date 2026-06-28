@@ -1,25 +1,3 @@
-/** @odoo-module **/
-import { escapeRegExp } from "@web/core/utils/strings";
-
-import { Component, useState, onWillRender } from "@odoo/owl";
-
-export class HighlightText extends Component {
-    setup() {
-        this.searchState = useState(this.env.searchState);
-
-        onWillRender(() => {
-            const splitText = this.props.originalText.split(
-                new RegExp(`(${escapeRegExp(this.searchState.value)})`, "ig")
-            );
-            this.splitText =
-                this.searchState.value.length && splitText.length > 1
-                    ? splitText
-                    : [this.props.originalText];
-        });
-    }
-}
-HighlightText.template = "web.HighlightText";
-HighlightText.props = {
-    originalText: String,
-};
-HighlightText.highlightClass = "highlighter";
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6ef9c867ea7f03dde9d4283f3ef35efe2bd9b6b399ea45353ee8ad57e9a36ee
+size 791

@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class CallSettingsMenu extends Component {
-
-    /**
-     * @returns {CallSettingsMenu}
-     */
-    get callSettingsMenu() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(CallSettingsMenu, {
-    props: { record: Object },
-    template: 'mail.CallSettingsMenu',
-});
-
-registerMessagingComponent(CallSettingsMenu);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2eb5e61b3830777d7db0d8b5784be531e5c489600510760f4987ec9ace1cff22
+size 459

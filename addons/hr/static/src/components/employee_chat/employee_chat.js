@@ -1,21 +1,3 @@
-/** @odoo-module */
-
-import { registry } from '@web/core/registry';
-import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-
-import { useOpenChat } from "@mail/views/open_chat_hook";
-
-const { Component } = owl;
-
-export class HrEmployeeChat extends Component {
-    setup() {
-        super.setup();
-        this.openChat = useOpenChat(this.props.record.resModel);
-    }
-}
-HrEmployeeChat.props = {
-    ...standardWidgetProps,
-};
-HrEmployeeChat.template = 'hr.OpenChat';
-
-registry.category("view_widgets").add("hr_employee_chat", HrEmployeeChat);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b37270cfa9e1c71e550c7e2b8a93184c37754bb61dcf0a27b4ea84d6c01e75b
+size 567

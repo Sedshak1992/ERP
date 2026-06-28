@@ -1,32 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { FloatField } from '@web/views/fields/float/float_field';
-
-const { useRef, useEffect } = owl;
-
-export class MrpConsumed extends FloatField {
-    setup() {
-        super.setup();
-        const inputRef = useRef("numpadDecimal");
-
-        useEffect(
-            (inputEl) => {
-                if (inputEl) {
-                    inputEl.addEventListener("input", this.onInput.bind(this));
-                    return () => {
-                        inputEl.removeEventListener("input", this.onInput.bind(this));
-                    };
-                }
-            },
-            () => [inputRef.el]
-        );
-    }
-
-    onInput(ev) {
-        this.props.setDirty(true);
-        return this.props.record.update({ manual_consumption: true });
-    }
-}
-
-registry.category('fields').add('mrp_consumed', MrpConsumed);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7a7d5e75bf1597872380fcfe7dcc334e099cc5203c3eb447b2e40fd65d114de
+size 885

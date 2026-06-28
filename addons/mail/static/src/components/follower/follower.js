@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class Follower extends Component {
-    /**
-     * @returns {FollowerView}
-     */
-    get followerView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(Follower, {
-    props: { record: Object },
-    template: 'mail.Follower',
-});
-
-registerMessagingComponent(Follower);
+version https://git-lfs.github.com/spec/v1
+oid sha256:966f9b4652862c92d6be26274ffc0cdc75e8ca5f522b34df10f2c1d859069f47
+size 417

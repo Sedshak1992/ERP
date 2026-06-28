@@ -1,14 +1,3 @@
-/** @odoo-module */
-
-import { useService } from "@web/core/utils/hooks";
-
-import { useEffect, useRef } from "@odoo/owl";
-
-export function useTooltip(refName, params) {
-    const tooltip = useService("tooltip");
-    const ref = useRef(refName);
-    useEffect(
-        (el) => tooltip.add(el, params),
-        () => [ref.el]
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d477792ba3f2c5262a2d288cce80f06b224493a13df5f9fa9b5362ab9801d9f5
+size 332

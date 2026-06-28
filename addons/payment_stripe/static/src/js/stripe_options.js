@@ -1,17 +1,3 @@
-/** @odoo-module */
-
-export class StripeOptions {
-    /**
-     * Prepare the options to init the Stripe JS Object.
-     *
-     * This method serves as a hook for modules that would fully implement Stripe Connect.
-     *
-     * @param {object} processingValues
-     * @return {object}
-     */
-    _prepareStripeOptions(processingValues) {
-        return {
-            'apiVersion': '2019-05-16',  // The API version of Stripe implemented in this module.
-        };
-    };
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:888202e1093791bdafd90e079a2e82350091559d25f4fe1cdad012831cc9d6c7
+size 473

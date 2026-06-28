@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-import { useBus, useService } from "@web/core/utils/hooks";
-
-import { Component } from "@odoo/owl";
-
-export class ProfilingItem extends Component {
-    setup() {
-        this.profiling = useService("profiling");
-        useBus(this.props.bus, "UPDATE", this.render);
-    }
-
-    changeParam(param, ev) {
-        this.profiling.setParam(param, ev.target.value);
-    }
-    toggleParam(param) {
-        const value = this.profiling.state.params.execution_context_qweb;
-        this.profiling.setParam(param, !value);
-    }
-    openProfiles() {
-        if (this.env.services.action) {
-            // using doAction in the backend to preserve breadcrumbs and stuff
-            this.env.services.action.doAction("base.action_menu_ir_profile");
-        } else {
-            // No action service means we are in the frontend.
-            window.location = "/web/#action=base.action_menu_ir_profile";
-        }
-    }
-}
-ProfilingItem.components = { DropdownItem };
-ProfilingItem.template = "web.DebugMenu.ProfilingItem";
+version https://git-lfs.github.com/spec/v1
+oid sha256:e92db5b836662889e3b14f84977a005cb04e3eb55dd4003c6be49d76e5abe38a
+size 1097

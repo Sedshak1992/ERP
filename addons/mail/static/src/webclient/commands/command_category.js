@@ -1,6 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-
-const commandCategoryRegistry = registry.category("command_categories");
-commandCategoryRegistry.add("mail", {}, { sequence: 20 });
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a6a9ae59f356c9008f4978414990b5156fee78e14cec24d76aa66d58e9fae63
+size 202

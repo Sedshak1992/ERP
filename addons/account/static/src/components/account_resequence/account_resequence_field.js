@@ -1,24 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-
-const { Component, onWillUpdateProps } = owl;
-
-class ChangeLine extends Component {}
-ChangeLine.template = "account.ResequenceChangeLine";
-ChangeLine.props = ["changeLine", "ordering"];
-
-class ShowResequenceRenderer extends Component {
-    setup() {
-        this.formatData(this.props);
-        onWillUpdateProps((nextProps) => this.formatData(nextProps));
-    }
-
-    formatData(props) {
-        this.data = props.value ? JSON.parse(props.value) : { changeLines: [], ordering: "date" };
-    }
-}
-ShowResequenceRenderer.template = "account.ResequenceRenderer";
-ShowResequenceRenderer.components = { ChangeLine };
-
-registry.category("fields").add("account_resequence_widget", ShowResequenceRenderer);
+version https://git-lfs.github.com/spec/v1
+oid sha256:b51cfe54bed34edb238ea9c5e1a7b340c9ebeab126e133c371f1c9b48fc1f8b3
+size 767

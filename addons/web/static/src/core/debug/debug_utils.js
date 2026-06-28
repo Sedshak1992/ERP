@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-export function editModelDebug(env, title, model, id) {
-    return env.services.action.doAction({
-        res_model: model,
-        res_id: id,
-        name: title,
-        type: "ir.actions.act_window",
-        views: [[false, "form"]],
-        view_mode: "form",
-        target: "new",
-    });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c8c8ae087332d815ac5952a97405a79079e9c020caf85a9c9aa7cc19a8e74bcf
+size 320

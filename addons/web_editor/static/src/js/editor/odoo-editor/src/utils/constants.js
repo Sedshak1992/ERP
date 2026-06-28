@@ -1,4 +1,3 @@
-/** @odoo-module **/
-export const UNBREAKABLE_ROLLBACK_CODE = 'UNBREAKABLE';
-export const UNREMOVABLE_ROLLBACK_CODE = 'UNREMOVABLE';
-export const REGEX_BOOTSTRAP_COLUMN = /(?:^| )col(-[a-zA-Z]+)?(-\d+)?(?:$| )/;
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c6ea5e75f99d8631f01caad7d1d26028fc7ab80f476a6608bf4f98dc5e077cb
+size 212

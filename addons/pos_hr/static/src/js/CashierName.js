@@ -1,31 +1,3 @@
-odoo.define('pos_hr.CashierName', function (require) {
-    'use strict';
-
-    const CashierName = require('point_of_sale.CashierName');
-    const Registries = require('point_of_sale.Registries');
-    const SelectCashierMixin = require('pos_hr.SelectCashierMixin');
-    const { useBarcodeReader } = require('point_of_sale.custom_hooks');
-
-    const PosHrCashierName = (CashierName) =>
-        class extends SelectCashierMixin(CashierName) {
-            setup() {
-                super.setup();
-                useBarcodeReader({ cashier: this.barcodeCashierAction });
-            }
-            //@Override
-            get avatar() {
-                if (this.env.pos.config.module_pos_hr) {
-                    const cashier = this.env.pos.get_cashier();
-                    if (!(cashier && cashier.id)) {
-                        return '';
-                    }
-                    return `/web/image/hr.employee.public/${cashier.id}/avatar_128`;
-                }
-                return super.avatar;
-            }
-        };
-
-    Registries.Component.extend(CashierName, PosHrCashierName);
-
-    return CashierName;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:9abf3461888b1e347b4ed16bee46788a97b622d86f5e13bc2fd93d28bc697bb8
+size 1121

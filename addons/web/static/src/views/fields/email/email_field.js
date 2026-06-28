@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { _lt } from "@web/core/l10n/translation";
-import { useInputField } from "../input_field_hook";
-import { standardFieldProps } from "../standard_field_props";
-
-import { Component } from "@odoo/owl";
-
-export class EmailField extends Component {
-    setup() {
-        useInputField({ getValue: () => this.props.value || "" });
-    }
-}
-
-EmailField.template = "web.EmailField";
-EmailField.props = {
-    ...standardFieldProps,
-    placeholder: { type: String, optional: true },
-};
-EmailField.extractProps = ({ attrs }) => {
-    return {
-        placeholder: attrs.placeholder,
-    };
-};
-
-EmailField.displayName = _lt("Email");
-EmailField.supportedTypes = ["char"];
-
-class FormEmailField extends EmailField {}
-FormEmailField.template = "web.FormEmailField";
-
-registry.category("fields").add("email", EmailField);
-registry.category("fields").add("form.email", FormEmailField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9eb3f8ac820fb90dfd2e5bdd71c59f2ef15a44ba43c5f2e23b3aaffa75db849
+size 945

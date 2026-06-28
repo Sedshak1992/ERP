@@ -1,29 +1,3 @@
-odoo.define('point_of_sale.ErrorPopup', function(require) {
-    'use strict';
-
-    const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
-    const Registries = require('point_of_sale.Registries');
-    const { _lt } = require('@web/core/l10n/translation');
-
-    // formerly ErrorPopupWidget
-    class ErrorPopup extends AbstractAwaitablePopup {
-        setup() {
-            super.setup();
-            owl.onMounted(this.onMounted);
-        }
-        onMounted() {
-            this.playSound('error');
-        }
-    }
-    ErrorPopup.template = 'ErrorPopup';
-    ErrorPopup.defaultProps = {
-        confirmText: _lt('Ok'),
-        title: _lt('Error'),
-        body: '',
-        cancelKey: false,
-    };
-
-    Registries.Component.add(ErrorPopup);
-
-    return ErrorPopup;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc3118b694ceae3d58bdc126fca68bf0a3d442b90fde527ac4290aaf7a6f17e1
+size 798

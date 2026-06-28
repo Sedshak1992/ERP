@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { PaymentScreen } from 'point_of_sale.tour.PaymentScreenTourMethods';
-import { ProductScreen } from 'pos_sale.tour.ProductScreenTourMethods';
-import { ReceiptScreen } from 'point_of_sale.tour.ReceiptScreenTourMethods';
-import { getSteps, startSteps } from 'point_of_sale.tour.utils';
-import Tour from 'web_tour.tour';
-
-// First tour should not get any automatic rewards
-startSteps();
-
-ProductScreen.do.confirmOpeningPopup();
-ProductScreen.do.clickQuotationButton();
-ProductScreen.do.selectFirstOrder();
-ProductScreen.do.clickDisplayedProduct('Desk Pad');
-ProductScreen.do.clickPayButton();
-PaymentScreen.do.clickPaymentMethod('Bank');
-PaymentScreen.do.clickValidate();
-ReceiptScreen.check.isShown();
-
-Tour.register('PosSaleLoyaltyTour1', { test: true, url: '/pos/web' }, getSteps());
+version https://git-lfs.github.com/spec/v1
+oid sha256:504387d3a58bffe35c4b3038ab264b4fa797c2fbbdb9a5efbc96d7bbad2ea5d5
+size 813

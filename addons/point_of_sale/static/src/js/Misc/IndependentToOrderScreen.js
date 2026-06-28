@@ -1,15 +1,3 @@
-odoo.define('point_of_sale.IndependentToOrderScreen', function (require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-
-    class IndependentToOrderScreen extends PosComponent {
-        close() {
-            const order = this.env.pos.get_order();
-            const { name: screenName } = order.get_screen_data();
-            this.showScreen(screenName);
-        }
-    }
-
-    return IndependentToOrderScreen;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b30cfe6d7808f712d05c8223f898ab2d7db70ff68197bae7e4476ec1c68fb80
+size 452

@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-import { clear } from '@mail/model/model_field_command';
-
-import PublicLivechatMessage from '@im_livechat/legacy/models/public_livechat_message';
-
-registerModel({
-    name: 'PublicLivechatMessage',
-    lifecycleHooks: {
-        _created() {
-            this.update({ widget: new PublicLivechatMessage(this.messaging.publicLivechatGlobal.livechatButtonView.widget, this.messaging, this.data) });
-        },
-        _willDelete() {
-            this.widget.destroy();
-        },
-    },
-    fields: {
-        authorId: attr({
-            compute() {
-                if (this.data.author && this.data.author.id) {
-                    return this.data.author.id;
-                }
-                return clear();
-            },
-        }),
-        data: attr(),
-        id: attr({
-            identifying: true,
-        }),
-        widget: attr(),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:41df6713aa0bc7f5c7b165cfb19032b9d51205652b6189fb78cba831c3bce886
+size 979

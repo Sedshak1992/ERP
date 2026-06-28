@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { useUpdate } from '@mail/component_hooks/use_update';
-
-const { useComponent } = owl;
-
-/**
- * This hook provides support for binding the onMounted/onPatched hooks to the
- * method of a target record.
- *
- * @param {Object} param0
- * @param {string} param0.methodName Name of the method on the target record.
- */
-export function useUpdateToModel({ methodName }) {
-    const component = useComponent();
-    useUpdate({ func: () => {
-        component.props.record[methodName]();
-    } });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b4222f3e9595b7ad3b3971e235d907703e1f1184395a5c5816fc51607cb9a31
+size 517

@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class EmojiGridSearchNoContentView extends Component {
-    /**
-     * @returns {EmojiGridSearchNoContentView}
-     */
-    get emojiGridSearchNoContentView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(EmojiGridSearchNoContentView, {
-    props: { record: Object },
-    template: 'mail.EmojiGridSearchNoContentView',
-});
-
-registerMessagingComponent(EmojiGridSearchNoContentView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c11cb19f8aef37ae5240edeaf93d5e42139a37824c08646105c71b621bfc9c8e
+size 529

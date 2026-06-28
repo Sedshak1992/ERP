@@ -1,16 +1,3 @@
-odoo.define('stock.BasicModel', function (require) {
-"use strict";
-
-var BasicModel = require('web.BasicModel');
-var localStorage = require('web.local_storage');
-
-BasicModel.include({
-
-    _invalidateCache: function (dataPoint) {
-        this._super.apply(this, arguments);
-        if (dataPoint.model === 'stock.warehouse' && !localStorage.getItem('running_tour')) {
-            this.do_action('reload_context');
-        }
-    }
-});
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f5ef720053d5d438853ff6359c71c0fef665338989373a7e4851fec96e9d0a6
+size 437

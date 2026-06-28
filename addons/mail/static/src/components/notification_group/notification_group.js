@@ -1,36 +1,3 @@
-/** @odoo-module **/
-
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class NotificationGroup extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'markAsReadRef', refName: 'markAsRead' });
-    }
-
-    //--------------------------------------------------------------------------
-    // Public
-    //--------------------------------------------------------------------------
-
-    /**
-     * @returns {NotificationGroupView}
-     */
-    get notificationGroupView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(NotificationGroup, {
-    props: { record: Object },
-    template: 'mail.NotificationGroup',
-});
-
-registerMessagingComponent(NotificationGroup);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e16a92b83898ced73d1f868f0d0a6434a7437d5b7d7569877db96f8fb58a0eb8
+size 877

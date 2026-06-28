@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-import { LegacyComponent } from '@web/legacy/legacy_component';
-
-export class Discuss extends LegacyComponent {
-
-    //--------------------------------------------------------------------------
-    // Public
-    //--------------------------------------------------------------------------
-
-    /**
-     * @returns {DiscussView}
-     */
-    get discussView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(Discuss, {
-    props: { record: Object },
-    template: 'mail.Discuss',
-});
-
-registerMessagingComponent(Discuss);
+version https://git-lfs.github.com/spec/v1
+oid sha256:6002b9ac6de57d4086d1f900b81fa737dfdcc5a0bebeebf0ca58856754ed6bfb
+size 631

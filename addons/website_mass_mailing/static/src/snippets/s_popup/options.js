@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import options from 'web_editor.snippets.options';
-
-options.registry.NewsletterLayout = options.registry.SelectTemplate.extend({
-    /**
-     * @constructor
-     */
-    init() {
-        this._super(...arguments);
-        this.containerSelector = '> .container, > .container-fluid, > .o_container_small';
-        this.selectTemplateWidgetName = 'newsletter_template_opt';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:65c0250f17080986f5e315c9c5f6569e166bcc3ef04ad3a41ef664ef5c061362
+size 404

@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { Listener } from '@mail/model/model_listener';
-
-const { onMounted, onPatched, onWillDestroy, useComponent } = owl;
-
-/**
- * This hook provides support for executing code after update (render or patch).
- *
- * @param {Object} param0
- * @param {function} param0.func the function to execute after the update.
- */
-export function useUpdate({ func }) {
-    const component = useComponent();
-    const listener = new Listener({
-        isLocking: false, // unfortunately onUpdate methods often have side effect
-        name: `useUpdate() of ${component}`,
-        onChange: () => component.render(),
-    });
-    function onUpdate() {
-        component.env.services.messaging.modelManager.startListening(listener);
-        func();
-        component.env.services.messaging.modelManager.stopListening(listener);
-    }
-    onMounted(onUpdate);
-    onPatched(onUpdate);
-    onWillDestroy(() => {
-        component.env.services.messaging.modelManager.removeListener(listener);
-    });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:134366bdbce28ec865c1a7ad1dfe5487a537806bbae755a64a4f14b575f50511
+size 1004

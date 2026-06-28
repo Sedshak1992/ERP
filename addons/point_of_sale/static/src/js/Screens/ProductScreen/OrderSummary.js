@@ -1,27 +1,3 @@
-odoo.define('point_of_sale.OrderSummary', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-    const { float_is_zero } = require('web.utils');
-
-    class OrderSummary extends PosComponent {
-        getTotal() {
-            return this.env.pos.format_currency(this.props.order.get_total_with_tax());
-        }
-        getTax() {
-            const total = this.props.order.get_total_with_tax();
-            const totalWithoutTax = this.props.order.get_total_without_tax();
-            const taxAmount = total - totalWithoutTax;
-            return {
-                hasTax: !float_is_zero(taxAmount, this.env.pos.currency.decimal_places),
-                displayAmount: this.env.pos.format_currency(taxAmount),
-            };
-        }
-    }
-    OrderSummary.template = 'OrderSummary';
-
-    Registries.Component.add(OrderSummary);
-
-    return OrderSummary;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3f7442a097ce2dacd759f1e268d43dc0a4de22254b58d5bda8ec4e30b0f054b
+size 972

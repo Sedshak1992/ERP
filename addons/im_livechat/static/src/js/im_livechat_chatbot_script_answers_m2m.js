@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-
-import { registry } from "@web/core/registry";
-import { Many2ManyTagsField } from "@web/views/fields/many2many_tags/many2many_tags_field";
-
-const fieldRegistry = registry.category("fields");
-
-export class ChatbotScriptTriggeringAnswersMany2Many extends Many2ManyTagsField {
-    /**
-     * Force the chatbot script ID we are currently editing into the context.
-     * This allows to filter triggering question answers on steps of this script.
-     */
-    setup() {
-        super.setup();
-
-        if (this.props.record.model.root.data.id) {
-            this.env.services.user.updateContext({
-                force_domain_chatbot_script_id: this.props.record.model.root.data.id
-            });
-        }
-    }
-};
-
-fieldRegistry.add("chatbot_triggering_answers_widget", ChatbotScriptTriggeringAnswersMany2Many);
+version https://git-lfs.github.com/spec/v1
+oid sha256:24b9d9eb57a1fab0a7e2ef2757af455426fd530809dc05e21372053873c045ab
+size 832

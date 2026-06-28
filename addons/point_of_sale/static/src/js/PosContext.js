@@ -1,10 +1,3 @@
-odoo.define('point_of_sale.PosContext', function (require) {
-    'use strict';
-    const { reactive } = owl;
-
-    // Create global context objects
-    // e.g. component.env.device = new Context({ isMobile: false });
-    return {
-        orderManagement: reactive({ searchString: '', selectedOrder: null }),
-    };
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:48cace0601ed5d720c0fae44e19130374a13439371dda947c71ffed200a828f5
+size 318

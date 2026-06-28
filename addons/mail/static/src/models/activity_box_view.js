@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, many, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'ActivityBoxView',
-    recordMethods: {
-        /**
-         * Handles click on activity box title.
-         */
-        onClickActivityBoxTitle(ev) {
-            ev.preventDefault();
-            this.update({ isActivityListVisible: !this.isActivityListVisible });
-        },
-    },
-    fields: {
-        activityViews: many('ActivityView', {
-            compute() {
-                return this.chatter.thread.activities.map(activity => {
-                    return { activity };
-                });
-            },
-            inverse: 'activityBoxView',
-        }),
-        chatter: one('Chatter', {
-            identifying: true,
-            inverse: 'activityBoxView',
-        }),
-        isActivityListVisible: attr({
-            default: true,
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d6452fdfe7b757a236b9b4b6e38ace3b33ddd4bada0b2caf86618b5cfe6d353
+size 935

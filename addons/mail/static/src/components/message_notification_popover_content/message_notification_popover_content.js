@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class MessageNotificationPopoverContent extends Component {
-
-    /**
-     * @returns {MessageNotificationPopoverContentView}
-     */
-    get messageNotificationPopoverContentView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(MessageNotificationPopoverContent, {
-    props: { record: Object },
-    template: 'mail.MessageNotificationPopoverContent',
-});
-
-registerMessagingComponent(MessageNotificationPopoverContent);
+version https://git-lfs.github.com/spec/v1
+oid sha256:429b42ff0c8d243f81d60c6ffc23d3d12937ca249c08c8b7a05b2adf5fc105d2
+size 569

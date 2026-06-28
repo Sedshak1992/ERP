@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { _lt } from "@web/core/l10n/translation";
-import { registry } from "@web/core/registry";
-import { Many2OneField } from "../many2one/many2one_field";
-
-export class Many2OneBarcodeField extends Many2OneField {}
-
-Many2OneBarcodeField.props = {
-    ...Many2OneField.props,
-};
-Many2OneBarcodeField.defaultProps = {
-    ...Many2OneField.defaultProps,
-    canScanBarcode: true,
-};
-
-Many2OneBarcodeField.displayName = _lt("Many2OneBarcode");
-Many2OneBarcodeField.template = "web.Many2OneField";
-Many2OneBarcodeField.supportedTypes = ["many2one"];
-
-Many2OneBarcodeField.extractProps = (args) => {
-    return {
-        ...Many2OneField.extractProps(args),
-        canScanBarcode: true,
-    };
-};
-
-registry.category("fields").add("many2one_barcode", Many2OneBarcodeField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ed0f4756ac5462f22cb78e77e8d87ff2552ad49f7b98b180274c02afb8d08b0
+size 792

@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { ThreadNeedactionPreview } from '@mail/components/thread_needaction_preview/thread_needaction_preview';
-
-import { patch } from 'web.utils';
-
-const components = { ThreadNeedactionPreview };
-
-patch(components.ThreadNeedactionPreview.prototype, 'thread_needaction_preview', {
-
-    //--------------------------------------------------------------------------
-    // Public
-    //--------------------------------------------------------------------------
-
-    /**
-     * @override
-     */
-    image(...args) {
-        if (this.threadNeedactionPreviewView.thread.channel && this.threadNeedactionPreviewView.thread.channel.channel_type === 'livechat') {
-            return '/mail/static/src/img/smiley/avatar.jpg';
-        }
-        return this._super(...args);
-    }
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:a801435e3073742f540fa88f78db4718e790178997c710f68546a30f2d651e4d
+size 796

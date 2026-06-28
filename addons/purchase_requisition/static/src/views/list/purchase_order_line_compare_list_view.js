@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import { listView } from '@web/views/list/list_view';
-import { registry } from "@web/core/registry";
-import { PurchaseOrderLineCompareListRenderer } from "./purchase_order_line_compare_list_renderer";
-
-
-export const PurchaseOrderLineCompareListView = {
-    ...listView,
-    Renderer: PurchaseOrderLineCompareListRenderer,
-};
-
-registry.category("views").add("purchase_order_line_compare", PurchaseOrderLineCompareListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a4c28f711993d7172ecf800d73707f99809415ba7bccdcbe8bdc5e450edf0b5
+size 445

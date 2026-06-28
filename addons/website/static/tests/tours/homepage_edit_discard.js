@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import wTourUtils from "website.tour_utils";
-
-// TODO remove this test; it is badly written: you just have to change the fact
-// that editor_enable is added on the body to silently make it useless +
-// useless extra_trigger + useless auto: true + ... A better duplicate of it has
-// been made with "website_no_dirty_page".
-wTourUtils.registerWebsitePreviewTour('homepage_edit_discard', {
-    test: true,
-    url: '/',
-    edition: true,
-}, [{
-    trigger: "#oe_snippets button[data-action=\"cancel\"]:not([disabled])",
-    extra_trigger: "body:not(:has(.o_dialog))",
-    content: "<b>Click Discard</b> to Discard all Changes.",
-    position: "bottom",
-}, {
-    trigger: "iframe body:not(.editor_enable)",
-    auto: true,
-    run: () => null,
-}]);
+version https://git-lfs.github.com/spec/v1
+oid sha256:91c096014337b0984adc74834e04289ab3dae2ca75cd8dc540e0a4ffba4b89f8
+size 769

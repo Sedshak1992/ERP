@@ -1,24 +1,3 @@
-/** @odoo-module **/
-
-import { _t } from "@web/core/l10n/translation";
-import spreadsheet from "../o_spreadsheet/o_spreadsheet_extended";
-const { args, toString, toJsDate } = spreadsheet.helpers;
-const { functionRegistry } = spreadsheet.registries;
-
-functionRegistry.add("ODOO.CURRENCY.RATE", {
-    description: _t(
-        "This function takes in two currency codes as arguments, and returns the exchange rate from the first currency to the second as float."
-    ),
-    compute: function (currencyFrom, currencyTo, date) {
-        const from = toString(currencyFrom);
-        const to = toString(currencyTo);
-        const _date = date ? toJsDate(date) : undefined;
-        return this.getters.getCurrencyRate(from, to, _date);
-    },
-    args: args(`
-            currency_from (string) ${_t("First currency code.")}
-            currency_to (string) ${_t("Second currency code.")}
-            date (date, optional) ${_t("Date of the rate.")}
-        `),
-    returns: ["NUMBER"],
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfbe1d83887b064455be190acae73cb7b4870e8c88c20fec68ae1a9fa8a6e69c
+size 984

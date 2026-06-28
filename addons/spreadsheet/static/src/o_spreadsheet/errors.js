@@ -1,12 +1,3 @@
-/** @odoo-module */
-
-import { _t } from "@web/core/l10n/translation";
-import spreadsheet from "./o_spreadsheet_extended";
-
-const { EvaluationError, CellErrorLevel } = spreadsheet.helpers;
-
-export class LoadingDataError extends EvaluationError {
-    constructor() {
-        super(_t("Loading..."), _t("Data is loading"), CellErrorLevel.silent);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a658f88ed7ee1aedb43f34be40ac1463f1b24be0eab7d122ebb4a41211de838d
+size 352

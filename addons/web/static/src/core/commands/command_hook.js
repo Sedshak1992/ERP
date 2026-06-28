@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-
-import { useEffect } from "@odoo/owl";
-
-/**
- * @typedef {import("./command_service").CommandOptions} CommandOptions
- */
-
-/**
- * This hook will subscribe/unsubscribe the given subscription
- * when the caller component will mount/unmount.
- *
- * @param {string} name
- * @param {()=>(void | CommandPaletteConfig)} action
- * @param {CommandOptions} [options]
- */
-export function useCommand(name, action, options = {}) {
-    const commandService = useService("command");
-    useEffect(
-        () => commandService.add(name, action, options),
-        () => []
-    );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aab1f5614d4ab456e117ea7b7a603923bc82e580b76c65a73c7e071740588ba8
+size 638

@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { useModels } from '@mail/component_hooks/use_models';
-// ensure components are registered beforehand.
-import '@mail/components/call_systray_menu/call_systray_menu';
-import { getMessagingComponent } from "@mail/utils/messaging_component";
-
-const { Component } = owl;
-
-export class CallSystrayMenuContainer extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        useModels();
-        super.setup();
-    }
-
-    get messaging() {
-        return this.env.services.messaging.modelManager.messaging;
-    }
-
-}
-
-Object.assign(CallSystrayMenuContainer, {
-    components: { CallSystrayMenu: getMessagingComponent('CallSystrayMenu') },
-    template: 'mail.CallSystrayMenuContainer',
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:76d8b5cdfacee1c6d79fbf1a9580bd1fbc77a0d09649c849d5a41284c5c3c942
+size 725

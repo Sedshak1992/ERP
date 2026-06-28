@@ -1,8 +1,3 @@
-/** @odoo-module */
-
-import { formView } from '@web/views/form/form_view';
-import { ProjectSharingFormController } from './project_sharing_form_controller';
-import { ProjectSharingFormRenderer } from './project_sharing_form_renderer';
-
-formView.Controller = ProjectSharingFormController;
-formView.Renderer = ProjectSharingFormRenderer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d85caf99c8dbd4fe72fab14002fa3230a089ab76c2f9648714ef069f6be1d3da
+size 336

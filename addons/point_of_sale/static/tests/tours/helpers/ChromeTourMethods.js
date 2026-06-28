@@ -1,29 +1,3 @@
-odoo.define('point_of_sale.tour.ChromeTourMethods', function (require) {
-    'use strict';
-
-    const { createTourMethods } = require('point_of_sale.tour.utils');
-
-    class Do {
-        confirmPopup() {
-            return [
-                {
-                    content: 'confirm popup',
-                    trigger: '.popups .modal-dialog .button.confirm',
-                },
-            ];
-        }
-        clickTicketButton() {
-            return [
-                {
-                    trigger: '.pos-topheader .ticket-button',
-                },
-                {
-                    trigger: '.subwindow .ticket-screen',
-                    run: () => {},
-                },
-            ];
-        }
-    }
-
-    return createTourMethods('Chrome', Do);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:de2d318c69623ceec6acef7efe643a3a80a66f7f9f8714e87ec13c27ebd107c8
+size 763

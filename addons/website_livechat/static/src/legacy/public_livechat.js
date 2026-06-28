@@ -1,14 +1,3 @@
-odoo.define('website_livechat.legacy.website_livechat.livechat_request', function (require) {
-"use strict";
-
-var LivechatButton = require('@im_livechat/legacy/widgets/livechat_button')[Symbol.for("default")];
-
-LivechatButton.include({
-    className: `${LivechatButton.prototype.className} o_bottom_fixed_element o_bottom_fixed_element_move_up o_website_livechat_button fa fa-commenting`,
-});
-
-return {
-    LivechatButton: LivechatButton,
-};
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6406b9a1fbdd81d83687e104372674d2565cb2d724d645cc61590d232a20c3c8
+size 446

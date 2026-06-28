@@ -1,12 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { kanbanView } from "@web/views/kanban/kanban_view";
-import { HrFleetKanbanController } from "@hr_fleet/views/hr_fleet_kanban/hr_fleet_kanban_controller";
-
-export const hrFleetKanbanView = {
-    ...kanbanView,
-    Controller: HrFleetKanbanController,
-    buttonTemplate: "hr_fleet.HrFleetKanbanController.Buttons",
-};
-registry.category("views").add("hr_fleet_kanban_view", hrFleetKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:520bb7998ee2f72bd25f86901648ef7e3c845234a5bbf6454e2e71ea1d52fed0
+size 469

@@ -1,33 +1,3 @@
-odoo.define('pos_restaurant.SplitBillButton', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const ProductScreen = require('point_of_sale.ProductScreen');
-    const { useListener } = require("@web/core/utils/hooks");
-    const Registries = require('point_of_sale.Registries');
-
-    class SplitBillButton extends PosComponent {
-        setup() {
-            super.setup();
-            useListener('click', this.onClick);
-        }
-        async onClick() {
-            const order = this.env.pos.get_order();
-            if (order.get_orderlines().length > 0) {
-                this.showScreen('SplitBillScreen');
-            }
-        }
-    }
-    SplitBillButton.template = 'SplitBillButton';
-
-    ProductScreen.addControlButton({
-        component: SplitBillButton,
-        condition: function() {
-            return this.env.pos.config.iface_splitbill;
-        },
-    });
-
-    Registries.Component.add(SplitBillButton);
-
-    return SplitBillButton;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:c029a53ee7f54fffff6e78cb5ed5f557d9015fd31b05b17dd0cfef40982cbc70
+size 1015

@@ -1,26 +1,3 @@
-odoo.define('pos_mercury.ProductScreen', function (require) {
-    'use strict';
-
-    const ProductScreen = require('point_of_sale.ProductScreen');
-    const Registries = require('point_of_sale.Registries');
-    const { useBarcodeReader } = require('point_of_sale.custom_hooks');
-
-    const PosMercuryProductScreen = (ProductScreen) =>
-        class extends ProductScreen {
-            setup() {
-                super.setup();
-                useBarcodeReader({
-                    credit: this.credit_error_action,
-                });
-            }
-            credit_error_action() {
-                this.showPopup('ErrorPopup', {
-                    body: this.env._t('Go to payment screen to use cards'),
-                });
-            }
-        };
-
-    Registries.Component.extend(ProductScreen, PosMercuryProductScreen);
-
-    return ProductScreen;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e8818c5a903ae9bf8d35b5484d1100c222657d76d3d5304fa55e7c7ddbed86c
+size 858

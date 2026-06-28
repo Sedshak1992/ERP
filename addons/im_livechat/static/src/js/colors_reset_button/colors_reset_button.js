@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from '@web/core/registry';
-import { standardWidgetProps } from "@web/views/widgets/standard_widget_props";
-
-const { Component } = owl;
-
-export class ColorsResetButton extends Component {
-    onColorsResetButtonClick() {
-        this.props.record.update(this.props.default_colors);
-    }
-}
-ColorsResetButton.template = `im_livechat.ColorsResetButton`;
-ColorsResetButton.props = {
-    ...standardWidgetProps,
-    default_colors: { type: Object },
-};
-ColorsResetButton.extractProps = ({ attrs }) => {
-    // Note: `options` should have `default_colors`. It's specified when using the widget.
-    return attrs.options;
-};
-
-registry.category('view_widgets').add('colors_reset_button', ColorsResetButton);
+version https://git-lfs.github.com/spec/v1
+oid sha256:6131fade579cabd206c07caeb391a9446191958d2108da1d0bc979f18de1fc52
+size 742

@@ -1,21 +1,3 @@
-/* @odoo-module */
-
-import Popover from "web.Popover";
-
-const { Component } = owl;
-
-export class TimeOffCardPopover extends Component {}
-TimeOffCardPopover.components = { Popover };
-
-TimeOffCardPopover.template = 'hr_holidays.TimeOffCardPopover';
-TimeOffCardPopover.props = ['allocated', 'approved', 'planned', 'left', 'usable'];
-
-export class TimeOffCard extends Component {}
-
-TimeOffCard.components = { TimeOffCardPopover };
-TimeOffCard.template = 'hr_holidays.TimeOffCard';
-TimeOffCard.props = ['name', 'id', 'data', 'requires_allocation'];
-
-export class TimeOffCardMobile extends TimeOffCard {}
-
-TimeOffCardMobile.template = 'hr_holidays.TimeOffCardMobile';
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ac74d25abd4d7e489d2abc6e1cf5b954ad2eb53dd55325ee21cadf8e4c53e77
+size 662

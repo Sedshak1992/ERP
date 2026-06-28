@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-import { clear } from '@mail/model/model_field_command';
-
-import { sprintf } from '@web/core/utils/strings';
-
-registerModel({
-    name: 'CallSystrayMenu',
-    fields: {
-        buttonTitle: attr({
-            compute() {
-                if (!this.messaging.rtc.channel) {
-                    return clear();
-                }
-                return sprintf(
-                    this.env._t("Open conference: %s"),
-                    this.messaging.rtc.channel.displayName,
-                );
-            },
-            default: '',
-        }),
-        rtc: one('Rtc', {
-            identifying: true,
-            inverse: 'callSystrayMenu',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:533a0ef921315e028a7792d2591be9cfd7901b5f94231f191c3504fbfe32f972
+size 796

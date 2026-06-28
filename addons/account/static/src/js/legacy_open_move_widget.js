@@ -1,23 +1,3 @@
-/** @odoo-module **/
-import fieldRegistry from 'web.field_registry';
-import { FieldChar } from 'web.basic_fields';
-
-const OpenMoveWidget = FieldChar.extend({
-    template: 'account.OpenMoveTemplate',
-    events: Object.assign({}, FieldChar.prototype.events, {
-        'click': '_onOpenMove',
-    }),
-    _onOpenMove: function(ev) {
-        ev.preventDefault();
-        ev.stopPropagation();
-        var self = this;
-        this._rpc({
-            model: 'account.move.line',
-            method: 'action_open_business_doc',
-            args: [this.res_id],
-        }).then(function (actionData){
-            return self.do_action(actionData);
-        });
-    },
-});
-fieldRegistry.add('open_move_widget', OpenMoveWidget);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9ae2a8b973ed865a4d4b1ab1d3d6a9e2bbe79640026d22e0661311b8597e75d
+size 721

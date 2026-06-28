@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { Component, useState, useEffect, useRef } from "@odoo/owl";
-
-export class SettingsApp extends Component {
-    setup() {
-        this.state = useState({
-            search: this.env.searchState,
-        });
-        this.settingsAppRef = useRef("settingsApp");
-        useEffect(
-            () => {
-                if (this.settingsAppRef.el) {
-                    const force =
-                        this.state.search.value &&
-                        !this.settingsAppRef.el.querySelector(
-                            ".o_settings_container:not(.d-none)"
-                        ) &&
-                        !this.settingsAppRef.el.querySelector(
-                            ".o_setting_box.o_searchable_setting"
-                        );
-                    this.settingsAppRef.el.classList.toggle("d-none", force);
-                }
-            },
-            () => [this.state.search.value]
-        );
-    }
-}
-SettingsApp.template = "web.SettingsApp";
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c27c999d6ab7174940633f5e9957c1b873995b26bbf0e842dc8ba9fec5b5ebf
+size 988

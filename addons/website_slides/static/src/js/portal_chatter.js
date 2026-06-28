@@ -1,24 +1,3 @@
-/** @odoo-module **/
-
-import { _t } from 'web.core';
-import { PortalChatter } from 'portal.chatter';
-
-/**
- * PortalChatter
- *
- * Extends Frontend Chatter to handle rating count on review tab
- */
-PortalChatter.include({
-    /**
-     * Update review count on review tab in courses
-     *
-     * @override
-     * @private
-     */
-    _reloadChatterContent: async function (data) {
-        await this._super(...arguments);
-        if (this.options.res_model === "slide.channel") {
-            $('#review-tab').text(_.str.sprintf(_t('Reviews (%d)'), data.rating_count));
-        }
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:44b300e9cd003210e66a21119a894313920f278032249b48993d2ed297a000a8
+size 587

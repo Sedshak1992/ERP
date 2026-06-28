@@ -1,21 +1,3 @@
-odoo.define('survey.session_colors', function (require) {
-'use strict';
-
-/**
- * Small tool that returns common colors for survey session widgets.
- * Source: https://www.materialui.co/colors (500)
- */
-return [
-    '33,150,243',
-    '63,81,181',
-    '205,220,57',
-    '0,150,136',
-    '76,175,80',
-    '121,85,72',
-    '158,158,158',
-    '156,39,176',
-    '96,125,139',
-    '244,67,54',
-];
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:d62ed80753899302a00265aacdbf7ededea38bfa008eef12f0a5c4deb3ab4b0e
+size 393

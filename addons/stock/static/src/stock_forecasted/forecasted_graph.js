@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { GraphRenderer } from "@web/views/graph/graph_renderer";
-import { graphView } from "@web/views/graph/graph_view";
-
-export class StockForecastedGraphRenderer extends GraphRenderer{};
-StockForecastedGraphRenderer.template = "stock.ForecastedGraphRenderer";
-
-export const StockForecastedGraphView = {
-    ...graphView,
-    Renderer: StockForecastedGraphRenderer,
-};
-
-registry.category("views").add("stock_forecasted_graph", StockForecastedGraphView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:4861efc958cef61e8866f5f623f3e4bb341cbc37ce822988f023cec19a5ba529
+size 525

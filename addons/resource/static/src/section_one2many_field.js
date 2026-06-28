@@ -1,18 +1,3 @@
-/** @odoo-module */
-
-import { SectionListRenderer } from "./section_list_renderer";
-import { registry } from "@web/core/registry";
-import { X2ManyField } from "@web/views/fields/x2many/x2many_field";
-
-class SectionOneToManyField extends X2ManyField {}
-SectionOneToManyField.components = {
-    ...X2ManyField.components,
-    ListRenderer: SectionListRenderer,
-};
-SectionOneToManyField.defaultProps = {
-    ...X2ManyField.defaultProps,
-    editable: "bottom",
-};
-
-SectionOneToManyField.additionalClasses = ['o_field_one2many'];
-registry.category("fields").add("section_one2many", SectionOneToManyField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c356adb6cba37799f32ae840418e98f6b80492a0b9a6963e5b6e8297d56845c3
+size 602

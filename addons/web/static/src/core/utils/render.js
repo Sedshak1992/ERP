@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { blockDom, markup } from "@odoo/owl";
-
-/**
- * renders a template with an (optional) context and outputs it as a string
- *
- * @param {string} template
- * @param {Object} context
- * @returns string: the html of the template
- */
-export function renderToString(template, context = {}) {
-    const app = renderToString.app;
-    if (!app) {
-        throw new Error("an app must be configured before using renderToString");
-    }
-    const templateFn = app.getTemplate(template);
-    const bdom = templateFn(context, {});
-    const div = document.createElement("div");
-    blockDom.mount(bdom, div);
-    return div.innerHTML;
-}
-
-/**
- * renders a template with an (optional) context and returns a Markup string,
- * suitable to be inserted in a template with a t-out directive
- *
- * @param {string} template
- * @param {Object} context
- * @returns string: the html of the template, as a markup string
- */
-export function renderToMarkup(template, context = {}) {
-    return markup(renderToString(template, context));
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac7eabdc5f4180637c6199c38b95e21818d05e9ad83178df338947cbeea3de31
+size 1038

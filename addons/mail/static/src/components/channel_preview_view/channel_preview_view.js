@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChannelPreviewView extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'markAsReadRef', refName: 'markAsRead' });
-    }
-
-    /**
-     * @returns {ChannelPreviewView}
-     */
-    get channelPreviewView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ChannelPreviewView, {
-    props: { record: Object },
-    template: 'mail.ChannelPreviewView',
-});
-
-registerMessagingComponent(ChannelPreviewView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba001a8c68901838deb2366aa4ed35bca69429ef6cebcbf2ca584d69ac43042f
+size 698

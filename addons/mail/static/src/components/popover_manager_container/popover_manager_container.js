@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { useModels } from '@mail/component_hooks/use_models';
-// ensure components are registered beforehand.
-import '@mail/components/popover_manager/popover_manager';
-import { getMessagingComponent } from "@mail/utils/messaging_component";
-
-const { Component } = owl;
-
-export class PopoverManagerContainer extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        useModels();
-        super.setup();
-    }
-
-    get messaging() {
-        return this.env.services.messaging.modelManager.messaging;
-    }
-}
-
-Object.assign(PopoverManagerContainer, {
-    components: { PopoverManager: getMessagingComponent('PopoverManager') },
-    template: 'mail.PopoverManagerContainer',
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f26fa037848794d1331b2df145d57f92c583ce2fc81c21b0cfcc9c21febdfb1e
+size 715

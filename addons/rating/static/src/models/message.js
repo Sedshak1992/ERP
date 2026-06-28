@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'Message',
-    modelMethods: {
-        /**
-         * @override
-         */
-        convertData(data) {
-            const data2 = this._super(data);
-            if ('rating' in data) {
-                data2.rating = data.rating;
-            }
-            return data2;
-        },
-    },
-    fields: {
-        rating: one('Rating', {
-            isCausal: true,
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ee122a4ea2b20119da0f4f394fc33822ddbc8ebc8f34e3653a82771c3a1a5cf
+size 536

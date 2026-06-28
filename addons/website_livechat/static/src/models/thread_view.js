@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'ThreadView',
-    fields: {
-        /**
-         * Determines whether visitor banner should be displayed.
-         */
-        hasVisitorBanner: attr({
-            compute() {
-                return Boolean(this.thread && this.thread.visitor && this.threadViewer && this.threadViewer.discuss);
-            },
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcde13f43a6aa3e42aee57ae66479ca08878c601c35e8a9bf5174c76ca88ced3
+size 484

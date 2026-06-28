@@ -1,33 +1,3 @@
-/** @odoo-module */
-
-import { getFixture } from "@web/../tests/helpers/utils";
-import { makeView, setupViewRegistries } from "@web/../tests/views/helpers";
-
-let makeViewParams, target;
-
-QUnit.module("Project", (hooks) => {
-    hooks.beforeEach(() => {
-        makeViewParams = {
-            type: "form",
-            resModel: "project.project",
-            serverData: {
-                models: {
-                    "project.project": {
-                        fields: {
-                            id: { string: "Id", type: "integer" },
-                        },
-                        records: [{ id: 1, display_name: "First record" }],
-                    },
-                },
-            },
-            arch: `<form js_class="project_form"><field name="display_name"/></form>`,
-        };
-        target = getFixture();
-        setupViewRegistries();
-    });
-    QUnit.module("Form");
-    QUnit.test("project form view", async function (assert) {
-        await makeView(makeViewParams);
-        assert.containsOnce(target, ".o_form_view");
-    });
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e83fe37a52756e774fc209386d3edb53a842b9454ab9d2c067054cd2566736b
+size 1061

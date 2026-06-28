@@ -1,27 +1,3 @@
-odoo.define('point_of_sale.Notification', function (require) {
-    'use strict';
-
-    const { useListener } = require("@web/core/utils/hooks");
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    const { onMounted } = owl;
-
-    class Notification extends PosComponent {
-        setup() {
-            super.setup();
-            useListener('click', this.closeNotification);
-
-            onMounted(() => {
-                setTimeout(() => {
-                    this.closeNotification();
-                }, this.props.duration)
-            });
-        }
-    }
-    Notification.template = 'Notification';
-
-    Registries.Component.add(Notification);
-
-    return Notification;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:67e8da11a785f9efdc6f824ce5c80df620c88b6b80037ab8279cbfff941248f5
+size 753

@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { SearchModel } from "@web/search/search_model";
-
-export class PivotSearchModel extends SearchModel {
-    _getIrFilterDescription() {
-        this.preparingIrFilterDescription = true;
-        const result = super._getIrFilterDescription(...arguments);
-        this.preparingIrFilterDescription = false;
-        return result;
-    }
-
-    _getSearchItemGroupBys(activeItem) {
-        const { searchItemId } = activeItem;
-        const { context, type } = this.searchItems[searchItemId];
-        if (
-            !this.preparingIrFilterDescription &&
-            type === "favorite" &&
-            context.pivot_row_groupby
-        ) {
-            return context.pivot_row_groupby;
-        }
-        return super._getSearchItemGroupBys(...arguments);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b3719e70877452757ae41b1c05fb92e7fc4d51d2e2efc30bc58b0d72c577152
+size 785

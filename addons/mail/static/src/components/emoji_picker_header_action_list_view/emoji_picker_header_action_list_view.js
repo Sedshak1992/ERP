@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class EmojiPickerHeaderActionListView extends Component {
-
-    /**
-     * @returns {EmojiPickerHeaderActionListView}
-     */
-    get emojiPickerHeaderActionListView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(EmojiPickerHeaderActionListView, {
-    props: { record: Object },
-    template: 'mail.EmojiPickerHeaderActionListView',
-});
-
-registerMessagingComponent(EmojiPickerHeaderActionListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e08c305aa7d5154fac639828cf2b2d34ae122c703ac22083a2dc687909362391
+size 549

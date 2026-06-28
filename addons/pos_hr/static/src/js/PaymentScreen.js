@@ -1,18 +1,3 @@
-odoo.define('pos_hr.PaymentScreen', function (require) {
-    'use strict';
-
-    const PaymentScreen = require('point_of_sale.PaymentScreen');
-    const Registries = require('point_of_sale.Registries');
-
-    const PosHrPaymentScreen = (PaymentScreen_) =>
-          class extends PaymentScreen_ {
-              async _finalizeValidation() {
-                  this.currentOrder.cashier = this.env.pos.get_cashier();
-                  await super._finalizeValidation();
-              }
-          };
-
-    Registries.Component.extend(PaymentScreen, PosHrPaymentScreen);
-
-    return PaymentScreen;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:ecc03bf1f9771ca5acf9855519f80b115dddc3c652fd6caac119538a503d9069
+size 595

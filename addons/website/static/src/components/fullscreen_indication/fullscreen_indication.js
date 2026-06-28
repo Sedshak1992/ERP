@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { Component, useState, markup } from "@odoo/owl";
-import { escape, sprintf } from "@web/core/utils/strings";
-import { _t } from "@web/core/l10n/translation";
-
-export class FullscreenIndication extends Component {
-    setup() {
-        this.state = useState({ isVisible: false });
-        this.props.bus.on('FULLSCREEN-INDICATION-SHOW', this, this.show);
-        this.props.bus.on('FULLSCREEN-INDICATION-HIDE', this, this.hide);
-    }
-
-    show() {
-        setTimeout(() => this.state.isVisible = true);
-        this.autofade = setTimeout(() => this.state.isVisible = false, 2000);
-    }
-
-    hide() {
-        if (this.state.isVisible) {
-            this.state.isVisible = false;
-            clearTimeout(this.autofade);
-        }
-    }
-
-    get fullScreenIndicationText() {
-        return markup(sprintf(escape(_t("Press %(key)s to exit full screen")), {key: "<span>esc</span>"}));
-    }
-}
-FullscreenIndication.template = "website.FullscreenIndication";
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b51883b82483d1777636f9a02ce6bb88be7b74e4a8de5efeaf040bd13ea10ca
+size 983

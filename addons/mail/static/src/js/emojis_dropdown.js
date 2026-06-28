@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import emojis from '@mail/js/emojis';
-
-const { Component, useRef, onMounted } = owl;
-
-export class EmojisDropdown extends Component {
-    setup() {
-        this.toggleRef = useRef('toggleRef');
-        this.emojis = emojis;
-        super.setup();
-        onMounted(() => {
-            new Dropdown(this.toggleRef.el, {
-                  popperConfig: { placement: 'bottom-end', strategy: 'fixed' },
-            });
-        });
-    }
-};
-EmojisDropdown.template = 'mail.EmojisDropdown';
+version https://git-lfs.github.com/spec/v1
+oid sha256:973172a590ca02f3ec033c84ca003578401c9e130e9209a9621fff70ccab8198
+size 507

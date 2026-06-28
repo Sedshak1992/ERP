@@ -1,29 +1,3 @@
-/** @odoo-module */
-
-import { registry } from '@web/core/registry';
-
-import { formView } from '@web/views/form/form_view';
-import { FormController } from '@web/views/form/form_controller';
-import { session } from '@web/session';
-
-export class InterviewerFormController extends FormController {
-
-    /**
-     * Add `o_applicant_interviewer_form` class if necessary
-     */
-    get className() {
-        const result = super.className;
-        const root = this.model.root;
-        if (!root.data.interviewer_ids || !root.data.user_id) {
-            return result;
-        }
-        result["o_applicant_interviewer_form"] = root.data.interviewer_ids.records.findIndex(
-            interviewer => interviewer.data.id === session.uid) > -1;
-        return result;
-    }
-}
-
-registry.category('views').add('hr_recruitment_interviewer', {
-    ...formView,
-    Controller: InterviewerFormController,
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:767cea303cbdb5603b91ebaaf1b7308df0ce7835787364faa4d50647bbdf2850
+size 896

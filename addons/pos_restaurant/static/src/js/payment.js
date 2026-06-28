@@ -1,24 +1,3 @@
-odoo.define('pos_restaurant.PaymentInterface', function (require) {
-    "use strict";
-
-    var PaymentInterface = require('point_of_sale.PaymentInterface');
-
-    PaymentInterface.include({
-        /**
-         * Return true if the amount that was authorized can be modified,
-         * false otherwise
-         * @param {string} cid - The id of the paymentline
-         */
-        canBeAdjusted(cid) {
-            return false;
-        },
-
-        /**
-         * Called when the amount authorized by a payment request should
-         * be adjusted to account for a new order line, it can only be called if
-         * canBeAdjusted returns True
-         * @param {string} cid - The id of the paymentline
-         */
-        send_payment_adjust: function (cid) {},
-    });
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:d319bdf30b8d9fecba55a24bc44f80b1a43d8d720abc0aefa7751a8c7b3276c6
+size 775

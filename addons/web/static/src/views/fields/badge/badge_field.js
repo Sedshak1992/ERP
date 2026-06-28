@@ -1,36 +1,3 @@
-/** @odoo-module **/
-
-import { _lt } from "@web/core/l10n/translation";
-import { registry } from "@web/core/registry";
-import { standardFieldProps } from "../standard_field_props";
-
-import { Component } from "@odoo/owl";
-const formatters = registry.category("formatters");
-
-export class BadgeField extends Component {
-    get formattedValue() {
-        const formatter = formatters.get(this.props.type);
-        return formatter(this.props.value, {
-            selection: this.props.record.fields[this.props.name].selection,
-        });
-    }
-
-    get classFromDecoration() {
-        for (const decorationName in this.props.decorations) {
-            if (this.props.decorations[decorationName]) {
-                return `text-bg-${decorationName}`;
-            }
-        }
-        return "";
-    }
-}
-
-BadgeField.template = "web.BadgeField";
-BadgeField.props = {
-    ...standardFieldProps,
-};
-
-BadgeField.displayName = _lt("Badge");
-BadgeField.supportedTypes = ["selection", "many2one", "char"];
-
-registry.category("fields").add("badge", BadgeField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a1ec40bb81bde44348cadddc9b40478d74d8a65d7e9f13a9b4d909dafdf5622
+size 1050

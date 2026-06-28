@@ -1,8 +1,3 @@
-/** @odoo-module  */
-
-import { registry } from '@web/core/registry';
-
-registry.category('website_custom_menus').add('website_links.menu_link_tracker', {
-    openWidget: (services) => services.website.goToWebsite({ path: `/r?u=${encodeURIComponent(services.website.contentWindow.location.href)}` }),
-    isDisplayed: (env) => env.services.website.currentWebsite && env.services.website.contentWindow,
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:77e8f468e8673fc13481dfe917cb61b0a73fbfc31cea244f10f3e4e4e05af53f
+size 404

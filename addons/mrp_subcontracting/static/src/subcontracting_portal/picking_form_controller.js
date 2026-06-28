@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { FormController } from "@web/views/form/form_controller";
-import { formView } from "@web/views/form/form_view";
-
-
-class PickingFormController extends FormController {}
-PickingFormController.template = "mrp_subcontracting.PickingFormController";
-
-const PickingFormView = {
-    ...formView,
-    Controller: PickingFormController,
-};
-
-registry.category("views").add("subcontracting_portal_picking_form_view", PickingFormView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:52b49b693060448159149b547d4f53cda4dceb1f147dbdb2fdfb91eaf629e288
+size 501

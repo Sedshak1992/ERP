@@ -1,32 +1,3 @@
-odoo.define('website_event.register_toaster_widget', function (require) {
-'use strict';
-
-let core = require('web.core');
-const {Markup} = require('web.utils');
-let _t = core._t;
-let publicWidget = require('web.public.widget');
-
-publicWidget.registry.RegisterToasterWidget = publicWidget.Widget.extend({
-    selector: '.o_wevent_register_toaster',
-
-    /**
-     * This widget allows to display a toast message on the page.
-     *
-     * @override
-     */
-    start: function () {
-        const message = this.$el.data('message');
-        if (message && message.length) {
-            this.displayNotification({
-                title: _t("Register"),
-                message: Markup(message),
-                type: 'info',
-            });
-        }
-        return this._super.apply(this, arguments);
-    },
-});
-
-return publicWidget.registry.RegisterToasterWidget;
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:28d70ab7dab8632b8053846a1625aa54600b49543982df4d69773a1868ca9ee9
+size 866

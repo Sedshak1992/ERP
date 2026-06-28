@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import { Component, xml, onWillDestroy } from "@odoo/owl";
-
-export class EffectContainer extends Component {
-    setup() {
-        this.effect = null;
-        const listenerRef = this.props.bus.addEventListener("UPDATE", (ev) => {
-            this.effect = ev.detail;
-            this.render();
-        });
-        onWillDestroy(() => {
-            this.props.bus.removeEventListener("UPDATE", listenerRef);
-        });
-    }
-    removeEffect() {
-        this.effect = null;
-        this.render();
-    }
-}
-
-EffectContainer.template = xml`
-  <div class="o_effects_manager">
-    <t t-if="effect">
-        <t t-component="effect.Component" t-props="effect.props" t-key="effect.id" close="() => this.removeEffect()"/>
-    </t>
-  </div>`;
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba6e7f928a1b3f26eb88b4d7d39a647700c28675c5ded4f7ea2b4187d99eb24b
+size 756

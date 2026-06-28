@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import { usePopover } from "@web/core/popover/popover_hook";
-
-export function useUniquePopover() {
-    const popover = usePopover();
-    let remove = null;
-    return Object.assign(Object.create(popover), {
-        add(target, component, props, options) {
-            if (remove) {
-                remove();
-            }
-            remove = popover.add(target, component, props, options);
-            return () => {
-                remove();
-                remove = null;
-            };
-        },
-    });
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:403077b9709dc4346e201c8b70a12246bb7648cf2e4d5182adba1b8d508e42d5
+size 533

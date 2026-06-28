@@ -1,18 +1,3 @@
-/** @odoo-module **/
-
-import * as publicWidget from 'web.public.widget'
-
-publicWidget.registry.ProductCategoriesLinks = publicWidget.Widget.extend({
-    selector: '.o_wsale_products_page',
-    events: {
-        'click [data-link-href]': '_openLink',
-    },
-
-    _openLink: function (ev) {
-        const productsDiv = this.el.querySelector('.o_wsale_products_grid_table_wrapper');
-        if (productsDiv) {
-            productsDiv.classList.add('opacity-50');
-        }
-        window.location.href = ev.currentTarget.getAttribute('data-link-href');
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:839933b590924a79023ee14c7e4214219d3065aef1228011f9bf68b107c617b3
+size 561

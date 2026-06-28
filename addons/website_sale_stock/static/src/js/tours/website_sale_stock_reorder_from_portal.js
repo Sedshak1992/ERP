@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import tour from 'web_tour.tour';
-import wTourUtils from 'website.tour_utils';
-
-tour.register('website_sale_stock_reorder_from_portal', {
-        test: true,
-        url: '/my/orders',
-    },
-    [
-        {
-            content: 'Select first order',
-            trigger: '.o_portal_my_doc_table a:first',
-        },
-        wTourUtils.clickOnElement('Reorder Again', '.o_wsale_reorder_button'),
-        {
-            content: "Check that there is one out of stock product",
-            trigger: "#o_wsale_reorder_body div.text-warning span:contains('This product is out of stock.')",
-        },
-        {
-            content: "Check that there is one product that does not have enough stock",
-            trigger: "#o_wsale_reorder_body div.text-warning:contains('You ask for 2.0 Units but only 1.0 are available.')",
-        },
-    ]
-);
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:f1f0aac3b821ba3ea7c8a5b3ba51f20796c17678f7f1a829ddccf1a95878be53
+size 862

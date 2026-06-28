@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import wTourUtils from 'website.tour_utils';
-
-const countdownSnippet = {
-    name: 'Countdown',
-    id: 's_countdown',
-};
-const dragNDropOutOfFooter = wTourUtils.dragNDrop(countdownSnippet);
-dragNDropOutOfFooter.run = 'drag_and_drop iframe #wrapwrap #wrap';
-
-wTourUtils.registerWebsitePreviewTour('website_start_cloned_snippet', {
-    edition: true,
-    test: true,
-    url: '/',
-}, [
-    dragNDropOutOfFooter,
-    wTourUtils.clickOnSnippet(countdownSnippet),
-    {
-        content: 'Click on clone snippet',
-        trigger: '.oe_snippet_clone',
-    },
-    {
-        content: 'Check that the cloned snippet has a canvas and that something has been drawn inside of it',
-        trigger: 'iframe .s_countdown:eq(1) canvas',
-        run: function () {
-            // Check that at least one bit has been drawn in the canvas
-            if (!this.$anchor[0].getContext('2d').getImageData(0, 0, 1000, 1000).data.includes(1)) {
-                console.error('The cloned snippet should have been started');
-            }
-        },
-    },
-]);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9f2aac79ae0d178dbdba281799f742987203340f6349af48b37b4206bbb9536
+size 1059

@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'Messaging',
-    fields: {
-        publicLivechatGlobal: one('PublicLivechatGlobal', {
-            isCausal: true,
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:6961056436f20814122869eedf4f2f5288ac8055b40e6913a4557d1d90497174
+size 290

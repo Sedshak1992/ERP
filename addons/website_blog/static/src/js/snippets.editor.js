@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import snippetEditor from 'web_editor.snippet.editor';
-
-snippetEditor.SnippetsMenu.include({
-
-    //--------------------------------------------------------------------------
-    // Private
-    //--------------------------------------------------------------------------
-
-    /**
-     * @override
-     */
-    _patchForComputeSnippetTemplates: function ($html) {
-        this._super(...arguments);
-        // TODO: remove in master.
-        const blogPostTagOptionEl = $html.find('[data-js="BlogPostTagSelection"]')[0];
-        if (blogPostTagOptionEl) {
-            blogPostTagOptionEl.dataset.noCheck = true;
-        }
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:26e43ebf328fd2d84ff243b23f9799bc2c3be0fdeaf36a97dcb83a6646ff72a3
+size 653

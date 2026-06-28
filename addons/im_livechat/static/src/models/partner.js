@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'Partner',
-    fields: {
-        /**
-         * States the specific name of this partner in the context of livechat.
-         * Either a string or undefined.
-         */
-        user_livechat_username: attr(),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e10750efd149590b7e8675f80d87826d6eae00fae7b20301d48af218f4583684
+size 374

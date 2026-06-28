@@ -1,12 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { formView } from "@web/views/form/form_view";
-import { CalendarFormController } from "@calendar/views/calendar_form/calendar_form_controller";
-
-export const CalendarFormView = {
-    ...formView,
-    Controller: CalendarFormController,
-};
-
-registry.category("views").add("calendar_form", CalendarFormView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ac348ece9b41e916be3653d1ec06147e95fc6956b3743ed46c9500fc06ccf3e
+size 383

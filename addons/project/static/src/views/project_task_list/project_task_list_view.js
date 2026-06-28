@@ -1,14 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { listView } from '@web/views/list/list_view';
-import { ProjectControlPanel } from "../../components/project_control_panel/project_control_panel";
-import { ProjectTaskListController } from './project_task_list_controller';
-
-export const projectTaskListView = {
-    ...listView,
-    Controller: ProjectTaskListController,
-    ControlPanel: ProjectControlPanel,
-};
-
-registry.category("views").add("project_task_list", projectTaskListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f7a564b88523667e0e09c59df5d56e2807345eae37b8661be3f5e46305e677da
+size 513

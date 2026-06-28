@@ -1,17 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'NotificationGroupView',
-    fields: {
-        imageSrc: {
-            compute() {
-                if (this.notificationGroup.notification_type === 'snail') {
-                    return '/snailmail/static/img/snailmail_failure.png';
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5162a64db08e6d810f437c0661c3da042892f1f7b64c5d531516976401b37e1
+size 431

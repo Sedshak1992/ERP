@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { useService } from "@web/core/utils/hooks";
-
-const { Component, useState } = owl;
-
-class MobilePreviewSystray extends Component {
-    setup() {
-        this.websiteService = useService('website');
-        this.state = useState(this.websiteService.context);
-    }
-}
-MobilePreviewSystray.template = "website.MobilePreviewSystray";
-
-export const systrayItem = {
-    Component: MobilePreviewSystray,
-    isDisplayed: (env) => env.services.website.isRestrictedEditor,
-};
-
-registry.category("website_systray").add("MobilePreview", systrayItem, { sequence: 12 });
+version https://git-lfs.github.com/spec/v1
+oid sha256:af466706001da4100ea70ab4761b21b28de300ad04c7961dca076dc084a20db6
+size 634

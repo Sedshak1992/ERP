@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { SearchModel } from "@web/search/search_model";
-
-export class GraphSearchModel extends SearchModel {
-    _getIrFilterDescription() {
-        this.preparingIrFilterDescription = true;
-        const result = super._getIrFilterDescription(...arguments);
-        this.preparingIrFilterDescription = false;
-        return result;
-    }
-
-    _getSearchItemGroupBys(activeItem) {
-        const { searchItemId } = activeItem;
-        const { context, type } = this.searchItems[searchItemId];
-        if (!this.preparingIrFilterDescription && type === "favorite" && context.graph_groupbys) {
-            return context.graph_groupbys;
-        }
-        return super._getSearchItemGroupBys(...arguments);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:60ba3d06bb6e225fa784fdfa2c47814fa98f615acdd92a4af8e9d46a304bb95d
+size 733

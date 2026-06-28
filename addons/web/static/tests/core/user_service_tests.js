@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { userService } from "@web/core/user_service";
-import { makeTestEnv } from "../helpers/mock_env";
-
-const serviceRegistry = registry.category("services");
-
-QUnit.module("UserService");
-
-QUnit.test("successive calls to hasGroup", async (assert) => {
-    serviceRegistry.add("user", userService);
-    const groups = ["x"];
-    const mockRPC = (route, args) => {
-        assert.step(`${args.model}/${args.method}/${args.args[0]}`);
-        return groups.includes(args.args[0]);
-    };
-    const env = await makeTestEnv({ mockRPC });
-    const hasGroupX = await env.services.user.hasGroup("x");
-    const hasGroupY = await env.services.user.hasGroup("y");
-    assert.strictEqual(hasGroupX, true);
-    assert.strictEqual(hasGroupY, false);
-    const hasGroupXAgain = await env.services.user.hasGroup("x");
-    assert.strictEqual(hasGroupXAgain, true);
-
-    assert.verifySteps(["res.users/has_group/x", "res.users/has_group/y"]);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0c0840a9125e70cec32dc705afde4e00d826249fa1feb140219a4f9af54b028d
+size 1003

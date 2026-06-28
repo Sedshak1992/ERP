@@ -1,28 +1,3 @@
-/** @odoo-module */
-
-import { useService } from '@web/core/utils/hooks';
-import { formatMonetary } from "@web/views/fields/formatters";
-
-const { Component, onWillStart, useState } = owl;
-
-export class ExpenseDashboard extends Component {
-
-    setup() {
-        super.setup();
-        this.orm = useService('orm');
-
-        this.state = useState({
-            expenses: {}
-        });
-
-        onWillStart(async () => {
-            const expense_states = await this.orm.call("hr.expense", 'get_expense_dashboard', []);
-            this.state.expenses = expense_states;
-        });
-    }
-
-    renderMonetaryField(value, currency_id) {
-        return formatMonetary(value, { currencyId: currency_id});;
-    }
-}
-ExpenseDashboard.template = 'hr_expense.ExpenseDashboard';
+version https://git-lfs.github.com/spec/v1
+oid sha256:50c4b56fa8868a902a53e0bd949da33ed19ec694d99d6aabcc542ab2f7b1609e
+size 767

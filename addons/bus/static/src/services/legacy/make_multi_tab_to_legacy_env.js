@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from '@web/core/registry';
-
-export function makeMultiTabToLegacyEnv(legacyEnv) {
-    return {
-        dependencies: ['multi_tab'],
-        start(_, { multi_tab }) {
-            legacyEnv.services['multi_tab'] = multi_tab;
-        },
-    };
-}
-
-registry.category('wowlToLegacyServiceMappers').add('multi_tab_to_legacy_env', makeMultiTabToLegacyEnv);
+version https://git-lfs.github.com/spec/v1
+oid sha256:22b2411abba9e57ded3ce91c1aade2921d08b116542dc69658addc3fda796308
+size 390

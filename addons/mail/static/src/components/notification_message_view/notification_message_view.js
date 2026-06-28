@@ -1,34 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-class NotificationMessageView extends Component {
-
-    /**
-     * @override
-     */
-     setup() {
-        super.setup();
-        useComponentToModel({ fieldName: 'component' });
-        useUpdateToModel({ methodName: 'onComponentUpdate' });
-    }
-
-    /**
-     * @returns {NotificationMessageView}
-     */
-    get notificationMessageView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(NotificationMessageView, {
-    props: { record: Object },
-    template: 'mail.NotificationMessageView',
-});
-
-registerMessagingComponent(NotificationMessageView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5f9a35e0e11a2a21860538cf1dc7cdda7559cbc51ac5c0b2bab75085b95eddc
+size 854

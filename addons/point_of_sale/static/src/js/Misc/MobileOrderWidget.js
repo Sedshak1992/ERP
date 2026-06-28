@@ -1,25 +1,3 @@
-odoo.define('point_of_sale.MobileOrderWidget', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class MobileOrderWidget extends PosComponent {
-        get order() {
-            return this.env.pos.get_order();
-        }
-        get total() {
-            const _total = this.order ? this.order.get_total_with_tax() : 0;
-            return this.env.pos.format_currency(_total);
-        }
-        get items_number() {
-            return this.order ? this.order.orderlines.reduce((items_number,line) => items_number + line.quantity, 0) : 0;
-        }
-    }
-
-    MobileOrderWidget.template = 'MobileOrderWidget';
-
-    Registries.Component.add(MobileOrderWidget);
-
-    return MobileOrderWidget;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:291d7f28a41de3c43f3b91e293a1280088cbbbeb85ffd89cf0a99705864fd565
+size 812

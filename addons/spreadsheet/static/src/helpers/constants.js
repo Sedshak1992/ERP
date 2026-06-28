@@ -1,28 +1,3 @@
-/** @odoo-module */
-
-import { _lt } from "@web/core/l10n/translation";
-
-export const DEFAULT_LINES_NUMBER = 20;
-
-export const FORMATS = {
-    day: { out: "MM/DD/YYYY", display: "DD MMM YYYY", interval: "d" },
-    week: { out: "WW/YYYY", display: "[W]W YYYY", interval: "w" },
-    month: { out: "MM/YYYY", display: "MMMM YYYY", interval: "M" },
-    quarter: { out: "Q/YYYY", display: "[Q]Q YYYY", interval: "Q" },
-    year: { out: "YYYY", display: "YYYY", interval: "y" },
-};
-
-export const HEADER_STYLE = { fillColor: "#f2f2f2" };
-export const TOP_LEVEL_STYLE = { bold: true, fillColor: "#f2f2f2" };
-export const MEASURE_STYLE = { fillColor: "#f2f2f2", textColor: "#756f6f" };
-
-export const UNTITLED_SPREADSHEET_NAME = _lt("Untitled spreadsheet");
-
-export const RELATIVE_DATE_RANGE_TYPES = [
-    { type: "last_week", description: _lt("Last 7 Days") },
-    { type: "last_month", description: _lt("Last 30 Days") },
-    { type: "last_three_months", description: _lt("Last 90 Days") },
-    { type: "last_six_months", description: _lt("Last 180 Days") },
-    { type: "last_year", description: _lt("Last 365 Days") },
-    { type: "last_three_years", description: _lt("Last 3 Years") },
-];
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9de824df6a2aae1dd5a9a7e50f34fc5d51449ac9abbee6f6ee7c5ce11c6a9fb
+size 1183

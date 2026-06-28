@@ -1,12 +1,3 @@
-// Change address font-size if needed
-document.addEventListener('DOMContentLoaded', function (evt) {
-    var recipientAddress = document.querySelector(".address.row > div[name='address'] > address");
-    let baseSize = 120;
-    if (!recipientAddress) {
-        recipientAddress = document.querySelector("div .row.fallback_header > div.col-5.offset-7 > div:first-child");
-    }
-    var style = window.getComputedStyle(recipientAddress, null); 
-    var height = parseFloat(style.getPropertyValue('height'));
-    var fontSize = parseFloat(style.getPropertyValue('font-size'));
-    recipientAddress.style.fontSize = (baseSize / (height / fontSize)) + 'px';
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:db39d9384c252da3007c29ff98e1df7dba50597b7b8d17c32b448ec9d0029528
+size 657

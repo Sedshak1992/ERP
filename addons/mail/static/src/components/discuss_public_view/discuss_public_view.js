@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-class DiscussPublicView extends Component {
-
-    /**
-     * @returns {DiscussPublicView}
-     */
-     get discussPublicView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(DiscussPublicView, {
-    props: { record: Object },
-    template: 'mail.DiscussPublicView',
-});
-
-registerMessagingComponent(DiscussPublicView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3d242dfbe9e8453ee759ea3bd6d2c4235d7c25d805e963eae45017eef0e4d6b
+size 458

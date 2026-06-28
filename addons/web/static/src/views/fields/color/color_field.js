@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { standardFieldProps } from "../standard_field_props";
-
-import { Component, useState, onWillUpdateProps } from "@odoo/owl";
-
-export class ColorField extends Component {
-    setup() {
-        this.state = useState({
-            color: this.props.value || '',
-        });
-
-        onWillUpdateProps((nextProps) => {
-            this.state.color = nextProps.value || '';
-        });
-    }
-
-    get isReadonly() {
-        return this.props.record.isReadonly(this.props.name);
-    }
-}
-
-ColorField.template = "web.ColorField";
-ColorField.props = {
-    ...standardFieldProps,
-};
-
-ColorField.supportedTypes = ["char"];
-
-registry.category("fields").add("color", ColorField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa359c71293a35737975a53d4d3b4f73a51c8bd2cb21837ecb1abe2726a9f197
+size 742

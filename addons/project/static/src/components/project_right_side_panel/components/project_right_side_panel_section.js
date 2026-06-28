@@ -1,26 +1,3 @@
-/** @odoo-module */
-
-const { Component } = owl;
-
-export class ProjectRightSidePanelSection extends Component { }
-
-ProjectRightSidePanelSection.props = {
-    name: { type: String, optional: true },
-    header: { type: Boolean, optional: true },
-    show: Boolean,
-    showData: { type: Boolean, optional: true },
-    slots: {
-        type: Object,
-        shape: {
-            default: Object, // Content is not optional
-            header: { type: Object, optional: true },
-            title: { type: Object, optional: true },
-        },
-    },
-};
-ProjectRightSidePanelSection.defaultProps = {
-    header: true,
-    showData: true,
-};
-
-ProjectRightSidePanelSection.template = 'project.ProjectRightSidePanelSection';
+version https://git-lfs.github.com/spec/v1
+oid sha256:507c375e2d7f34bfceb188c6d567b9c8b59926fb425ee7ba25db7f7a1484baeb
+size 716

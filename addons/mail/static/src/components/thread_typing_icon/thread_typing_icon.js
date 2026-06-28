@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ThreadTypingIcon extends Component {}
-
-Object.assign(ThreadTypingIcon, {
-    defaultProps: {
-        animation: 'none',
-        size: 'small',
-    },
-    props: {
-        animation: {
-            type: String,
-            validate: prop => ['bounce', 'none', 'pulse'].includes(prop),
-            optional: true,
-        },
-        size: {
-            type: String,
-            validate: prop => ['small', 'medium'].includes(prop),
-            optional: true,
-        },
-        title: {
-            type: String,
-            optional: true,
-        }
-    },
-    template: 'mail.ThreadTypingIcon',
-});
-
-registerMessagingComponent(ThreadTypingIcon);
+version https://git-lfs.github.com/spec/v1
+oid sha256:91da952de33e31bca9b12ab72536d0b0b6306aa2ae32530c76acde6f070f33b9
+size 790

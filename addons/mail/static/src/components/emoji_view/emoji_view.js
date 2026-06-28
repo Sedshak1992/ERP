@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class EmojiView extends Component {
-    /**
-     * @returns {EmojiView}
-     */
-    get emojiView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(EmojiView, {
-    props: { record: Object },
-    template: 'mail.EmojiView',
-});
-
-registerMessagingComponent(EmojiView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:76bcf97f3800801c9701de5f1375d8534f3558af2b18b2770322a3d94ab42ae3
+size 415

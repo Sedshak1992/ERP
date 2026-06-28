@@ -1,24 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-
-registerModel({
-    name: 'MediaStream',
-    lifecycleHooks: {
-        _willDelete() {
-            for (const track of this.webMediaStream.getTracks()) {
-                track.stop();
-            }
-        },
-    },
-    fields: {
-        id: attr({
-            identifying: true,
-        }),
-        webMediaStream: attr({
-            required: true,
-            readonly: true,
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:98afab0c063371c45bd5c778c4b041c617d98cf4d1e31e64cc764e78df57b533
+size 529

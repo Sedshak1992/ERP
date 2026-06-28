@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from '@web/core/registry';
-
-export function makeBusServiceToLegacyEnv(legacyEnv) {
-    return {
-        dependencies: ['bus_service'],
-        start(_, { bus_service }) {
-            legacyEnv.services['bus_service'] = bus_service;
-        },
-    };
-}
-
-registry.category('wowlToLegacyServiceMappers').add('bus_service_to_legacy_env', makeBusServiceToLegacyEnv);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3d0c9f1550621aa9504df25e313c51f8d59a4feaa09fcf0ad1917b9de9faa49e
+size 404

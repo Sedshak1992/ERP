@@ -1,19 +1,3 @@
-odoo.define('website.tour_focus_blur_snippets_options', function (require) {
-'use strict';
-
-const options = require('web_editor.snippets.options');
-
-const FocusBlur = options.Class.extend({
-    onFocus() {
-        window.focusBlurSnippetsResult.push(`focus ${this.focusBlurName}`);
-    },
-    onBlur() {
-        window.focusBlurSnippetsResult.push(`blur ${this.focusBlurName}`);
-    },
-});
-
-options.registry.FocusBlurParent = FocusBlur.extend({focusBlurName: 'parent'});
-options.registry.FocusBlurChild1 = FocusBlur.extend({focusBlurName: 'child1'});
-options.registry.FocusBlurChild2 = FocusBlur.extend({focusBlurName: 'child2'});
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e7d6fe5a00b0d30f1a4fdfb1349d866e810b6d87c1e0d6a35ab3730e2c258c92
+size 636

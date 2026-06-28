@@ -1,36 +1,3 @@
-/** @odoo-module **/
-
-import { Component } from "@odoo/owl";
-
-export class FormStatusIndicator extends Component {
-    get displayButtons() {
-        return this.indicatorMode !== "saved";
-    }
-
-    get indicatorMode() {
-        if (this.props.model.root.isVirtual) {
-            return this.props.model.root.isValid ? "dirty" : "invalid";
-        } else if (!this.props.model.root.isValid) {
-            return "invalid";
-        } else if (this.props.model.root.isDirty || this.props.fieldIsDirty) {
-            return "dirty";
-        } else {
-            return "saved";
-        }
-    }
-
-    async discard() {
-        await this.props.discard();
-    }
-    async save() {
-        await this.props.save();
-    }
-}
-FormStatusIndicator.template = "web.FormStatusIndicator";
-FormStatusIndicator.props = {
-    model: Object,
-    save: Function,
-    discard: Function,
-    isDisabled: Boolean,
-    fieldIsDirty: Boolean,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:6069c19fe232092b23d27b4d515998d6a0f60b1a4bc002edc0700c6723a49a83
+size 922

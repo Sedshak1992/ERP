@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { SearchPanel } from "@web/search/search_panel/search_panel";
-
-export class StockReportSearchPanel extends SearchPanel {
-    setup() {
-        super.setup(...arguments);
-        this.selectedWarehouse = false;
-    }
-
-    //---------------------------------------------------------------------
-    // Actions / Getters
-    //---------------------------------------------------------------------
-
-    get warehouses() {
-        return this.env.searchModel.getWarehouses();
-    }
-
-    clearWarehouseContext() {
-        this.env.searchModel.clearWarehouseContext();
-        this.selectedWarehouse = null;
-    }
-
-    applyWarehouseContext(warehouse_id) {
-        this.env.searchModel.applyWarehouseContext(warehouse_id);
-        this.selectedWarehouse = warehouse_id;
-    }
-}
-
-StockReportSearchPanel.template = "stock.StockReportSearchPanel";
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc265e8c1f52301729c34f44be01fc32cf34684ba3abefffd9e51fe1988158c1
+size 867

@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from "@mail/model/model_core";
-
-registerPatch({
-    name: "MessageView",
-    fields: {
-        hasAuthorClickable: {
-            compute() {
-                if (
-                    this.message &&
-                    this.message.originThread &&
-                    this.message.originThread.channel &&
-                    this.message.originThread.channel.channel_type === "livechat"
-                ) {
-                    return this.message.author === this.message.originThread.channel.correspondent;
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc15f7301d51d9d77d6ba2b338f58b973819af484e8e093e30d545c424621faf
+size 646

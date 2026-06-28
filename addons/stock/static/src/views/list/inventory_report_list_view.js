@@ -1,15 +1,3 @@
-/** @odoo-module */
-
-import { listView } from "@web/views/list/list_view";
-import { InventoryReportListModel } from "./inventory_report_list_model";
-import { InventoryReportListController } from "./inventory_report_list_controller";
-import { registry } from "@web/core/registry";
-
-export const InventoryReportListView = {
-    ...listView,
-    Model: InventoryReportListModel,
-    Controller: InventoryReportListController,
-    buttonTemplate: 'InventoryReport.Buttons',
-};
-
-registry.category("views").add('inventory_report_list', InventoryReportListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ff8900899094d9299d780a2f6198f512d1360ea6f2f3d91dcabd1b7fa32f421
+size 556

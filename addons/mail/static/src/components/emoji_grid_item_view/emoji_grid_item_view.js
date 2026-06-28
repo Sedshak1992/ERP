@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class EmojiGridItemView extends Component {
-    /**
-     * @returns {EmojiGridItemView}
-     */
-    get emojiGridItemView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(EmojiGridItemView, {
-    props: { record: Object },
-    template: 'mail.EmojiGridItemView',
-});
-
-registerMessagingComponent(EmojiGridItemView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:03ebc782f7672fb7bd2c06cdf184c1df96c7da5021302b94b3e8368919ab58ab
+size 463

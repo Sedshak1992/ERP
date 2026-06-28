@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class MobileMessagingNavbar extends Component {
-
-    /**
-     * @returns {MobileMessagingNavbarView}
-     */
-    get mobileMessagingNavbarView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(MobileMessagingNavbar, {
-    props: { record: Object },
-    template: 'mail.MobileMessagingNavbar',
-});
-
-registerMessagingComponent(MobileMessagingNavbar);
+version https://git-lfs.github.com/spec/v1
+oid sha256:d15920bcfcb074155cf2b197b0c5898449e955950ea6950b079ecc84e09bce5a
+size 497

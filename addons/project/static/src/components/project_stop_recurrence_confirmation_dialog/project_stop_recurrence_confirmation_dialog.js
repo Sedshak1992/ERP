@@ -1,14 +1,3 @@
-/** @odoo-module */
-
-import { ConfirmationDialog } from '@web/core/confirmation_dialog/confirmation_dialog';
-
-export class ProjectStopRecurrenceConfirmationDialog extends ConfirmationDialog {
-    _continueRecurrence() {
-        if (this.props.continueRecurrence) {
-            this.props.continueRecurrence();
-        }
-        this.props.close();
-    }
-}
-ProjectStopRecurrenceConfirmationDialog.template = 'project.ProjectStopRecurrenceConfirmationDialog';
-ProjectStopRecurrenceConfirmationDialog.props.continueRecurrence = { type: Function, optional: true };
+version https://git-lfs.github.com/spec/v1
+oid sha256:95bf67f212d3fa136cb2686ea9864c27e2b5f8a6708d2577d06298cf976db24c
+size 561

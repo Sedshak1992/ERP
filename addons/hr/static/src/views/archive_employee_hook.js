@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-
-const { useComponent, useEnv } = owl;
-
-export function useArchiveEmployee() {
-    const component = useComponent();
-    const env = useEnv();
-    const action = useService("action");
-    return (id) => {
-        action.doAction({
-            type: 'ir.actions.act_window',
-            name: env._t('Employee Termination'),
-            res_model: 'hr.departure.wizard',
-            views: [[false, 'form']],
-            view_mode: 'form',
-            target: 'new',
-            context: {
-                'active_id': id,
-                'toggle_active': true,
-            }
-        }, {
-            onClose: async () => {
-                await component.model.load();
-                component.model.notify();
-            },
-        });
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f24fcf35b3793c8987f873f6afd093debed156704d0ac910b7f291e47aaf9a1
+size 820

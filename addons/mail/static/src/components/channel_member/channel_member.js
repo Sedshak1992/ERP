@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChannelMember extends Component {
-
-    /**
-     * @returns {ChannelMemberView}
-     */
-    get channelMemberView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ChannelMember, {
-    props: {
-        record: Object,
-    },
-    template: 'mail.ChannelMember',
-});
-
-registerMessagingComponent(ChannelMember);
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa655c231da172e79396d5cd892e4338b4a3881d8da2aec82ebd9a01bbb34b67
+size 462

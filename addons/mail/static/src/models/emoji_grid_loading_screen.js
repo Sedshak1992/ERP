@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'EmojiGridLoadingScreen',
-    fields: {
-        emojiGridViewOwner: one('EmojiGridView', {
-            identifying: true,
-            inverse: 'loadingScreenView',
-        }),
-        text: attr({
-            compute() {
-                return this.env._t("Loading...");
-            },
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:94655f2f6ff253eed188149f14fb7e8f2086956ceca6a9b4db078cb9c266cda0
+size 467

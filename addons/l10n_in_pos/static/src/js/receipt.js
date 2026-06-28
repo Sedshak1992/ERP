@@ -1,17 +1,3 @@
-odoo.define('l10n_in_pos.receipt', function (require) {
-"use strict";
-
-var { Orderline } = require('point_of_sale.models');
-const Registries = require('point_of_sale.Registries');
-
-
-const L10nInOrderline = (Orderline) => class L10nInOrderline extends Orderline {
-    export_for_printing() {
-        var line = super.export_for_printing(...arguments);
-        line.l10n_in_hsn_code = this.get_product().l10n_in_hsn_code;
-        return line;
-    }
-}
-Registries.Model.extend(Orderline, L10nInOrderline);
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:845e5063cb030cc0f3cea44df96190f883c2c8949afa319a5316b4c844cbc30a
+size 507

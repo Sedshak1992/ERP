@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import { PortalWizardUserListController } from "../list/portal_wizard_user_list_controller";
-import { X2ManyField } from "@web/views/fields/x2many/x2many_field";
-import { registry } from "@web/core/registry";
-
-export class PortalUserX2ManyField extends X2ManyField {}
-PortalUserX2ManyField.components = {
-    ...X2ManyField.components,
-    Controller: PortalWizardUserListController,
-};
-
-registry.category("fields").add("portal_wizard_user_one2many", PortalUserX2ManyField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3107be3c75557c3a488e6864b55883a3e1ef70710cc0b2946c3a9510bf264f10
+size 497

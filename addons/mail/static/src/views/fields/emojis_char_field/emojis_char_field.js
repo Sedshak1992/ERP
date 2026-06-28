@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { CharField } from "@web/views/fields/char/char_field";
-import { patch } from "@web/core/utils/patch";
-import MailEmojisMixin from '@mail/js/emojis_mixin';
-import { EmojisDropdown } from '@mail/js/emojis_dropdown';
-import { EmojisFieldCommon } from '@mail/views/fields/emojis_field_common';
-import { registry } from "@web/core/registry";
-
-const { useRef } = owl;
-
-/**
- * Extension of the FieldChar that will add emojis support
- */
-export class EmojisCharField extends CharField {
-    setup() {
-        super.setup();
-        this.targetEditElement = useRef('input');
-        this._setupOverride();
-    }
-};
-
-EmojisCharField.extractProps = ({ attrs, field }) => {
-    return {...CharField.extractProps({attrs, field}), shouldTrim: false};
-};
-patch(EmojisCharField.prototype, 'emojis_char_field_mail_mixin', MailEmojisMixin);
-patch(EmojisCharField.prototype, 'emojis_char_field_field_mixin', EmojisFieldCommon);
-EmojisCharField.template = 'mail.EmojisCharField';
-EmojisCharField.components = { ...CharField.components, EmojisDropdown };
-EmojisCharField.additionalClasses = [...(CharField.additionalClasses || []), 'o_field_text'];
-registry.category("fields").add("char_emojis", EmojisCharField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:62b9d4c5f600f9c93ac45630e95bbdc144a64fca7f50d0114d798215bf2cf655
+size 1223

@@ -1,28 +1,3 @@
-odoo.define('web.test_utils_graph', function () {
-"use strict";
-
-/**
- * Graph Test Utils
- *
- * This module defines various utility functions to help test graph views.
- *
- * Note that all methods defined in this module are exported in the main
- * testUtils file.
- */
-
-
-/**
- * Reloads a graph view.
- *
- * @param {GraphController} graph
- * @param {[Object]} params given to the controller reload method
- */
-function reload(graph, params) {
-    return graph.reload(params);
-}
-
-return {
-    reload: reload,
-};
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e475d86ff3293c8de439b07f1cbc8246f2344d60240f6b08aa05faf89659b0b
+size 510

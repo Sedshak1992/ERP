@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { _lt } from "@web/core/l10n/translation";
-import { registry } from "@web/core/registry";
-import { archParseBoolean } from "@web/views/utils";
-import { standardFieldProps } from "../standard_field_props";
-
-import { Component } from "@odoo/owl";
-
-export class BooleanFavoriteField extends Component {}
-
-BooleanFavoriteField.template = "web.BooleanFavoriteField";
-BooleanFavoriteField.props = {
-    ...standardFieldProps,
-    noLabel: { type: Boolean, optional: true },
-};
-BooleanFavoriteField.defaultProps = {
-    noLabel: false,
-};
-
-BooleanFavoriteField.displayName = _lt("Favorite");
-BooleanFavoriteField.supportedTypes = ["boolean"];
-
-BooleanFavoriteField.isEmpty = () => false;
-BooleanFavoriteField.extractProps = ({ attrs }) => {
-    return {
-        noLabel: archParseBoolean(attrs.nolabel),
-    };
-};
-
-registry.category("fields").add("boolean_favorite", BooleanFavoriteField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:145356e10562d162fa138f130128ab9b7d762460d5c6e988ea6eb7f2c27314ed
+size 912

@@ -1,36 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-import Popover from "web.Popover";
-import { LegacyComponent } from "@web/legacy/legacy_component";
-
-export class Activity extends LegacyComponent {
-
-    /**
-     * @override
-     */
-     setup() {
-        super.setup();
-        useComponentToModel({ fieldName: 'component' });
-        useRefToModel({ fieldName: 'markDoneButtonRef', refName: 'markDoneButton', });
-    }
-
-    /**
-     * @returns {ActivityView}
-     */
-    get activityView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(Activity, {
-    props: { record: Object },
-    template: 'mail.Activity',
-    components: { Popover },
-});
-
-registerMessagingComponent(Activity);
+version https://git-lfs.github.com/spec/v1
+oid sha256:95f87c18fca289ebb2ca7f21e48883e379e2a43575d55eef2d1496def87a0160
+size 904

@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import {NewContentFormController, NewContentFormView} from '@website/js/new_content_form';
-import {registry} from "@web/core/registry";
-
-export class AddForumFormController extends NewContentFormController {
-    /**
-     * @override
-     */
-    computePath() {
-        return `/forum/${encodeURIComponent(this.model.root.data.id)}`;
-    }
-}
-
-export const AddForumFormView = {
-    ...NewContentFormView,
-    Controller: AddForumFormController,
-};
-
-registry.category("views").add("website_forum_add_form", AddForumFormView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4831e3ac7b9f7bc7c17919b64ebd0a0fb43dcdb0d69b19cafe7843552cb7661
+size 545

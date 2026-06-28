@@ -1,13 +1,3 @@
-/** @odoo-module **/
-
-import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-
-export class SearchDropdownItem extends DropdownItem {}
-SearchDropdownItem.template = "web.SearchDropdownItem";
-SearchDropdownItem.props = {
-    ...DropdownItem.props,
-    checked: {
-        type: Boolean,
-        optional: false,
-    },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:0d7a3299208a033def3f439e27c9b4c35e30da63be94088dfdc5e20d9041aa51
+size 329

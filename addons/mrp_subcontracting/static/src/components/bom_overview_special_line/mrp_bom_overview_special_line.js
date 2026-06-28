@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from "@web/core/utils/patch";
-import { useService } from "@web/core/utils/hooks";
-import { BomOverviewSpecialLine } from "@mrp/components/bom_overview_special_line/mrp_bom_overview_special_line";
-
-patch(BomOverviewSpecialLine.prototype, "mrp_subcontracting", {
-    setup() {
-        this._super.apply();
-        this.actionService = useService("action");
-    },
-
-    //---- Handlers ----
-
-    async goToSubcontractor() {
-        return this.actionService.doAction({
-            type: "ir.actions.act_window",
-            res_model: "res.partner",
-            res_id: this.subcontracting.partner_id,
-            views: [[false, "form"]],
-            target: "current",
-            context: {
-                active_id: this.subcontracting.partner_id,
-            },
-        });
-    },
-
-    //---- Getters ----
-
-    get subcontracting() {
-        return this.props.data.subcontracting || {};
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b36e65e5b8acec9efd78abd51367a2d8855077c82512462068a48a9d863bc0a
+size 940

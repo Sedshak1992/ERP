@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ChannelInvitationForm extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useComponentToModel({ fieldName: 'component' });
-        useRefToModel({ fieldName: 'searchInputRef', refName: 'searchInput' });
-        useUpdateToModel({ methodName: 'onComponentUpdate' });
-    }
-
-    get channelInvitationForm() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(ChannelInvitationForm, {
-    props: { record: Object },
-    template: 'mail.ChannelInvitationForm',
-});
-
-registerMessagingComponent(ChannelInvitationForm);
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d80aba4bba23da260c317b59740cbd6834728c6588ce4282d1d803863ed7c16
+size 944

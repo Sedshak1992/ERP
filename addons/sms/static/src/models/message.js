@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'Message',
-    recordMethods: {
-        /**
-         * @override
-         */
-        openResendAction() {
-            if (this.message_type === 'sms') {
-                this.env.services.action.doAction(
-                    'sms.sms_resend_action',
-                    {
-                        additionalContext: {
-                            default_mail_message_id: this.id,
-                        },
-                    },
-                );
-            } else {
-                this._super(...arguments);
-            }
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:8af15ee16582f9d0df36c9f0b781607e94d75dd16cd67c59d4607f080931f069
+size 652

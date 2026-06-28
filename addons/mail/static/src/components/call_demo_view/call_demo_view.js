@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class CallDemoView extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'audioRef', refName: 'audio' });
-        useRefToModel({ fieldName: 'videoRef', refName: 'video' });
-    }
-
-    /**
-     * @returns {CallDemoView}
-     */
-    get callDemoView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(CallDemoView, {
-    props: { record: Object },
-    template: 'mail.CallDemoView',
-});
-
-registerMessagingComponent(CallDemoView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:4250388c4c20decef2ec53a803130f2d62d42f4c6a8dd1802e16f991ef1f2dab
+size 719

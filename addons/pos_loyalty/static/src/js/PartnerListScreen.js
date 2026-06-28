@@ -1,21 +1,3 @@
-odoo.define('pos_loyalty.PartnerListScreen', function (require) {
-    'use strict';
-
-    const PartnerListScreen = require('point_of_sale.PartnerListScreen');
-    const Registries = require('point_of_sale.Registries');
-
-    const PosLoyaltyPartnerListScreen = (PartnerListScreen) =>
-        class extends PartnerListScreen {
-            /**
-             * Needs to be set to true to show the loyalty points in the partner list.
-             * @override
-             */
-            get isBalanceDisplayed() {
-                return true;
-            }
-        };
-
-    Registries.Component.extend(PartnerListScreen, PosLoyaltyPartnerListScreen);
-
-    return PartnerListScreen;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e69d48886817aceae186b8f7a1b165914d0121f6189c0edf4203ff094982ee9
+size 679

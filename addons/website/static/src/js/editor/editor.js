@@ -1,22 +1,3 @@
-odoo.define('website.editor', function (require) {
-'use strict';
-
-var weWidgets = require('web_editor.widget');
-var wUtils = require('website.utils');
-
-weWidgets.LinkDialog.include({
-    /**
-     * Allows the URL input to propose existing website pages.
-     *
-     * @override
-     */
-    start: async function () {
-        const options = {
-            body: this.linkWidget.$link && this.linkWidget.$link[0].ownerDocument.body,
-        };
-        const result = await this._super.apply(this, arguments);
-        wUtils.autocompleteWithPages(this, this.$('input[name="url"]'), options);
-        return result;
-    },
-});
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:73c0045a9cef3e232cdf691a0e8f56c533b1089a440ea235f691caeb84c10ef1
+size 627

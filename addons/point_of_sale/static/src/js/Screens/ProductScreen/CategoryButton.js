@@ -1,18 +1,3 @@
-odoo.define('point_of_sale.CategoryButton', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class CategoryButton extends PosComponent {
-        get imageUrl() {
-            const category = this.props.category
-            return `/web/image?model=pos.category&field=image_128&id=${category.id}&unique=${category.write_date}`;
-        }
-    }
-    CategoryButton.template = 'CategoryButton';
-
-    Registries.Component.add(CategoryButton);
-
-    return CategoryButton;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e125dc52d7b4c8ec260de84c98f4fd5eacd75bb8095800ce84c22c3f8b86770e
+size 589

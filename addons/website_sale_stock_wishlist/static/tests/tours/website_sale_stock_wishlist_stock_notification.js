@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import tour from 'web_tour.tour';
-
-tour.register('stock_notification_wishlist', {
-        test: true,
-        url: '/shop/wishlist',
-    },
-    [
-        {
-            content: "Click on 'Be notified when back in stock'",
-            trigger: '#wishlist_stock_notification_message',
-        },
-        {
-            content: "Fill email form",
-            trigger: 'div[id="stock_notification_form"] input[name="email"]',
-            run: 'text test@test.test',
-        },
-        {
-            content: "Click on the button",
-            trigger: '#wishlist_stock_notification_form_submit_button',
-        },
-        {
-            content: "Success Message",
-            trigger: '#stock_notification_success_message',
-        },
-    ],
-);
+version https://git-lfs.github.com/spec/v1
+oid sha256:56a9ac8c7215d88b2d038c91b9bf976f9ad4e077f1b3ca18f575a8b4535d7c69
+size 763

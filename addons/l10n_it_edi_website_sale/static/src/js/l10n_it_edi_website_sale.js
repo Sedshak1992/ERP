@@ -1,23 +1,3 @@
-/** @odoo-module **/
-import { WebsiteSale } from 'website_sale.website_sale';
-
-WebsiteSale.include({
-    events: Object.assign(WebsiteSale.prototype.events, {
-        "change input[name='vat'], select[name='country_id']": "computeCodiceFiscale",
-    }),
-
-    computeCodiceFiscale: function() {
-        const vatValue = this.$('input[name="vat"]').val();
-        const countryValue = this.$('select[name="country_id"]').find(':selected').attr('code');
-        const l10nItCodiceFiscaleInput = this.$('input[name="l10n_it_codice_fiscale"]');
-
-        if (vatValue && (vatValue.startsWith('IT') || countryValue === 'IT')) {
-            if (/^IT[0-9]{11}$/.test(vatValue)) {
-                l10nItCodiceFiscaleInput.val(vatValue.slice(2, 13));
-            }
-            else {
-                l10nItCodiceFiscaleInput.val(vatValue);
-            }
-        }
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:821db97a0a1edee87cf21dc3ff785be108a503b5ed999452a58b0b6bc5069841
+size 864

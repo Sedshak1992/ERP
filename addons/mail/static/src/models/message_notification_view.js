@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'NotificationMessageView',
-    recordMethods: {
-        onComponentUpdate() {
-            if (!this.exists()) {
-                return;
-            }
-            if (this.messageListViewItemOwner.threadViewOwnerAsLastMessageListViewItem && this.messageListViewItemOwner.isPartiallyVisible()) {
-                this.messageListViewItemOwner.threadViewOwnerAsLastMessageListViewItem.handleVisibleMessage(this.message);
-            }
-        },
-        async onClick(ev) {
-            await this.messaging.handleClickOnLink(ev);
-        },
-    },
-    fields: {
-        component: attr(),
-        message: one('Message', {
-            related: 'messageListViewItemOwner.message',
-            inverse: 'notificationMessageViews',
-            required: true,
-        }),
-        messageListViewItemOwner: one('MessageListViewItem', {
-            identifying: true,
-            inverse: 'notificationMessageView',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ff94cc00590b84b9b379499f1b2532288e62cb6f126dc812a17c07d0d59f24a
+size 1088

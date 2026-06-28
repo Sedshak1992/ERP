@@ -1,15 +1,3 @@
-/** @odoo-module */
-
-import { listView } from "@web/views/list/list_view";
-
-import { ProjectSharingListRenderer } from "./list_renderer";
-
-const props = listView.props;
-listView.props = function (genericProps, view) {
-    const result = props(genericProps, view);
-    return {
-        ...result,
-        allowSelectors: false,
-    };
-};
-listView.Renderer = ProjectSharingListRenderer;
+version https://git-lfs.github.com/spec/v1
+oid sha256:15dea0ed8dce825bd9a7467169e1755f2de10033076ea518f87f9729d514e904
+size 385

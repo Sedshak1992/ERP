@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class CallInviteRequestPopup extends Component {
-
-    //--------------------------------------------------------------------------
-    // Getters / Setters
-    //--------------------------------------------------------------------------
-
-    /**
-     * @returns {CallInviteRequestPopup}
-     */
-    get callInviteRequestPopup() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(CallInviteRequestPopup, {
-    props: { record: Object },
-    template: 'mail.CallInviteRequestPopup',
-});
-
-registerMessagingComponent(CallInviteRequestPopup);
+version https://git-lfs.github.com/spec/v1
+oid sha256:24441b209bfa54b7ca06169289cb8e68f98e8bcfc8c964f8550a89c94f843304
+size 683

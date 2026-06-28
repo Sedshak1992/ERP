@@ -1,16 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { kanbanView } from '@web/views/kanban/kanban_view';
-import { ProjectTaskKanbanModel } from "./project_task_kanban_model";
-import { ProjectTaskKanbanRenderer } from './project_task_kanban_renderer';
-import { ProjectControlPanel } from "../../components/project_control_panel/project_control_panel";
-
-export const projectTaskKanbanView = {
-    ...kanbanView,
-    Model: ProjectTaskKanbanModel,
-    Renderer: ProjectTaskKanbanRenderer,
-    ControlPanel: ProjectControlPanel,
-};
-
-registry.category('views').add('project_task_kanban', projectTaskKanbanView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e84f65d105bdda02dbc3ea62e8f1db359ff7119b52ffd5c417905abc773c2bb9
+size 630

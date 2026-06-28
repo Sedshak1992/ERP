@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-import { clear } from '@mail/model/model_field_command';
-
-import fieldUtils from 'web.field_utils';
-import { getLangTimeFormat } from 'web.time';
-
-registerModel({
-    name: 'calendar.event',
-    fields: {
-        allday: attr(),
-        attendee_status: attr(),
-        formattedStart: attr({
-            compute() {
-                if (!this.start) {
-                    return clear();
-                }
-                return moment(fieldUtils.parse.datetime(this.start, false, { isUTC: true })).local().format(getLangTimeFormat());
-            },
-        }),
-        id: attr({
-            identifying: true,
-        }),
-        name: attr(),
-        start: attr(),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:a439531e5ba65650cd6104ebd0e4527ec6f0bfb244d5c3e28e092167b8405145
+size 807

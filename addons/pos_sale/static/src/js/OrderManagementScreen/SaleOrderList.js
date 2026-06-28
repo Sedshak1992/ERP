@@ -1,32 +1,3 @@
-odoo.define('pos_sale.SaleOrderList', function (require) {
-    'use strict';
-
-    const { useListener } = require("@web/core/utils/hooks");
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    const { useState } = owl;
-
-    /**
-     * @props {models.Order} [initHighlightedOrder] initially highligted order
-     * @props {Array<models.Order>} orders
-     */
-    class SaleOrderList extends PosComponent {
-        setup() {
-            super.setup();
-            useListener('click-order', this._onClickOrder);
-            this.state = useState({ highlightedOrder: this.props.initHighlightedOrder || null });
-        }
-        get highlightedOrder() {
-            return this.state.highlightedOrder;
-        }
-        _onClickOrder({ detail: order }) {
-            this.state.highlightedOrder = order;
-        }
-    }
-    SaleOrderList.template = 'SaleOrderList';
-
-    Registries.Component.add(SaleOrderList);
-
-    return SaleOrderList;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:119a1dbccf2dad36b770c570fa64dd4f211fdb6be0f36e829a3c877372828cb6
+size 1016

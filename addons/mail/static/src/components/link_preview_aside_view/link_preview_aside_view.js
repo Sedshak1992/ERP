@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-class LinkPreviewAsideView extends Component {
-
-    /**
-     * @returns {LinkPreviewAsideView}
-     */
-    get linkPreviewAsideView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(LinkPreviewAsideView, {
-    props: { record: Object },
-    template: 'mail.LinkPreviewAsideView',
-});
-
-registerMessagingComponent(LinkPreviewAsideView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:26e578f3f5ced5647c8f99ea848bc6b20705e0a3b7137861089e782ae83c2bfa
+size 476

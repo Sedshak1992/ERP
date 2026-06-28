@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-import { attr } from '@mail/model/model_field';
-
-registerPatch({
-    name: 'Chatbot',
-    fields: {
-        awaitUserInputDebounceTime: {
-            compute() {
-                if (this.isWebsiteLivechatTourFlow) {
-                    /**
-                     * Let us make it a bit faster than the default delay (3500ms).
-                     * Let us also debounce waiting for more user inputs for only 500ms.
-                     */
-                    return 500;
-                }
-                return this._super();
-            },
-        },
-        isWebsiteLivechatTourFlow: attr({
-            default: false,
-        }),
-        messageDelay: {
-            compute() {
-                if (this.isWebsiteLivechatTourFlow) {
-                    return 100;
-                }
-                return this._super();
-            },
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c3d20bf5b369c28ad487a6c964a1b62ed848f0c43d7f234af9cd816ea1816ab
+size 938

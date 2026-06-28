@@ -1,35 +1,3 @@
-odoo.define('website_sale.form', function (require) {
-'use strict';
-
-const core = require('web.core');
-var FormEditorRegistry = require('website.form_editor_registry');
-
-const _lt = core._lt;
-
-FormEditorRegistry.add('create_customer', {
-    formFields: [{
-        type: 'char',
-        modelRequired: true,
-        name: 'name',
-        fillWith: 'name',
-        string: _lt('Your Name'),
-    }, {
-        type: 'email',
-        required: true,
-        fillWith: 'email',
-        name: 'email',
-        string: _lt('Your Email'),
-    }, {
-        type: 'tel',
-        fillWith: 'phone',
-        name: 'phone',
-        string: _lt('Phone Number'),
-    }, {
-        type: 'char',
-        name: 'company_name',
-        fillWith: 'commercial_company_name',
-        string: _lt('Company Name'),
-    }],
-});
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:12670e3f2b17248f9c947cc23e2a393c253ab70d5db848ed068fbeaf8546fb53
+size 807

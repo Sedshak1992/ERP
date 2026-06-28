@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-/**
- * Models a relation between a ComposerSuggestionListView and a
- * ComposerSuggestionView where suggestable is used as iterating field for main
- * suggestions.
- */
-registerModel({
-    name: 'ComposerSuggestionListViewMainComposerSuggestionViewItem',
-    fields: {
-        composerSuggestionListViewOwner: one('ComposerSuggestionListView', {
-            identifying: true,
-            inverse: 'composerSuggestionListViewMainComposerSuggestionViewItems',
-        }),
-        composerSuggestionView: one('ComposerSuggestionView', {
-            default: {},
-            inverse: 'composerSuggestionListViewMainComposerSuggestionViewItemOwner',
-            readonly: true,
-            required: true,
-        }),
-        suggestable: one('ComposerSuggestable', {
-            identifying: true,
-            inverse: 'composerSuggestionListViewMainComposerSuggestionViewItems',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:544957b6ea684a6907fec2df0e4b4237a4a9ff7894d6531807a00ee8516331af
+size 1025

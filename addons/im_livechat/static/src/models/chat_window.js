@@ -1,25 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'ChatWindow',
-    recordMethods: {
-        /**
-         * @override
-         */
-        close({ notifyServer } = {}) {
-            if (
-                this.thread &&
-                this.thread.channel &&
-                this.thread.channel.channel_type === 'livechat' &&
-                this.thread.cache.isLoaded &&
-                this.thread.messages.length === 0
-            ) {
-                notifyServer = true;
-                this.thread.unpin();
-            }
-            this._super({ notifyServer });
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:ede9fa18e5962498daad53ea71b252e60e5781cb13aa444c2be9829a47948b67
+size 643

@@ -1,11 +1,3 @@
-/** @odoo-module **/
-
-import { ProjectControlPanel } from "@project/components/project_control_panel/project_control_panel";
-import { registry } from "@web/core/registry";
-import { graphView } from "@web/views/graph/graph_view";
-
-const viewRegistry = registry.category("views");
-
-export const projectGraphView = {...graphView, ControlPanel: ProjectControlPanel};
-
-viewRegistry.add("project_graph", projectGraphView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:5810ecc5c42b428e428088a71491b9f48f27078d889cf07a214e8a0f0309f8ce
+size 417

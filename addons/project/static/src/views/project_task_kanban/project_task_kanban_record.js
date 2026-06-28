@@ -1,14 +1,3 @@
-/* @odoo-module */
-
-import { Record } from '@web/views/relational_model';
-
-export class ProjectTaskRecord extends Record {
-    async _applyChanges(changes) {
-        const value = changes.personal_stage_type_ids;
-        if (value && Array.isArray(value)) {
-            delete changes.personal_stage_type_ids;
-            changes.personal_stage_type_id = value;
-        }
-        await super._applyChanges(changes);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02280adb86a88350153fa3610e4537368f1bfaeb5be64555cefab7bfb42fc64f
+size 424

@@ -1,31 +1,3 @@
-odoo.define('pos_restaurant.TransferOrderButton', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const ProductScreen = require('point_of_sale.ProductScreen');
-    const { useListener } = require("@web/core/utils/hooks");
-    const Registries = require('point_of_sale.Registries');
-
-    class TransferOrderButton extends PosComponent {
-        setup() {
-            super.setup();
-            useListener('click', this.onClick);
-        }
-        async onClick() {
-            this.env.pos.setCurrentOrderToTransfer();
-            this.showScreen('FloorScreen');
-        }
-    }
-    TransferOrderButton.template = 'TransferOrderButton';
-
-    ProductScreen.addControlButton({
-        component: TransferOrderButton,
-        condition: function() {
-            return this.env.pos.config.iface_floorplan;
-        },
-    });
-
-    Registries.Component.add(TransferOrderButton);
-
-    return TransferOrderButton;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:bc2594f834c558c7e5babee9183f81a1aa7f93f8079ad2b83c0685db58476148
+size 970

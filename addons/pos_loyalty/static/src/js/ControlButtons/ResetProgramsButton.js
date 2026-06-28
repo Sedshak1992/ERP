@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import PosComponent from 'point_of_sale.PosComponent';
-import ProductScreen from 'point_of_sale.ProductScreen';
-import Registries from 'point_of_sale.Registries';
-import { useListener } from "@web/core/utils/hooks";
-
-export class ResetProgramsButton extends PosComponent {
-    setup() {
-        super.setup();
-        useListener('click', this.onClick);
-    }
-
-    async onClick() {
-        this.env.pos.get_order()._resetPrograms();
-    }
-}
-
-ResetProgramsButton.template = 'ResetProgramsButton';
-
-ProductScreen.addControlButton({
-    component: ResetProgramsButton,
-    condition: function () {
-        return this.env.pos.programs.some(p => ['coupons', 'promotion'].includes(p.program_type));
-    }
-});
-
-Registries.Component.add(ResetProgramsButton);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ae6cd1d901d6f59308053b6bb825dcdf4e5d40b6eacf886a62004e095b70923
+size 775

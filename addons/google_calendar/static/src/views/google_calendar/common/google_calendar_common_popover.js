@@ -1,10 +1,3 @@
-/** @odoo-module **/
-
-import { AttendeeCalendarCommonPopover } from "@calendar/views/attendee_calendar/common/attendee_calendar_common_popover";
-import { patch } from "@web/core/utils/patch";
-
-patch(AttendeeCalendarCommonPopover.prototype, "google_calendar_google_calendar_common_popover", {
-    get isEventArchivable() {
-        return this._super() || (this.isCurrentUserOrganizer && this.props.record.rawRecord.google_id);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:26917a87b5a1f29722e21acb07a95fe4d66ec0b1da23df7ddf2e1204e728d30e
+size 437

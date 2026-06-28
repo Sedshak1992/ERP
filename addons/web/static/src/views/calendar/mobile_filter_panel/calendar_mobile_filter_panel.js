@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { Component } from "@odoo/owl";
-import { getColor } from "../colors";
-
-export class CalendarMobileFilterPanel extends Component {
-    get caretDirection() {
-        return this.props.sideBarShown ? "down" : "left";
-    }
-    getFilterColor(filter) {
-        return `o_color_${getColor(filter.colorIndex)}`;
-    }
-    getFilterTypePriority(type) {
-        return ["user", "record", "dynamic", "all"].indexOf(type);
-    }
-    getSortedFilters(section) {
-        return section.filters.slice().sort((a, b) => {
-            if (a.type === b.type) {
-                const va = a.value ? -1 : 0;
-                const vb = b.value ? -1 : 0;
-                if (a.type === "dynamic" && va !== vb) {
-                    return va - vb;
-                }
-                return b.label.localeCompare(a.label);
-            } else {
-                return this.getFilterTypePriority(a.type) - this.getFilterTypePriority(b.type);
-            }
-        });
-    }
-}
-CalendarMobileFilterPanel.components = {};
-CalendarMobileFilterPanel.template = "web.CalendarMobileFilterPanel";
+version https://git-lfs.github.com/spec/v1
+oid sha256:70cc57df03fdffe7ca614d052c9a2d96cc1e413f8d5d988d27bc8de624eef27f
+size 1094

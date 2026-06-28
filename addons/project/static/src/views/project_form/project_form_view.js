@@ -1,12 +1,3 @@
-/** @odoo-module */
-
-import { registry } from "@web/core/registry";
-import { formViewWithHtmlExpander } from '../form_with_html_expander/form_view_with_html_expander';
-import { ProjectFormRenderer } from "./project_form_renderer";
-
-export const projectFormView = {
-    ...formViewWithHtmlExpander,
-    Renderer: ProjectFormRenderer,
-};
-
-registry.category("views").add("project_form", projectFormView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5613e8eca48e9c6fd90619985807247b88c3c1be871264b162b0d4b0efab68b
+size 402

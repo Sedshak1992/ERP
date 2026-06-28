@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-export function getFormattedDateSpan(start, end) {
-    const isSameDay = start.hasSame(end, "days");
-
-    if (!isSameDay && start.hasSame(end, "month")) {
-        // Simplify date-range if an event occurs into the same month (eg. "August 4-5, 2019")
-        return start.toFormat("LLLL d") + "-" + end.toFormat("d, y");
-    } else {
-        return isSameDay
-            ? start.toFormat("DDD")
-            : start.toFormat("DDD") + " - " + end.toFormat("DDD");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad3d1abcbab4a539e8ec54fd9c6f3bbafa2d4a6beefe350bfc0b16b8d67bb7fe
+size 491

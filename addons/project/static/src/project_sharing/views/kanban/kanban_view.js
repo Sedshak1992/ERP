@@ -1,19 +1,3 @@
-/** @odoo-module */
-
-import { kanbanView } from "@web/views/kanban/kanban_view";
-import { KanbanDynamicGroupList, KanbanModel } from "@web/views/kanban/kanban_model";
-
-export class ProjectSharingTaskKanbanDynamicGroupList extends KanbanDynamicGroupList {
-    get context() {
-        return {
-            ...super.context,
-            project_kanban: true,
-        };
-    }
-}
-
-export class ProjectSharingTaskKanbanModel extends KanbanModel {}
-
-ProjectSharingTaskKanbanModel.DynamicGroupList = ProjectSharingTaskKanbanDynamicGroupList;
-
-kanbanView.Model = ProjectSharingTaskKanbanModel;
+version https://git-lfs.github.com/spec/v1
+oid sha256:51da0c71600cb4fb39830909e293ffb521e5bd3e961bffbce56c814c8781053e
+size 585

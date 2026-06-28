@@ -1,32 +1,3 @@
-/** @odoo-module **/
-
-import { registerPatch } from '@mail/model/model_core';
-
-registerPatch({
-    name: 'NotificationGroup',
-    recordMethods: {
-        /**
-         * @override
-         */
-        _openDocuments() {
-            if (this.notification_type !== 'sms') {
-                return this._super(...arguments);
-            }
-            this.env.services.action.doAction({
-                name: this.env._t("SMS Failures"),
-                type: 'ir.actions.act_window',
-                view_mode: 'kanban,list,form',
-                views: [[false, 'kanban'], [false, 'list'], [false, 'form']],
-                target: 'current',
-                res_model: this.res_model,
-                domain: [['message_has_sms_error', '=', true]],
-                context: { create: false },
-            });
-            if (this.messaging.device.isSmall) {
-                // messaging menu has a higher z-index than views so it must
-                // be closed to ensure the visibility of the view
-                this.messaging.messagingMenu.close();
-            }
-        },
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c6f1961477a7c1b014a6a3d664b09b65e7afdb9bc0ad52f5bb6bc74d8a6e7e0
+size 1090

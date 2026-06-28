@@ -1,28 +1,3 @@
-odoo.define('point_of_sale.ControlButtonPopup', function(require) {
-    'use strict';
-
-    const AbstractAwaitablePopup = require('point_of_sale.AbstractAwaitablePopup');
-    const Registries = require('point_of_sale.Registries');
-    const { _lt } = require('@web/core/l10n/translation');
-
-    class ControlButtonPopup extends AbstractAwaitablePopup {
-        /**
-         * @param {Object} props
-         * @param {string} props.startingValue
-         */
-        setup() {
-            super.setup();
-            this.controlButtons = this.props.controlButtons;
-        }
-    }
-    ControlButtonPopup.template = 'ControlButtonPopup';
-    ControlButtonPopup.defaultProps = {
-        cancelText: _lt('Back'),
-        controlButtons: [],
-        confirmKey: false,
-    };
-
-    Registries.Component.add(ControlButtonPopup);
-
-    return ControlButtonPopup;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e6639d3115e6fc4d79210a5e77a340c4a18014c61e542eb1c17fce0ccc866a9b
+size 857

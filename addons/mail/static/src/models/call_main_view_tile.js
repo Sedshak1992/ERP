@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'CallMainViewTile',
-    fields: {
-        callMainViewOwner: one('CallMainView', {
-            identifying: true,
-            inverse: 'mainTiles',
-        }),
-        channelMember: one('ChannelMember', {
-            identifying: true,
-        }),
-        participantCard: one('CallParticipantCard', {
-            default: {},
-            inverse: 'mainViewTileOwner',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:802f2bc183575a19e8187976169c46b32e7af8e0df2981d0368cd8668e34893f
+size 545

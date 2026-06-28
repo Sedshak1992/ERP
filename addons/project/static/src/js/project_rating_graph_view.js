@@ -1,35 +1,3 @@
-/** @odoo-module **/
-
-import { _lt } from "@web/core/l10n/translation";
-import { registry } from "@web/core/registry";
-import { GraphArchParser } from "@web/views/graph/graph_arch_parser";
-import { graphView } from "@web/views/graph/graph_view";
-
-const viewRegistry = registry.category("views");
-
-const MEASURE_STRINGS = {
-    parent_res_id: _lt("Project"),
-    rating: _lt("Rating Value (/5)"),
-    res_id: _lt("Task"),
-};
-
-class ProjectRatingArchParser extends GraphArchParser {
-    parse() {
-        const archInfo = super.parse(...arguments);
-        for (const [key, val] of Object.entries(MEASURE_STRINGS)) {
-            archInfo.fieldAttrs[key] = {
-                ...archInfo.fieldAttrs[key],
-                string: val.toString(),
-            };
-        }
-        return archInfo;
-    }
-}
-
-// Would it be not better achiedved by using a proper arch directly?
-const projectRatingGraphView = {
-    ...graphView,
-    ArchParser: ProjectRatingArchParser,
-};
-
-viewRegistry.add("project_rating_graph", projectRatingGraphView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:226b69f2d5b79b9debf3c9560be382ac5d64bc87db9a07ca8390840048926799
+size 1031

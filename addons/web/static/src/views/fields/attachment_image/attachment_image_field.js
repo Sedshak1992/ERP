@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { _lt } from "@web/core/l10n/translation";
-import { registry } from "@web/core/registry";
-
-import { Component } from "@odoo/owl";
-
-export class AttachmentImageField extends Component {}
-
-AttachmentImageField.template = "web.AttachmentImageField";
-
-AttachmentImageField.displayName = _lt("Attachment Image");
-AttachmentImageField.supportedTypes = ["many2one"];
-
-registry.category("fields").add("attachment_image", AttachmentImageField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0165c7a6ac48839c1a57bd6836f8737edee508a9035c515089c14737bb5c0de
+size 465

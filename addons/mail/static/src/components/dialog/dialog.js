@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class Dialog extends Component {
-
-    //--------------------------------------------------------------------------
-    // Public
-    //--------------------------------------------------------------------------
-
-    /**
-     * @returns {Dialog}
-     */
-    get dialog() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(Dialog, {
-    props: { record: Object },
-    template: 'mail.Dialog',
-});
-
-registerMessagingComponent(Dialog);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9db08760fa779adc0b4d4e97784747dbb16cc968f6b94f8a2da1f7ada1ffb2c
+size 576

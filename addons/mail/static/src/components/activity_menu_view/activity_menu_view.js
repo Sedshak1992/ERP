@@ -1,29 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class ActivityMenuView extends Component {
-    /**
-     * @override
-     */
-     setup() {
-        super.setup();
-        useComponentToModel({ fieldName: 'component' });
-    }
-    /**
-     * @returns {ActivityMenuView}
-     */
-    get activityMenuView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(ActivityMenuView, {
-    props: { record: Object },
-    template: 'mail.ActivityMenuView',
-});
-
-registerMessagingComponent(ActivityMenuView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:8234e3b8218e3d27ee88e63d55008a763e88064f7f3b76aa4801f02c6851f16d
+size 675

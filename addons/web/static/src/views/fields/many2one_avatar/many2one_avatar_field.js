@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { Many2OneField } from "../many2one/many2one_field";
-
-import { Component } from "@odoo/owl";
-
-export class Many2OneAvatarField extends Component {
-    get relation() {
-        return this.props.relation;
-    }
-}
-
-Many2OneAvatarField.template = "web.Many2OneAvatarField";
-Many2OneAvatarField.components = {
-    Many2OneField,
-};
-Many2OneAvatarField.props = {
-    ...Many2OneField.props,
-};
-
-Many2OneAvatarField.supportedTypes = ["many2one"];
-
-Many2OneAvatarField.extractProps = Many2OneField.extractProps;
-
-registry.category("fields").add("many2one_avatar", Many2OneAvatarField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c0da91041cf9569e393c2f8160034872198332d74b56fd120fb5c6b0a2087f4
+size 655

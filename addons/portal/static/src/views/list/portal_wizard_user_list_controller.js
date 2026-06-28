@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { ListController } from "@web/views/list/list_controller";
-
-export class PortalWizardUserListController extends ListController {
-    setup() {
-        super.setup();
-        this.isPortalActionOngoing = false;
-    }
-
-    /**
-     * @override
-     */
-     async beforeExecuteActionButton(clickParams) {
-        if (clickParams.name === 'action_refresh_modal' || this.isPortalActionOngoing) {
-            return false;
-        }
-        this.isPortalActionOngoing = true;
-        return super.beforeExecuteActionButton(clickParams);
-    }
-    
-    /**
-     * @override
-     */
-    async afterExecuteActionButton(clickParams) {
-        this.isPortalActionOngoing = false;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b38c1aba53d66c81312ba69f50db338adccb71f0a8df535d7a4a0d5dfeb795e
+size 706

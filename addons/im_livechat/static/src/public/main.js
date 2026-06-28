@@ -1,24 +1,3 @@
-/** @odoo-module **/
-
-import { publicLivechatService } from '@im_livechat/services/public_livechat_service';
-import { isAvailable, options, serverUrl } from 'im_livechat.loaderData';
-
-import { messagingService } from '@mail/services/messaging_service';
-import { makeMessagingToLegacyEnv } from '@mail/utils/make_messaging_to_legacy_env';
-
-import { registry } from '@web/core/registry';
-
-const messagingValuesService = {
-    start() {
-        return {
-            publicLivechatGlobal: { isAvailable, options, serverUrl },
-        };
-    }
-};
-
-const serviceRegistry = registry.category('services');
-serviceRegistry.add('messaging', messagingService);
-serviceRegistry.add('messagingValues', messagingValuesService);
-serviceRegistry.add('public_livechat_service', publicLivechatService);
-
-registry.category('wowlToLegacyServiceMappers').add('make_messaging_to_legacy_env', makeMessagingToLegacyEnv);
+version https://git-lfs.github.com/spec/v1
+oid sha256:74145ce46077b7ed6da50c87395583ae85e83977f18828766548462435486b82
+size 897

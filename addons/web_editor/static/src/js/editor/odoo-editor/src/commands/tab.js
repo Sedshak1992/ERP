@@ -1,31 +1,3 @@
-/** @odoo-module **/
-import { createList, getListMode, isBlock, preserveCursor, toggleClass } from '../utils/utils.js';
-
-Text.prototype.oTab = function () {
-    return this.parentElement.oTab(0);
-};
-
-HTMLElement.prototype.oTab = function (offset) {
-    if (!isBlock(this)) {
-        return this.parentElement.oTab(offset);
-    }
-    return false;
-};
-
-HTMLLIElement.prototype.oTab = function () {
-    const lip = document.createElement('li');
-    const destul =
-        (this.previousElementSibling && this.previousElementSibling.querySelector('ol, ul')) ||
-        (this.nextElementSibling && this.nextElementSibling.querySelector('ol, ul')) ||
-        this.closest('ul, ol');
-
-    const ul = createList(getListMode(destul));
-    lip.append(ul);
-
-    const cr = preserveCursor(this.ownerDocument);
-    toggleClass(lip, 'oe-nested');
-    this.before(lip);
-    ul.append(this);
-    cr();
-    return true;
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:767e4243cb93d2c42c8859eee10a721935a33346ed6f07d1e7f023e5673d33b9
+size 906

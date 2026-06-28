@@ -1,22 +1,3 @@
-/** @odoo-module alias=web.clickEverywhere **/
-
-import { loadJS } from "@web/core/assets";
-import { registry } from "@web/core/registry";
-
-export default async function startClickEverywhere(xmlId, appsMenusOnly) {
-    await loadJS("web/static/src/webclient/clickbot/clickbot.js");
-    window.clickEverywhere(xmlId, appsMenusOnly);
-}
-
-function runClickTestItem({ env }) {
-    return {
-        type: "item",
-        description: env._t("Run Click Everywhere Test"),
-        callback: () => {
-            startClickEverywhere();
-        },
-        sequence: 30,
-    };
-}
-
-registry.category("debug").category("default").add("runClickTestItem", runClickTestItem);
+version https://git-lfs.github.com/spec/v1
+oid sha256:93ce20beb834f8fc8b9960524a69bf85a347e3104d0ce889a6131a0852c3b6e4
+size 659

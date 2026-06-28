@@ -1,31 +1,3 @@
-/** @odoo-module **/
-
-import { useComponentToModel } from '@mail/component_hooks/use_component_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-import { LegacyComponent } from "@web/legacy/legacy_component";
-
-export class CallOptionMenu extends LegacyComponent {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useComponentToModel({ fieldName: 'component' });
-    }
-
-    /**
-     * @returns {CallOptionMenu}
-     */
-    get callOptionMenu() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(CallOptionMenu, {
-    props: { record: Object },
-    template: 'mail.CallOptionMenu',
-});
-
-registerMessagingComponent(CallOptionMenu);
+version https://git-lfs.github.com/spec/v1
+oid sha256:466c79020878c55ee2e450e0e7bef9c0c148a29f93a30e5044b2c707a08b7831
+size 707

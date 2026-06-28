@@ -1,21 +1,3 @@
-/** @odoo-module **/
-
-import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
-import { _lt } from "@web/core/l10n/translation";
-
-export class SettingsConfirmationDialog extends ConfirmationDialog {
-    _stayHere() {
-        if (this.props.stayHere) {
-            this.props.stayHere();
-        }
-        this.props.close();
-    }
-}
-SettingsConfirmationDialog.defaultProps = {
-    title: _lt("Unsaved changes"),
-};
-SettingsConfirmationDialog.template = "web.SettingsConfirmationDialog";
-SettingsConfirmationDialog.props = {
-    ...ConfirmationDialog.props,
-    stayHere: { type: Function, optional: true },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7f5410419cf71729147866e7f6c658fe9b1f15201821f2eda2141ea9ed79363
+size 641

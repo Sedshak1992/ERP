@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
-import { patch } from 'web.utils';
-
-patch(NewContentModal.prototype, 'website_slides_new_content', {
-    setup() {
-        this._super();
-
-        const newSlidesChannelElement = this.state.newContentElements.find(element => element.moduleXmlId === 'base.module_website_slides');
-        newSlidesChannelElement.createNewContent = () => this.onAddContent('website_slides.slide_channel_action_add');
-        newSlidesChannelElement.status = MODULE_STATUS.INSTALLED;
-        newSlidesChannelElement.model = 'slide.channel';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8631e57466b4c3e5c7c3033e010c075bf0420c2478d2d57c8ead2f4c086650d
+size 640

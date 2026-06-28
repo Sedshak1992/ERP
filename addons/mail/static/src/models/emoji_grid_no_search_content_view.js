@@ -1,19 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { attr, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'EmojiGridNoSearchContentView',
-    fields: {
-        emojiGridViewOwner: one('EmojiGridView', {
-            identifying: true,
-            inverse: 'searchNoContentView',
-        }),
-        text: attr({
-            compute() {
-                return this.env._t("No emoji match your search");
-            },
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f143c9a60f61aae85fe6b5fe31246c7aa68a325b2465d786e65492e406cda893
+size 491

@@ -1,22 +1,3 @@
-odoo.define('portal.tour', function (require) {
-'use strict';
-
-var tour = require("web_tour.tour");
-
-tour.register('portal_load_homepage', {
-    test: true,
-    url: '/my',
-},
-    [
-        {
-            content: "Check portal is loaded",
-            trigger: 'a[href*="/my/account"]:contains("Edit"):first',
-        },
-        {
-            content: "Load my account details",
-            trigger: 'input[value="Joel Willis"]'
-        }
-    ]
-);
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed4fbb5cf3bfa8405f4311abd1065bb060485ddc150894aae990abce61f81e42
+size 452

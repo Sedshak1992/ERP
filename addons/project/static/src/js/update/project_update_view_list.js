@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import ListController from 'web.ListController';
-import ListRenderer from 'web.ListRenderer';
-import ListView from 'web.ListView';
-import viewRegistry from 'web.view_registry';
-import ProjectRightSidePanel from '@project/js/right_panel/project_right_panel';
-import {
-    RightPanelControllerMixin,
-    RightPanelRendererMixin,
-    RightPanelViewMixin,
-} from '@project/js/right_panel/project_right_panel_mixin';
-
-const ProjectUpdateListRenderer = ListRenderer.extend(RightPanelRendererMixin);
-
-const ProjectUpdateListController = ListController.extend(RightPanelControllerMixin);
-
-export const ProjectUpdateListView = ListView.extend(RightPanelViewMixin).extend({
-    config: Object.assign({}, ListView.prototype.config, {
-        Controller: ProjectUpdateListController,
-        Renderer: ProjectUpdateListRenderer,
-        RightSidePanel: ProjectRightSidePanel,
-    }),
-});
-
-viewRegistry.add('project_update_list', ProjectUpdateListView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:6a34af7d5c7c91f8e434b27d8d7641a733164bcbd545831c6121b76508e231c2
+size 963

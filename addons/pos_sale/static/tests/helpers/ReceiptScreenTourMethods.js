@@ -1,19 +1,3 @@
-odoo.define('pos_sale.tour.ReceiptScreenTourMethods', function (require) {
-    'use strict';
-
-    const { createTourMethods } = require('point_of_sale.tour.utils');
-    const { Do, Check, Execute } = require('point_of_sale.tour.ReceiptScreenTourMethods');
-
-    class CheckExt extends Check{
-        checkCustomerNotes(note) {
-            return [
-                {
-                    content: `check customer notes`,
-                    trigger: `.pos-receipt-customer-note:contains(${note})`,
-                }
-            ];
-        }
-    }
-
-    return createTourMethods('ReceiptScreen', Do, CheckExt, Execute);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:06b76639336089b13b83eb3826f4abe3ae715b37e47888ff01f6f0fa9264d853
+size 619

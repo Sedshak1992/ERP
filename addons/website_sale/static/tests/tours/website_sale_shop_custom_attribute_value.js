@@ -1,31 +1,3 @@
-odoo.define("website_sale.tour_shop_custom_attribute_value", function (require) {
-    "use strict";
-
-    var tour = require("web_tour.tour");
-    const tourUtils = require('website_sale.tour_utils');
-
-    tour.register("shop_custom_attribute_value", {
-        url: "/shop?search=Customizable Desk",
-        test: true,
-    }, [{
-        content: "click on Customizable Desk",
-        trigger: '.oe_product_cart a:contains("Customizable Desk (TEST)")',
-    }, {
-        trigger: 'li.js_attribute_value span:contains(Custom TEST)',
-        extra_trigger: 'li.js_attribute_value',
-        run: 'click',
-    }, {
-        trigger: 'input.variant_custom_value',
-        run: 'text Wood',
-    }, {
-        id: 'add_cart_step',
-        trigger: 'a:contains(ADD TO CART)',
-        run: 'click',
-    },
-        tourUtils.goToCart(),
-    {
-        trigger: 'span:contains(Custom TEST: Wood)',
-        extra_trigger: '#cart_products',
-        run: function (){}, // check
-    }]);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b197a3f15d0c214a5073317083fcde957da3b790d5a3706c20522b7d813d03ac
+size 973

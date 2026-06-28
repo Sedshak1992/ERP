@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-const { useComponent } = owl;
-
-/**
- * This hook provides support for dynamic-refs.
- *
- * @returns {function} returns object whose keys are t-ref values of active refs.
- *   and values are refs.
- */
-export function useRefs() {
-    const component = useComponent();
-    return function () {
-        return component.__owl__.refs || {};
-    };
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:824a13ebbe1f4015434ef08984af626531850c3b7ac4ee392d322f778916016f
+size 365

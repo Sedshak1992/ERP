@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { many, one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'EmojiOrEmojiInCategory',
-    identifyingMode: 'xor',
-    fields: {
-        emoji: one('Emoji', {
-            identifying: true,
-            inverse: 'emojiOrEmojiInCategory',
-        }),
-        emojiInCategory: one('EmojiInCategory', {
-            identifying: true,
-            inverse: 'emojiOrEmojiInCategory',
-        }),
-        emojiGridItemViews: many('EmojiGridItemView', {
-            inverse: 'emojiOrEmojiInCategory',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ac161e09820f2e11251ac06bcd3f9b0bfe3f56a38f9985864392b2fc5cd980e
+size 612

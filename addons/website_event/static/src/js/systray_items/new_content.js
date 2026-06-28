@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
-import { patch } from 'web.utils';
-
-patch(NewContentModal.prototype, 'website_event_new_content', {
-    setup() {
-        this._super();
-
-        const newEventElement = this.state.newContentElements.find(element => element.moduleXmlId === 'base.module_website_event');
-        newEventElement.createNewContent = () => this.onAddContent('website_event.event_event_action_add', true);
-        newEventElement.status = MODULE_STATUS.INSTALLED;
-        newEventElement.model = 'event.event';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4405d208c512b525b211ae6eefc89a73ec7fd5e667411beb77d8c43f605c8b2
+size 607

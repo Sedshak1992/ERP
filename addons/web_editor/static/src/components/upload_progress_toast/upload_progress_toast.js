@@ -1,23 +1,3 @@
-/** @odoo-module */
-import { useService } from '@web/core/utils/hooks';
-
-import { Component, useState } from "@odoo/owl";
-
-export class ProgressBar extends Component {
-    get progress() {
-        return Math.round(this.props.progress);
-    }
-}
-ProgressBar.template = 'web_editor.ProgressBar';
-
-export class UploadProgressToast extends Component {
-    setup() {
-        this.uploadService = useService('upload');
-
-        this.state = useState(this.uploadService.progressToast);
-    }
-}
-UploadProgressToast.template = 'web_editor.UploadProgressToast';
-UploadProgressToast.components = {
-    ProgressBar
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:ee05c6b0707acd997ec931fa66ce947e544cf9e4b92463c24a483ca3bb3a775c
+size 606

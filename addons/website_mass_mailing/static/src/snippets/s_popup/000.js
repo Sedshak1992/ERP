@@ -1,27 +1,3 @@
-/** @odoo-module **/
-
-import PopupWidget from 'website.s_popup';
-
-PopupWidget.include({
-
-    //--------------------------------------------------------------------------
-    // Private
-    //--------------------------------------------------------------------------
-
-    /**
-     * Prevents the (newsletter) popup to be shown if the user is subscribed.
-     *
-     * @override
-     */
-    _canShowPopup() {
-        if (
-            this.$el.is('.o_newsletter_popup') &&
-            this.$el.find('input.js_subscribe_value, input.js_subscribe_email').prop('disabled') // js_subscribe_email is kept by compatibility (it was the old name of js_subscribe_value)
-        ) {
-            return false;
-        }
-        return this._super(...arguments);
-    },
-});
-
-export default PopupWidget;
+version https://git-lfs.github.com/spec/v1
+oid sha256:30edc1e52a7f5b36f1ca033ddbe1ad91d8f6cffa31b8e8c21642be10e33ae5fd
+size 788

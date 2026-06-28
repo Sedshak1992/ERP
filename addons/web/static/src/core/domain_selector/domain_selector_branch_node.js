@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { DomainSelectorBranchOperator } from "./domain_selector_branch_operator";
-import { DomainSelectorControlPanel } from "./domain_selector_control_panel";
-import { DomainSelectorLeafNode } from "./domain_selector_leaf_node";
-
-import { Component, useRef } from "@odoo/owl";
-
-export class DomainSelectorBranchNode extends Component {
-    setup() {
-        this.root = useRef("root");
-    }
-    onHoverDeleteNodeBtn(hovering) {
-        this.root.el.classList.toggle("o_hover_btns", hovering);
-    }
-    onHoverInsertLeafNodeBtn(hovering) {
-        this.root.el.classList.toggle("o_hover_add_node", hovering);
-    }
-    onHoverInsertBranchNodeBtn(hovering) {
-        this.root.el.classList.toggle("o_hover_add_node", hovering);
-        this.root.el.classList.toggle("o_hover_add_inset_node", hovering);
-    }
-}
-DomainSelectorBranchNode.template = "web.DomainSelectorBranchNode";
-DomainSelectorBranchNode.components = {
-    DomainSelectorBranchNode,
-    DomainSelectorBranchOperator,
-    DomainSelectorControlPanel,
-    DomainSelectorLeafNode,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:1f99c087f4fe7c7a4480082ed826bbfb49802f7c2915fc243a4311d28b33f6b3
+size 1069

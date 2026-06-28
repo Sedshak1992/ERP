@@ -1,25 +1,3 @@
-odoo.define('point_of_sale.ActionpadWidget', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    /**
-     * @props partner
-     * @emits click-partner
-     * @emits click-pay
-     */
-    class ActionpadWidget extends PosComponent {
-        get isLongName() {
-            return this.props.partner && this.props.partner.name.length > 10;
-        }
-    }
-    ActionpadWidget.template = 'ActionpadWidget';
-    ActionpadWidget.defaultProps = {
-        isActionButtonHighlighted: false,
-    }
-
-    Registries.Component.add(ActionpadWidget);
-
-    return ActionpadWidget;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ecb9c4317b5dae2bb2b275be94ac8aedb8c99e701841c4a03e20d5682943838
+size 685

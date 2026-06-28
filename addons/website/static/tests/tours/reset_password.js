@@ -1,30 +1,3 @@
-odoo.define('website.tour_reset_password', function (require) {
-'use strict';
-
-var tour = require('web_tour.tour');
-require('web.dom_ready');
-
-tour.register('website_reset_password', {
-    test: true,
-}, [
-    {
-        content: "fill new password",
-        trigger: '.oe_reset_password_form input[name="password"]',
-        run: "text adminadmin"
-    },
-    {
-        content: "fill confirm password",
-        trigger: '.oe_reset_password_form input[name="confirm_password"]',
-        run: "text adminadmin"
-    },
-    {
-        content: "submit reset password form",
-        trigger: '.oe_reset_password_form button[type="submit"]',
-    },
-    {
-        content: "check that we're logged in",
-        trigger: '.oe_topbar_name:contains("The King")',
-        run: function () {}
-    },
-]);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:74834ca915ba63784b8bedfba5745168ff5e6ad4ee08b3e250bd7c68df7c178d
+size 795

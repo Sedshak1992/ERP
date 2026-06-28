@@ -1,14 +1,3 @@
-/** @odoo-module **/
-
-import { pyToJsLocale } from "@web/core/l10n/utils";
-
-QUnit.module("utils");
-
-QUnit.test("pyToJsLocale", (assert) => {
-    assert.strictEqual(pyToJsLocale("kab"), "kab");
-    assert.strictEqual(pyToJsLocale("fr_BE"), "fr-BE");
-    assert.strictEqual(pyToJsLocale("es_419"), "es-419");
-    assert.strictEqual(pyToJsLocale("sr@latin"), "sr-Latn");
-    assert.strictEqual(pyToJsLocale("sr_RS@latin"), "sr-Latn-RS");
-    assert.strictEqual(pyToJsLocale("en-US"), "en-US");
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:ade9912b6889f0968a41842044b3ec755df4ee9a761ed9c051e63e4bfb72fab4
+size 495

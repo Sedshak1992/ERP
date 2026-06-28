@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class MessageAuthorPrefix extends Component {
-
-    /**
-     * @returns {MessageAuthorPrefixView}
-     */
-    get messageAuthorPrefixView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(MessageAuthorPrefix, {
-    props: { record: Object },
-    template: 'mail.MessageAuthorPrefix',
-});
-
-registerMessagingComponent(MessageAuthorPrefix);
+version https://git-lfs.github.com/spec/v1
+oid sha256:08c320275d2475632bd2b44a03cb236bd6b626390cab40d36aaad5cddfd62684
+size 485

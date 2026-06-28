@@ -1,33 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-
-
-const { Component } = owl;
-
-export class EmojiSearchBarView extends Component {
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useRefToModel({ fieldName: 'inputRef', refName: 'input' });
-        useUpdateToModel({ methodName: 'onComponentUpdate', modelName: 'EmojiSearchBarView' });
-    }
-
-    /**
-     * @returns {EmojiSearchBarView}
-     */
-    get emojiSearchBarView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(EmojiSearchBarView, {
-    props: { record: Object },
-    template: 'mail.EmojiSearchBarView',
-});
-
-registerMessagingComponent(EmojiSearchBarView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c02d193a853a5a76dd5fcf7e1b53aeb7bc33e6018efcef0cc105c09fbc8acfb7
+size 861

@@ -1,20 +1,3 @@
-odoo.define('web.LocalStorageService', function (require) {
-'use strict';
-
-/**
- * This module defines a service to access the localStorage object.
- */
-
-var AbstractStorageService = require('web.AbstractStorageService');
-var core = require('web.core');
-var localStorage = require('web.local_storage');
-
-var LocalStorageService = AbstractStorageService.extend({
-    storage: localStorage,
-});
-
-core.serviceRegistry.add('local_storage', LocalStorageService);
-
-return LocalStorageService;
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:db4fa101659e98721f86f7871355fe9e7f504a6c8e1317e1d555fb166c994722
+size 490

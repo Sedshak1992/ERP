@@ -1,19 +1,3 @@
-odoo.define('web.Bus', function (require) {
-"use strict";
-
-var Class = require('web.Class');
-var mixins = require('web.mixins');
-
-/**
- * Event Bus used to bind events scoped in the current instance
- *
- * @class Bus
- */
-return Class.extend(mixins.EventDispatcherMixin, {
-    init: function (parent) {
-        mixins.EventDispatcherMixin.init.call(this);
-        this.setParent(parent);
-    },
-});
-
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b530dbece91df994552eb20faf84b8cda80b433dae2215d67d93a7af6b3a220e
+size 401

@@ -1,9 +1,3 @@
-/** @odoo-module **/
-
-import { registry } from "@web/core/registry";
-import { X2ManyField } from "@web/views/fields/x2many/x2many_field";
-
-export class LoyaltyX2ManyField extends X2ManyField {};
-LoyaltyX2ManyField.template = "loyalty.LoyaltyX2ManyField";
-
-registry.category("fields").add("loyalty_one2many", LoyaltyX2ManyField);
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ef4af5083432eca44e9665f8ae00a33d9dd4389e49ddc23f6c4c9810be52d1f
+size 329

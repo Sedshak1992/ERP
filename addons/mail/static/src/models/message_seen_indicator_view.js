@@ -1,26 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-import { clear } from '@mail/model/model_field_command';
-
-registerModel({
-    name: 'MessageSeenIndicatorView',
-    fields: {
-        messageViewOwner: one('MessageView', {
-            identifying: true,
-            inverse: 'messageSeenIndicatorView',
-        }),
-        messageSeenIndicator: one('MessageSeenIndicator', {
-            compute() {
-                if (this.messageViewOwner.messageListViewItemOwner && this.messageViewOwner.messageListViewItemOwner.messageListViewOwner.threadViewOwner.thread) {
-                    return {
-                        message: this.messageViewOwner.message,
-                        thread: this.messageViewOwner.messageListViewItemOwner.messageListViewOwner.threadViewOwner.thread,
-                    };
-                }
-                return clear();
-            },
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:1dfd14ba7dda477abad2cc8a597121657d370fd28c0e1d6836942fad74a22949
+size 966

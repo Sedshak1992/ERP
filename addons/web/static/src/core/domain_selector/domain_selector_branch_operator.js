@@ -1,24 +1,3 @@
-/** @odoo-module **/
-import { Dropdown } from "@web/core/dropdown/dropdown";
-import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-
-import { Component } from "@odoo/owl";
-
-export class DomainSelectorBranchOperator extends Component {
-    onOperatorSelected(operator) {
-        this.props.node.update(operator);
-    }
-}
-DomainSelectorBranchOperator.components = {
-    Dropdown,
-    DropdownItem,
-};
-DomainSelectorBranchOperator.template = "web.DomainSelectorBranchOperator";
-DomainSelectorBranchOperator.props = {
-    node: Object,
-    readonly: Boolean,
-    showCaret: {
-        type: Boolean,
-        optional: true,
-    },
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:b4e4dd316015503c370d9890f894081ec2199d16171b6a96687a4ac06364aef6
+size 639

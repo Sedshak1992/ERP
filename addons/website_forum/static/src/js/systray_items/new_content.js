@@ -1,15 +1,3 @@
-/** @odoo-module **/
-
-import { NewContentModal, MODULE_STATUS } from '@website/systray_items/new_content';
-import { patch } from 'web.utils';
-
-patch(NewContentModal.prototype, 'website_forum_new_content', {
-    setup() {
-        this._super();
-
-        const newForumElement = this.state.newContentElements.find(element => element.moduleXmlId === 'base.module_website_forum');
-        newForumElement.createNewContent = () => this.onAddContent('website_forum.forum_forum_action_add');
-        newForumElement.status = MODULE_STATUS.INSTALLED;
-        newForumElement.model = 'forum.forum';
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:b2b079edfedf3a41c9d139e9137b1a45cc362654217d380b7724cfac2a937a92
+size 601

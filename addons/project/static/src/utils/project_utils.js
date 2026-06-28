@@ -1,13 +1,3 @@
-/** @odoo-module */
-
-/**
- * List of colors according to the selection value, see `project_update.py`
- */
-export const STATUS_COLORS = {
-    'on_track': 10,
-    'at_risk': 2,
-    'off_track': 1,
-    'on_hold': 4,
-};
-
-export const STATUS_COLOR_PREFIX = 'o_status_bubble mx-0 o_color_bubble_';
+version https://git-lfs.github.com/spec/v1
+oid sha256:2bc34f8e5ed6e269756d6edae792eb9fec5632167a5e0a5f15664fbf20f5a387
+size 291

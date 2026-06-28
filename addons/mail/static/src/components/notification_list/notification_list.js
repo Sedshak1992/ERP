@@ -1,23 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class NotificationList extends Component {
-
-    /**
-     * @returns {NotificationListView}
-     */
-    get notificationListView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(NotificationList, {
-    props: { record: Object },
-    template: 'mail.NotificationList',
-});
-
-registerMessagingComponent(NotificationList);
+version https://git-lfs.github.com/spec/v1
+oid sha256:4868c62944a246cd4eb6241db289e77041686568108566f5bd392cfbd3b0ec8a
+size 467

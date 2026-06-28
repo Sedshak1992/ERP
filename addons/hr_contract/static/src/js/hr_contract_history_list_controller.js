@@ -1,24 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-import { ListController } from "@web/views/list/list_controller";
-
-export class HrContractHistoryListController extends ListController {
-    setup() {
-        super.setup();
-        this.actionService = useService('action');
-    }
-
-    /**
-     * @override
-     */
-    async createRecord({ group } = {}) {
-        this.actionService.doAction({
-            name: this.env._t('New Employee'),
-            type: 'ir.actions.act_window',
-            res_model: 'hr.employee',
-            views: [[false, 'form']],
-            view_mode: 'form',
-        });
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2259660415e4f497e655bec803d1138b578b18aa6374ee2277e2dfed502e2ee0
+size 635

@@ -1,21 +1,3 @@
-odoo.define('web_tour.public.TourManager', function (require) {
-'use strict';
-
-var TourManager = require('web_tour.TourManager');
-var lazyloader = require('web.public.lazyloader');
-
-TourManager.include({
-    /**
-     * @override
-     */
-    _waitBeforeTourStart: function () {
-        return this._super.apply(this, arguments).then(function () {
-            return lazyloader.allScriptsLoaded;
-        }).then(function () {
-            return new Promise(function (resolve) {
-                setTimeout(resolve);
-            });
-        });
-    },
-});
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:68ffc6a6f8a88b7809172f503c0d3e113f17426f8d8ea41aeecfcc4880c07617
+size 556

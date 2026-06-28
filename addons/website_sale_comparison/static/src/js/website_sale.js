@@ -1,16 +1,3 @@
-/** @odoo-module **/
-
-import { WebsiteSale } from 'website_sale.website_sale';
-
-WebsiteSale.include({
-    /**
-     * Toggles the add to cart button depending on the possibility of the
-     * current combination.
-     *
-     * @override
-     */
-    _toggleDisable: function ($parent, isCombinationPossible) {
-        this._super(...arguments);
-        $parent.find('a.a-submit').toggleClass('disabled', !isCombinationPossible);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:576a75109d6d6daa86694bc2e51a7eb62a424a403d4ec68bf9fe31751ce9b0a3
+size 438

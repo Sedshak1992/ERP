@@ -1,13 +1,3 @@
-/** @odoo-module */
-
-import publicWidget from 'web.public.widget';
-import "portal.portal"; // force dependencies
-
-publicWidget.registry.PortalHomeCounters.include({
-    /**
-     * @override
-     */
-    _getCountersAlwaysDisplayed() {
-        return this._super(...arguments).concat(['invoice_count']);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d8cfb5b4d3da9dc959d88c2e5def02389452c080df0f72e9daf02c05ac07623
+size 313

@@ -1,12 +1,3 @@
-/**
- * This module exists so that web_tour can use it as the parent of the
- * TourManager so it can get access to _trigger_up.
- */
-odoo.define("root.widget", function (require) {
-    // need to wait for owl.Component.env to be set by discuss_public_boot before
-    // we spawn the component adapter
-    require("@mail/public/discuss_public_boot");
-    const { standaloneAdapter } = require("web.OwlCompatibility");
-    const { Component } = owl;
-    return standaloneAdapter({ Component });
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:0eb71d762a22f3df06ce9df1396c2abc3e9862438d9b928a5d6d7d7a91c88a63
+size 495

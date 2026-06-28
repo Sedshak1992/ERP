@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import WebsiteSale from 'website_sale_stock.website_sale';
-
-WebsiteSale.include({
-
-    events: Object.assign({}, WebsiteSale.prototype.events, {
-        'click #wishlist_stock_notification_message': '_onClickWishlistStockNotificationMessage',
-        'click #wishlist_stock_notification_form_submit_button': '_onClickSubmitWishlistStockNotificationForm',
-    }),
-
-    _onClickWishlistStockNotificationMessage(ev) {
-        this._handleClickStockNotificationMessage(ev);
-    },
-
-    _onClickSubmitWishlistStockNotificationForm(ev) {
-        const productId = ev.currentTarget.closest('tr').dataset.productId;
-        this._handleClickSubmitStockNotificationForm(ev, productId);
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:4445e4f60288e37b80fd3987494dab1b7d82c055a95b45dbf0db2a1a07ad6d96
+size 710

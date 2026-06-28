@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { useService } from "@web/core/utils/hooks";
-
-const { useComponent } = owl;
-
-export async function checkRainbowmanMessage(orm, effect, recordId) {
-    const message = await orm.call("crm.lead", "get_rainbowman_message", [[recordId]]);
-    if (message) {
-        effect.add({
-            message,
-            type: "rainbow_man",
-        });
-    }
-}
-
-export function useCheckRainbowman() {
-    const component = useComponent();
-    const orm = useService("orm");
-    const effect = useService("effect");
-    return checkRainbowmanMessage.bind(component, orm, effect);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:276f2b94525d54e7a324c1485620d90529f064087a6d502516542c37eb28cd86
+size 598

@@ -1,35 +1,3 @@
-/** @odoo-module **/
-
-import { registerModel } from '@mail/model/model_core';
-import { one } from '@mail/model/model_field';
-
-registerModel({
-    name: 'FollowerSubtypeView',
-    recordMethods: {
-        /**
-         * Called when clicking on cancel button.
-         *
-         * @param {Event} ev
-         */
-        onChangeCheckbox(ev) {
-            if (ev.target.checked) {
-                this.follower.selectSubtype(this.subtype);
-            } else {
-                this.follower.unselectSubtype(this.subtype);
-            }
-        },
-    },
-    fields: {
-        follower: one('Follower', {
-            related: 'followerSubtypeListOwner.follower',
-        }),
-        followerSubtypeListOwner: one('FollowerSubtypeList', {
-            identifying: true,
-            inverse: 'followerSubtypeViews',
-        }),
-        subtype: one('FollowerSubtype', {
-            identifying: true,
-            inverse: 'followerSubtypeViews',
-        }),
-    },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:dae8123162e260c1563587b4a3f8d1bf5fb810d1847e098f4a6d2dbc518042aa
+size 963

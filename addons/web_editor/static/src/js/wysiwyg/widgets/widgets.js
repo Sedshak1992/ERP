@@ -1,21 +1,3 @@
-odoo.define('wysiwyg.widgets', function (require) {
-'use strict';
-
-var Dialog = require('wysiwyg.widgets.Dialog');
-var AltDialog = require('wysiwyg.widgets.AltDialog');
-var LinkDialog = require('wysiwyg.widgets.LinkDialog');
-var LinkTools = require('wysiwyg.widgets.LinkTools');
-var ImageCropWidget = require('wysiwyg.widgets.ImageCropWidget');
-const LinkPopoverWidget = require('@web_editor/js/wysiwyg/widgets/link_popover_widget')[Symbol.for("default")];
-const {ColorpickerDialog} = require('web.Colorpicker');
-
-return {
-    Dialog: Dialog,
-    AltDialog: AltDialog,
-    LinkDialog: LinkDialog,
-    LinkTools: LinkTools,
-    ImageCropWidget: ImageCropWidget,
-    LinkPopoverWidget: LinkPopoverWidget,
-    ColorpickerDialog: ColorpickerDialog,
-};
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:dccd0c29bfe6c3bbae7aa7d8868410b543b2c25efdc0686b0388942d72e18cb3
+size 752

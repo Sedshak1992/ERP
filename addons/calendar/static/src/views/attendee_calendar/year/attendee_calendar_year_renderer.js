@@ -1,10 +1,3 @@
-/** @odoo-module **/
-
-import { CalendarYearRenderer } from "@web/views/calendar/calendar_year/calendar_year_renderer";
-import { AttendeeCalendarYearPopover } from "@calendar/views/attendee_calendar/year/attendee_calendar_year_popover";
-
-export class AttendeeCalendarYearRenderer extends CalendarYearRenderer {}
-AttendeeCalendarYearRenderer.components = {
-    ...CalendarYearRenderer,
-    Popover: AttendeeCalendarYearPopover,
-};
+version https://git-lfs.github.com/spec/v1
+oid sha256:7580f5d3d6909a1b13e6dc17ffe4a3435a4e425e90df6045d68d65e40610da1a
+size 429

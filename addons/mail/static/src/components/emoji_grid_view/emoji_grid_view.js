@@ -1,30 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-import { useRefToModel } from '@mail/component_hooks/use_ref_to_model';
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-
-const { Component } = owl;
-
-export class EmojiGridView extends Component {
-    setup() {
-        useRefToModel({ fieldName: 'containerRef', refName: 'containerRef'});
-        useRefToModel({ fieldName: 'listRef', refName: 'listRef'});
-        useRefToModel({ fieldName: 'viewBlockRef', refName: 'viewBlockRef'});
-        useUpdateToModel({ methodName: 'onComponentUpdate' });
-    }
-
-    /**
-     * @returns {EmojiGridView}
-     */
-    get emojiGridView() {
-        return this.props.record;
-    }
-}
-
-Object.assign(EmojiGridView, {
-    props: { record: Object },
-    template: 'mail.EmojiGridView',
-});
-
-registerMessagingComponent(EmojiGridView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:c4d52bf6af197b57ae1dc9b82a4c0b5ed6702f711c2399b2b36fc0f9d05c55c7
+size 897

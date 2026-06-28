@@ -1,32 +1,3 @@
-/** @odoo-module */
-
-import tour from "web_tour.tour";
-
-const requestChatSteps = [
-    {
-        trigger: ".o_livechat_button",
-        run: "click",
-    },
-    {
-        trigger: ".o_thread_window",
-    },
-];
-
-tour.register("im_livechat_request_chat", { test: true }, requestChatSteps);
-
-tour.register("im_livechat_request_chat_and_send_message", { test: true }, [
-    ...requestChatSteps,
-    {
-        trigger: ".o_composer_text_field",
-        run: "text Hello, I need help please !",
-    },
-    {
-        trigger: '.o_composer_text_field',
-        run() {
-            $(".o_composer_text_field").trigger($.Event("keydown", { which: 13 }));
-        },
-    },
-    {
-        trigger: ".o_thread_message:contains('Hello, I need help')",
-    },
-]);
+version https://git-lfs.github.com/spec/v1
+oid sha256:e120249bcb6b46c691f4774fee7414d55bd064b26b0726c1b6958b61ba9753f7
+size 749

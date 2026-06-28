@@ -1,20 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class KanbanFieldActivityView extends Component {
-
-    get kanbanFieldActivityView() {
-        return this.props.record;
-    }
-
-}
-
-Object.assign(KanbanFieldActivityView, {
-    props: { record: Object },
-    template: 'mail.KanbanFieldActivityView',
-});
-
-registerMessagingComponent(KanbanFieldActivityView);
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b62316a9253c210c8a95f3b2e694d84e02bd07c98f28548f86f46956baf8b93
+size 443

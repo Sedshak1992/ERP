@@ -1,22 +1,3 @@
-/** @odoo-module **/
-
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class DiscussSidebarCategory extends Component {
-
-    /**
-     * @returns {DiscussSidebarCategory}
-     */
-    get category() {
-        return this.props.record;
-    }
-}
-
-Object.assign(DiscussSidebarCategory, {
-    props: { record: Object },
-    template: 'mail.DiscussSidebarCategory',
-});
-
-registerMessagingComponent(DiscussSidebarCategory);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2157e35de585d5f5e2ccb4ba48c46ae910f96a53c0a257170d01b977882df7c3
+size 480

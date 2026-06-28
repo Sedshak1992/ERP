@@ -1,23 +1,3 @@
-odoo.define('point_of_sale.PaymentScreenPaymentLines', function(require) {
-    'use strict';
-
-    const PosComponent = require('point_of_sale.PosComponent');
-    const Registries = require('point_of_sale.Registries');
-
-    class PaymentScreenPaymentLines extends PosComponent {
-        formatLineAmount(paymentline) {
-            return this.env.pos.format_currency_no_symbol(paymentline.get_amount());
-        }
-        selectedLineClass(line) {
-            return { 'payment-terminal': line.get_payment_status() };
-        }
-        unselectedLineClass(line) {
-            return {};
-        }
-    }
-    PaymentScreenPaymentLines.template = 'PaymentScreenPaymentLines';
-
-    Registries.Component.add(PaymentScreenPaymentLines);
-
-    return PaymentScreenPaymentLines;
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:c2730fd3bee6cddf1d24f46b8a0d8016ebecb91973c88bc1c1570b107d12a95a
+size 773

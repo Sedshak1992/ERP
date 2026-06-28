@@ -1,28 +1,3 @@
-/** @odoo-module **/
-
-import { useUpdateToModel } from '@mail/component_hooks/use_update_to_model';
-import { registerMessagingComponent } from '@mail/utils/messaging_component';
-
-const { Component } = owl;
-
-export class DialogManager extends Component {
-
-    /**
-     * @override
-     */
-    setup() {
-        super.setup();
-        useUpdateToModel({ methodName: 'onComponentUpdate' });
-    }
-
-    get dialogManager() {
-        return this.props.record;
-    }
-}
-
-Object.assign(DialogManager, {
-    props: { record: Object },
-    template: 'mail.DialogManager',
-});
-
-registerMessagingComponent(DialogManager);
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b5655001f46fac0ae5a043f4b13ec2a2c127d03cc4abf1a2acf2f5856c72f40
+size 610

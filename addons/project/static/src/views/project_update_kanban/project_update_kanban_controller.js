@@ -1,16 +1,3 @@
-/** @odoo-module */
-
-import { KanbanController } from '@web/views/kanban/kanban_controller';
-import { ProjectRightSidePanel } from '../../components/project_right_side_panel/project_right_side_panel';
-
-export class ProjectUpdateKanbanController extends KanbanController {
-    get className() {
-        return super.className + ' o_controller_with_rightpanel';
-    }
-}
-
-ProjectUpdateKanbanController.components = {
-    ...KanbanController.components,
-    ProjectRightSidePanel,
-};
-ProjectUpdateKanbanController.template = 'project.ProjectUpdateKanbanView';
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3b67c32d87a0fce5eca85749eccdce5cb13cf690cfce6fe6826c8a1415a8bc1
+size 556

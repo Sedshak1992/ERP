@@ -1,9 +1,3 @@
-/** @odoo-module **/
-
-import { patch } from "@web/core/utils/patch";
-import { BomOverviewComponentsBlock } from "@mrp/components/bom_overview_components_block/mrp_bom_overview_components_block";
-import { BomOverviewSpecialLine } from "@mrp/components/bom_overview_special_line/mrp_bom_overview_special_line";
-
-patch(BomOverviewComponentsBlock, "mrp_subcontracting", {
-    components: { ...BomOverviewComponentsBlock.components, BomOverviewSpecialLine },
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2cc45a12fd9ca6ca76b422ccb0839323b63a25cc1967045f940fead9662d24c
+size 458
