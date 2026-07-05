@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: erp-cockpit
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: ./odoo-bin -c odoo.conf
+    runtime: python3.11
